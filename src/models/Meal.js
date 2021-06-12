@@ -11,6 +11,10 @@ const schema = {
     primaryKey: true,
     autoIncrement: true,
   },
+  spoonacular_id: {
+    type: DataTypes.INTEGER,
+    allowNull: false,
+  },
   title: {
     type: DataTypes.STRING,
     allowNull: false,
