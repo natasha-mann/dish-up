@@ -1,0 +1,42 @@
+[
+  {
+    "spoonacular_id": 652610,
+    "title": "Mushroom & Sundried Tomato Pasta",
+    "readyInMinutes": 45,
+    "servings": 4,
+    "calories": 500,
+    "image": "https://spoonacular.com/recipeImages/652610-312x231.jpg"
+  },
+  {
+    "spoonacular_id": 633851,
+    "title": "Baked Tofu Cheesecake",
+    "readyInMinutes": 45,
+    "servings": 12,
+    "calories": 2208,
+    "image": "https://spoonacular.com/recipeImages/633851-556x370.jpg"
+  },
+  {
+    "spoonacular_id": 658655,
+    "title": "Roasted red peppers and tomatoes salad",
+    "readyInMinutes": 45,
+    "servings": 2,
+    "calories": 184,
+    "image": "https://spoonacular.com/recipeImages/658655-556x370.jpg"
+  },
+  {
+    "spoonacular_id": 715494,
+    "title": "Guinness and Brats",
+    "readyInMinutes": 55,
+    "servings": 4,
+    "calories": 1444,
+    "image": "https://spoonacular.com/recipeImages/715494-556x370.jpg"
+  },
+  {
+    "spoonacular_id": 715494,
+    "title": "Guinness and Brats",
+    "readyInMinutes": 55,
+    "servings": 4,
+    "calories": 1444,
+    "image": "https://spoonacular.com/recipeImages/715494-556x370.jpg"
+  }
+]
