@@ -1,0 +1,60 @@
+[
+  {
+    "title": "Vegetarian Meal Plan",
+    "description": "7 days of healthy veggie meals",
+    "user_id": 1,
+    "start_date": "14/07/2021",
+    "end_date": "22/07/2021"
+  },
+  {
+    "title": "Italian Meal Plan",
+    "description": "Not just pasta",
+    "user_id": 1,
+    "start_date": "23/07/2021",
+    "end_date": "30/07/2021"
+  },
+  {
+    "title": "Spanish Meal Plan",
+    "description": "7 days of sizzling spanish dishes",
+    "user_id": 1,
+    "start_date": "31/07/2021",
+    "end_date": "06/08/2021"
+  },
+  {
+    "title": "French Meal Plan",
+    "description": "A week of nouvelle cuisine",
+    "user_id": 1,
+    "start_date": "07/08/2021",
+    "end_date": "14/08/2021"
+  },
+  [
+    {
+      "title": "Fish Meal Plan",
+      "description": "Seafood sizzlers",
+      "user_id": 2,
+      "start_date": "14/07/2021",
+      "end_date": "22/07/2021"
+    },
+    {
+      "title": "English Meal Plan",
+      "description": "Meat and two veg (even for breakfast)",
+      "user_id": 2,
+      "start_date": "23/07/2021",
+      "end_date": "30/07/2021"
+    },
+    {
+      "title": "Protein Meal Plan",
+      "description": "Mighty meaty dishes",
+      "user_id": 2,
+      "start_date": "31/07/2021",
+      "end_date": "06/08/2021"
+    },
+    {
+      "title": "Spicy Meal Plan",
+      "description": "Tabasco on everything",
+      "user_id": 2,
+      "start_date": "07/08/2021",
+      "end_date": "14/08/2021"
+    }
+  ]
+]
