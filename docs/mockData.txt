@@ -11,6 +11,8 @@ const mealPlan = {
   id: 1,
   title: "",
   description: "",
+  startDate: "14/07/21",
+  endDate: "21/07/21",
   userId: 2,
   plan: {
     monday: {
@@ -39,13 +41,6 @@ const mealPlan = {
   },
 };
 
-const plan = {
-  id: 1,
-  startDate: "14/07/21",
-  endDate: "21/07/21",
-  mealPlanId: 1,
-  userId: 1,
-};
 
 const user = {
   id: 1,
