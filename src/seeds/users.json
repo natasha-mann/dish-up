@@ -1,0 +1,29 @@
+[
+  {
+    "first_name": "Bob",
+    "last_name": "Smith",
+    "email": "bob.smith@email.com",
+    "password": "password123",
+    "diet_id": [1],
+    "intolerance_id": [],
+    "daily_calories": 2500
+  },
+  {
+    "first_name": "Alice",
+    "last_name": "Green",
+    "email": "alice.green@email.com",
+    "password": "hello789",
+    "diet_id": [],
+    "intolerance_id": [1],
+    "daily_calories": 2000
+  },
+  {
+    "first_name": "Sam",
+    "last_name": "Jones",
+    "email": "sam.jones@email.com",
+    "password": "lamp456",
+    "diet_id": [],
+    "intolerance_id": [1, 2],
+    "daily_calories": 2200
+  }
+]
