@@ -6,3 +6,51 @@ const sequelize = require("../config/connection.js");
 
 // The MealPlan model table extends Sequelize's Model class
 class MealPlan extends Model {}
+
+const schema = {
+  id: {
+    type: DataTypes.INTEGER,
+    allowNull: false,
+    primaryKey: true,
+    autoIncrement: true,
+    validate: {
+      isNumeric: true,
+    },
+  },
+  title: {
+    type: DataTypes.TEXT,
+    allowNull: false,
+  },
+  description: {
+    type: DataTypes.TEXT,
+    allowNull: false,
+  },
+  user_id: {
+    type: DataTypes.INTEGER,
+    allowNull: false,
+    references: {
+      model: "user",
+      key: "id",
+    },
+  },
+  start_date: {
+    type: DataTypes.DATE,
+    allowNull: false,
+  },
+  end_date: {
+    type: DataTypes.DATE,
+    allowNull: false,
+  },
+};
+
+const options = {
+  sequelize,
+  timestamps: true,
+  freezeTableName: true,
+  underscored: true,
+  modelName: "mealPlan",
+};
+
+MealPlan.init(schema, options);
+
+module.exports = MealPlan;
