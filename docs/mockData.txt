@@ -1,0 +1,71 @@
+const meal = {
+  id: 652610,
+  title: "Mushroom & Sundried Tomato Pasta",
+  readyInMinutes: 45,
+  servings: 4,
+  calories: 500,
+  image: "https://spoonacular.com/recipeImages/652610-312x231.jpg",
+};
+
+const mealPlan = {
+  id: 1,
+  title: "",
+  description: "",
+  userId: 2,
+  plan: {
+    monday: {
+      breakfast: {
+        id: 652610,
+        title: "Mushroom & Sundried Tomato Pasta",
+        readyInMinutes: 45,
+        servings: 4,
+        image: "https://spoonacular.com/recipeImages/652610-312x231.jpg",
+      },
+      lunch: {
+        id: 652610,
+        title: "Mushroom & Sundried Tomato Pasta",
+        readyInMinutes: 45,
+        servings: 4,
+        image: "https://spoonacular.com/recipeImages/652610-312x231.jpg",
+      },
+      dinner: {
+        id: 652610,
+        title: "Mushroom & Sundried Tomato Pasta",
+        readyInMinutes: 45,
+        servings: 4,
+        image: "https://spoonacular.com/recipeImages/652610-312x231.jpg",
+      },
+    },
+  },
+};
+
+const plan = {
+  id: 1,
+  startDate: "14/07/21",
+  endDate: "21/07/21",
+  mealPlanId: 1,
+  userId: 1,
+};
+
+const user = {
+  id: 1,
+  firstName: "",
+  lastName: "",
+  email: "",
+  password: "",
+  dietId: [1, 2],
+  intoleranceId: [1, 2],
+  dailyCalories: 2000,
+};
+
+const diet = {
+  id: 1,
+  name: "Gluten Free",
+  description:
+    "Eliminating gluten means avoiding wheat, barley, rye, and other gluten-containing grains and foods made from them (or that may have been cross contaminated).",
+};
+
+const intolerance = {
+  id: 1,
+  name: "Peanut",
+};
