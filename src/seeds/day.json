@@ -1,0 +1,100 @@
+[
+  {
+    "name": "monday",
+    "meal_plan_id": 1,
+    "breakfast_meal_id": 5,
+    "lunch_meal_id": 8,
+    "dinner_meal_id": 1
+  },
+  {
+    "name": "tuesday",
+    "meal_plan_id": 1,
+    "breakfast_meal_id": 6,
+    "lunch_meal_id": 7,
+    "dinner_meal_id": 4
+  },
+  {
+    "name": "wednesday",
+    "meal_plan_id": 1,
+    "breakfast_meal_id": 5,
+    "lunch_meal_id": 8,
+    "dinner_meal_id": 1
+  },
+  {
+    "name": "thursday",
+    "meal_plan_id": 1,
+    "breakfast_meal_id": 7,
+    "lunch_meal_id": 1,
+    "dinner_meal_id": 8
+  },
+  {
+    "name": "friday",
+    "meal_plan_id": 1,
+    "breakfast_meal_id": 5,
+    "lunch_meal_id": 3,
+    "dinner_meal_id": 7
+  },
+  {
+    "name": "saturday",
+    "meal_plan_id": 1,
+    "breakfast_meal_id": 6,
+    "lunch_meal_id": 7,
+    "dinner_meal_id": 1
+  },
+  {
+    "name": "sunday",
+    "meal_plan_id": 1,
+    "breakfast_meal_id": 7,
+    "lunch_meal_id": 8,
+    "dinner_meal_id": 1
+  },
+  {
+    "name": "monday",
+    "meal_plan_id": 2,
+    "breakfast_meal_id": 7,
+    "lunch_meal_id": 1,
+    "dinner_meal_id": 8
+  },
+  {
+    "name": "tuesday",
+    "meal_plan_id": 2,
+    "breakfast_meal_id": 5,
+    "lunch_meal_id": 8,
+    "dinner_meal_id": 1
+  },
+  {
+    "name": "wednesday",
+    "meal_plan_id": 2,
+    "breakfast_meal_id": 5,
+    "lunch_meal_id": 8,
+    "dinner_meal_id": 1
+  },
+  {
+    "name": "thursday",
+    "meal_plan_id": 2,
+    "breakfast_meal_id": 6,
+    "lunch_meal_id": 7,
+    "dinner_meal_id": 4
+  },
+  {
+    "name": "friday",
+    "meal_plan_id": 2,
+    "breakfast_meal_id": 6,
+    "lunch_meal_id": 7,
+    "dinner_meal_id": 1
+  },
+  {
+    "name": "saturday",
+    "meal_plan_id": 2,
+    "breakfast_meal_id": 7,
+    "lunch_meal_id": 8,
+    "dinner_meal_id": 1
+  },
+  {
+    "name": "sunday",
+    "meal_plan_id": 2,
+    "breakfast_meal_id": 5,
+    "lunch_meal_id": 3,
+    "dinner_meal_id": 7
+  }
+]
