@@ -2,7 +2,7 @@
   {
     "spoonacular_id": 652610,
     "title": "Mushroom & Sundried Tomato Pasta",
-    "readyInMinutes": 45,
+    "ready_in_minutes": 45,
     "servings": 4,
     "calories": 500,
     "image": "https://spoonacular.com/recipeImages/652610-312x231.jpg"
@@ -10,7 +10,7 @@
   {
     "spoonacular_id": 633851,
     "title": "Baked Tofu Cheesecake",
-    "readyInMinutes": 45,
+    "ready_in_minutes": 45,
     "servings": 12,
     "calories": 184,
     "image": "https://spoonacular.com/recipeImages/633851-556x370.jpg"
@@ -18,7 +18,7 @@
   {
     "spoonacular_id": 658655,
     "title": "Roasted red peppers and tomatoes salad",
-    "readyInMinutes": 45,
+    "ready_in_minutes": 45,
     "servings": 2,
     "calories": 184,
     "image": "https://spoonacular.com/recipeImages/658655-556x370.jpg"
@@ -26,7 +26,7 @@
   {
     "spoonacular_id": 715494,
     "title": "Guinness and Brats",
-    "readyInMinutes": 55,
+    "ready_in_minutes": 55,
     "servings": 4,
     "calories": 361,
     "image": "https://spoonacular.com/recipeImages/715494-556x370.jpg"
@@ -34,7 +34,7 @@
   {
     "spoonacular_id": 636062,
     "title": "Breakfast Porridge",
-    "readyInMinutes": 45,
+    "ready_in_minutes": 45,
     "servings": 6,
     "calories": 346,
     "image": "https://spoonacular.com/recipeImages/636062-312x231.jpg"
@@ -43,7 +43,7 @@
   {
     "spoonacular_id": 661251,
     "title": "Spinach Almond Amaranth Breakfast Muffins",
-    "readyInMinutes": 45,
+    "ready_in_minutes": 45,
     "servings": 9,
     "calories": 142,
     "image": "https://spoonacular.com/recipeImages/661251-312x231.jpg"
@@ -52,7 +52,7 @@
   {
     "spoonacular_id": 661249,
     "title": "Spinach & Ham Quiche",
-    "readyInMinutes": 45,
+    "ready_in_minutes": 45,
     "servings": 8,
     "calories": 304,
     "image": "https://spoonacular.com/recipeImages/661249-312x231.jpg"
@@ -61,7 +61,7 @@
   {
     "spoonacular_id": 659135,
     "title": "Salmon with roasted vegetables",
-    "readyInMinutes": 45,
+    "ready_in_minutes": 45,
     "servings": 2,
     "calories": 492,
     "image": "https://spoonacular.com/recipeImages/659135-312x231.jpg"

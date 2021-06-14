@@ -7,12 +7,7 @@ const mealPlans = require("../seeds/mealPlans.json");
 const users = require("../seeds/users.json");
 const intolerances = require("../seeds/intolerances.json");
 
-const Day = require("../models/Day");
-const Diet = require("../models/Diet");
-const Meal = require("../models/Meal");
-const MealPlan = require("../models/MealPlan");
-const User = require("../models/User");
-const Intolerance = require("../models/Intolerance");
+const { Day, Diet, Intolerance, Meal, MealPlan, User } = require("../models");
 
 const seed = async () => {
   await sequelize.sync({ force: true });
