@@ -28,20 +28,6 @@ const schema = {
     type: DataTypes.STRING,
     allowNull: false,
   },
-  diet_id: {
-    type: DataTypes.INTEGER,
-    references: {
-      model: "diet",
-      key: "id",
-    },
-  },
-  intolerance_id: {
-    type: DataTypes.INTEGER,
-    references: {
-      model: "intolerance",
-      key: "id",
-    },
-  },
   daily_calories: {
     type: DataTypes.INTEGER,
   },

@@ -20,7 +20,6 @@ const schema = {
     onDelete: "cascade",
     onUpdate: "cascade",
   },
-
   intolerance_id: {
     type: DataTypes.INTEGER,
     references: {

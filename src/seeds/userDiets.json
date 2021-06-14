@@ -1,0 +1,18 @@
+[
+  {
+    "user_id": 1,
+    "diet_id": 1
+  },
+  {
+    "user_id": 2,
+    "diet_id": 3
+  },
+  {
+    "user_id": 2,
+    "diet_id": 7
+  },
+  {
+    "user_id": 3,
+    "diet_id": 4
+  }
+]

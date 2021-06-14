@@ -1,0 +1,18 @@
+[
+  {
+    "user_id": 1,
+    "intolerance_id": 2
+  },
+  {
+    "user_id": 1,
+    "intolerance_id": 6
+  },
+  {
+    "user_id": 2,
+    "intolerance_id": 5
+  },
+  {
+    "user_id": 3,
+    "intolerance_id": 1
+  }
+]
