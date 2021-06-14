@@ -36,7 +36,7 @@ const schema = {
 const options = {
   sequelize,
   modelName: "meal",
-  timestamps: true,
+  timestamps: false,
   underscored: true,
   freezeTableName: true,
 };
