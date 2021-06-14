@@ -4,7 +4,6 @@
     "last_name": "Smith",
     "email": "bob.smith@email.com",
     "password": "password123",
-    "diet_id": 1,
     "daily_calories": 2500
   },
   {
@@ -12,7 +11,6 @@
     "last_name": "Green",
     "email": "alice.green@email.com",
     "password": "hello789",
-    "intolerance_id": 1,
     "daily_calories": 2000
   },
   {
@@ -20,7 +18,6 @@
     "last_name": "Jones",
     "email": "sam.jones@email.com",
     "password": "lamp456",
-    "intolerance_id": 2,
     "daily_calories": 2200
   }
 ]

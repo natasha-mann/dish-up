@@ -4,6 +4,8 @@ const Intolerance = require("./Intolerance");
 const Meal = require("./Meal");
 const MealPlan = require("./MealPlan");
 const User = require("./User");
+const UserDiet = require("./UserDiet");
+const UserIntolerance = require("./UserIntolerance");
 
 Day.belongsTo(Meal, {
   as: "breakfast",
@@ -51,4 +53,33 @@ User.hasMany(MealPlan, {
   foreignKey: "user_id",
 });
 
-module.exports = { Day, Diet, Intolerance, Meal, MealPlan, User };
+Diet.belongsToMany(User, {
+  through: { model: UserDiet },
+  foreignKey: "diet_id",
+});
+
+User.belongsToMany(Diet, {
+  through: { model: UserDiet },
+  foreignKey: "user_id",
+});
+
+User.belongsToMany(Intolerance, {
+  through: { model: UserIntolerance },
+  foreignKey: "user_id",
+});
+
+Intolerance.belongsToMany(User, {
+  through: { model: UserIntolerance },
+  foreignKey: "intolerance_id",
+});
+
+module.exports = {
+  Day,
+  Diet,
+  Intolerance,
+  Meal,
+  MealPlan,
+  User,
+  UserDiet,
+  UserIntolerance,
+};
