@@ -38,7 +38,7 @@ const schema = {
   intolerances_id: {
     type: DataTypes.INTEGER,
     references: {
-      model: "intolerances",
+      model: "intolerance",
       key: "id",
     },
   },

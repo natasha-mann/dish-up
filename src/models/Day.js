@@ -35,7 +35,7 @@ const schema = {
     type: DataTypes.INTEGER,
     allowNull: false,
     references: {
-      model: "meal_plan",
+      model: "mealPlan",
       key: "id",
     },
   },
@@ -70,7 +70,7 @@ const options = {
   timestamps: true,
   freezeTableName: true,
   underscored: true,
-  modelName: "mealPlan",
+  modelName: "day",
 };
 
 Day.init(schema, options);

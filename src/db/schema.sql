@@ -1,0 +1,3 @@
+DROP DATABASE IF EXISTS dishup_db;
+
+CREATE DATABASE dishup_db;
