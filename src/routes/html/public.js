@@ -1,5 +1,4 @@
 const { Router } = require("express");
-const { route } = require(".");
 const {
   renderHomepage,
   renderLogin,
