@@ -1,2 +1,55 @@
 {{>private-navbar}}
-<h1> Dashboard </h1>
+ <div class="container">
+      <div class="card mt-5 shadow-lg p-2 bg-body rounded">
+        <div class="card-body text-center">Hello Name!</div>
+
+   </div>
+      </div>
+      <div
+        class="
+          position-absolute
+          top-45
+          start-45
+          translate-right-y
+          text-center
+          bg-light
+          shadow-lg
+          p-3
+          mb-5
+          bg-body
+          rounded
+          w-50
+          mt-5
+          ms-4
+          p-4
+          px-5
+        "
+      >
+        <h2 class="pb-3">Create Meal Plan!</h2>
+        <form id="create-mealplan-form">
+          <div class="mb-3">
+            <input
+              placeholder="Title"
+              type="input"
+              class="form-control"
+              id="title"
+              aria-describedby="titleMealPlan"
+            />
+          </div>
+          <div class="mb-3">
+            <textarea
+              placeholder="Description"
+              rows="4"
+              class="form-control"
+              id="description"
+            ></textarea>
+          </div>
+          <div class="mb-3">
+            <label for="start-date">Start Date:</label>
+            <input type="date" id="start-date" name="start-date" />
+          </div>
+          <div id="alert-div"></div>
+          <button type="submit" class="btn btn-primary ms-3">Let's go!</button>
+        </form>
+      </div>
+   
