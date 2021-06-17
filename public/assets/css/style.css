@@ -1,0 +1,30 @@
+:root {
+  --orange: #f36523;
+  --green: #8dc73f;
+  --blue: #00adef;
+  --yellow: #ffc20f;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+#home-navbar {
+  background-color: var(--orange) !important;
+  color: white !important;
+}
+
+.navbar-text {
+  color: white !important;
+}
+
+body {
+  background-image: url("../images/dishup-background-landing-page.jpeg");
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
