@@ -24,4 +24,20 @@ const getAllMealPlans = async (req, res) => {
   }
 };
 
-module.exports = { getAllMealPlans };
+const createMealPlan = async (req, res) => {
+  try {
+    const { title, description, start_date, end_date, user_id } = req.body;
+    // const { userId: user_id } = req.session;
+
+    const mealPlan = { title, description, start_date, end_date, user_id };
+
+    await MealPlan.create(mealPlan);
+
+    res.status(200).json({ data: "Successfully created meal plan" });
+  } catch (error) {
+    console.error(error.message);
+    return res.status(500).json({ error: "Failed to create meal plan" });
+  }
+};
+
+module.exports = { getAllMealPlans, createMealPlan };
