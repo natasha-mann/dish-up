@@ -2,11 +2,11 @@ const { Router } = require("express");
 
 const publicRoutes = require("./public");
 const privateRoutes = require("./private");
-const auth = require("../../middleware/auth");
+// const auth = require("../../middleware/auth");
 
 const router = Router();
 
 router.use(publicRoutes);
-router.use(auth, privateRoutes);
+router.use(privateRoutes);
 
 module.exports = router;

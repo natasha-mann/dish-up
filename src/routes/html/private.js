@@ -1,7 +1,12 @@
 const { Router } = require("express");
-const { renderDashboard } = require("../../controllers/html/private");
+const {
+  renderDashboard,
+  renderMealPlan,
+} = require("../../controllers/html/private");
 const router = Router();
 
 router.get("/dashboard", renderDashboard);
+
+router.get("/mealplan/:id", renderMealPlan);
 
 module.exports = router;
