@@ -1,11 +1,13 @@
-const handleSubmit = (event) => {
+const handleSubmit = async (event) => {
   event.preventDefault();
 
   const title = $("#title").val();
   const description = $("#description").val();
-  const startDate = $("#start-date").val();
+  const start_date = $("#start-date").val();
+  const end_date = moment(start_date).add(6, "days").format("YYYY-MM-DD");
+  const user_id = 2;
 
-  if (!title || !startDate) {
+  if (!title || !start_date) {
     $("#alert-div").empty();
     $("#alert-div")
       .append(`<div id="error-alert" class="alert alert-danger d-flex align-items-center" role="alert">
@@ -26,16 +28,19 @@ const handleSubmit = (event) => {
     body: JSON.stringify({
       title,
       description,
-      startDate,
+      start_date,
+      end_date,
+      user_id,
     }),
   };
 
   const response = await fetch("/api/mealplans", options);
+  const data = await response.json();
 
   if (response.status !== 200) {
-    console.error("Unable to create mealplan");
+    console.error("Unable to create meal plan");
   } else {
-    const { id } = response;
+    const { id } = data;
     window.location.replace(`/mealplan/${id}`);
   }
 };
