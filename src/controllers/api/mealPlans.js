@@ -31,9 +31,9 @@ const createMealPlan = async (req, res) => {
 
     const mealPlan = { title, description, start_date, end_date, user_id };
 
-    await MealPlan.create(mealPlan);
+    const newMealPlan = await MealPlan.create(mealPlan);
 
-    res.status(200).json({ data: "Successfully created meal plan" });
+    res.status(200).json({ id: newMealPlan.id });
   } catch (error) {
     console.error(error.message);
     return res.status(500).json({ error: "Failed to create meal plan" });
