@@ -41,7 +41,6 @@ const schema = {
   },
   breakfast_meal_id: {
     type: DataTypes.INTEGER,
-    allowNull: false,
     references: {
       model: "meal",
       key: "id",
@@ -49,7 +48,6 @@ const schema = {
   },
   lunch_meal_id: {
     type: DataTypes.INTEGER,
-    allowNull: false,
     references: {
       model: "meal",
       key: "id",
@@ -57,7 +55,6 @@ const schema = {
   },
   dinner_meal_id: {
     type: DataTypes.INTEGER,
-    allowNull: false,
     references: {
       model: "meal",
       key: "id",

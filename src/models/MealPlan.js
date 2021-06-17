@@ -22,7 +22,7 @@ const schema = {
     allowNull: false,
   },
   description: {
-    type: DataTypes.STRING(30),
+    type: DataTypes.STRING,
   },
   user_id: {
     type: DataTypes.INTEGER,
