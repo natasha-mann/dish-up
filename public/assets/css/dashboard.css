@@ -1,0 +1,112 @@
+:root {
+  --orange: #f36523;
+  --green: #8dc73f;
+  --blue: #00adef;
+  --yellow: #ffc20f;
+}
+
+.form-container {
+  font-family: "Open Sans", sans-serif;
+  text-align: center;
+}
+
+.form-container .form-icon {
+  color: #fff;
+  background: linear-gradient(to right, #fdc006, #feb101);
+  font-size: 50px;
+  line-height: 110px;
+  width: 110px;
+  height: 110px;
+  margin: 0 auto -60px;
+  border-radius: 50%;
+  position: relative;
+  z-index: 1;
+}
+
+.form-container .form-horizontal {
+  background: linear-gradient(45deg, #fff 50%, #f9f9f9 50%);
+  background-size: 20px 20px;
+  padding: 75px 40px 15px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.form-horizontal .title {
+  color: #4f4f4f;
+  font-size: 20px;
+  text-transform: uppercase;
+  padding: 0 25px;
+  margin: 0 0 20px;
+  display: inline-block;
+  position: relative;
+}
+.form-horizontal .title:before,
+.form-horizontal .title:after {
+  content: "";
+  background: #4f4f4f;
+  width: 15px;
+  height: 2px;
+  transform: translateY(-50%);
+  position: absolute;
+  top: 50%;
+  left: 0;
+}
+.form-horizontal .title:after {
+  left: auto;
+  right: 0;
+}
+.form-horizontal .form-group {
+  margin: 0 0 15px;
+}
+.form-horizontal .form-group:last-of-type {
+  border-top: 2px solid #e5e5e5;
+  padding: 15px 15px 0;
+  margin: 0 -40px 0;
+}
+.form-horizontal .form-control {
+  background: #e6e6e6;
+  font-size: 16px;
+  text-align: center;
+  letter-spacing: 1px;
+  height: 40px;
+  padding: 6px 30px;
+  border-radius: 8px;
+  border: none;
+  box-shadow: none;
+  border-top: 4px solid #cecece;
+  border-left: 4px solid #cecece;
+}
+.form-horizontal .form-control:focus {
+  box-shadow: none;
+}
+.form-horizontal .form-control::placeholder {
+  color: #6c6c6c;
+}
+.form-horizontal .signup {
+  color: #58523c;
+  background-color: #fec107;
+  font-size: 22px;
+  font-weight: 600;
+  text-transform: uppercase;
+  width: 100%;
+  padding: 6px 10px;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 -3px 0 rgba(0, 0, 0, 0.1) inset;
+  display: block;
+  transition: all 0.3s ease 0s;
+}
+.form-horizontal .signup:hover,
+.form-horizontal .signup:focus {
+  box-shadow: 0 3px 0 rgba(0, 0, 0, 0.1) inset, 0 0 10px rgba(0, 0, 0, 0.1);
+}
+@media only screen and (max-width: 359px) {
+  .form-container .form-horizontal {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .form-horizontal .form-group:last-of-type {
+    padding: 15px 15px 0;
+    margin: 0 -20px 0;
+  }
+}

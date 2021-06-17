@@ -10,6 +10,16 @@
   padding: 0px;
 }
 
+body {
+  background-image: url("../images/dishup-background-landing-page.png");
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
 #home-navbar {
   background-color: var(--orange) !important;
   color: white !important;
@@ -19,12 +29,21 @@
   color: white !important;
 }
 
-body {
-  background-image: url("../images/dishup-background-landing-page.png");
-  height: 100%;
-  width: 100%;
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
+.welcome-card {
+  background-color: var(--orange);
+  color: white;
+}
+
+.dashboard-card {
+  height: 80%;
+  color: white;
+  background-color: #f3652388 !important;
+}
+
+.dashboard-btn {
+  background-color: var(--yellow);
+}
+
+.dashboard-btn:hover {
+  background-color: #ffc30f5b;
 }
