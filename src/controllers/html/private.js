@@ -20,12 +20,15 @@ const renderMealPlan = async (req, res) => {
     });
 
     const mealPlan = mealPlanData.get({ plain: true });
-    console.log(mealPlan);
 
-    res.render("mealPlan", mealPlan);
+    if (!mealPlan) {
+      return res.status(404).json({ error: "Meal plan does not exist" });
+    }
+
+    res.status(200).render("mealPlan", mealPlan);
   } catch (error) {
     console.error(error.message);
-    return res.status(500).json({ error: "Failed to get all meal plans." });
+    return res.status(500).json({ error: "Failed to render meal plan." });
   }
 };
 
