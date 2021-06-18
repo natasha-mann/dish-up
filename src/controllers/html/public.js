@@ -7,7 +7,7 @@ const renderHomePage = (req, res) => {
 };
 
 const renderLogin = (req, res) => {
-  res.render("login");
+  res.render("login", { layout: "login" });
 };
 
 const renderSignup = (req, res) => {
