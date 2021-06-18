@@ -2,9 +2,9 @@ const { MealPlan, Day, Meal } = require("../../models");
 
 const renderDashboard = async (req, res) => {
   try {
-    const { firstName, lastName } = req.session;
+    const { userId, firstName, lastName } = req.session;
 
-    const mealPlanData = await MealPlan.findAll();
+    const mealPlanData = await MealPlan.findAll({ where: { user_id: userId } });
 
     const mealPlans = mealPlanData.map((mealPlan) =>
       mealPlan.get({ plain: true })
