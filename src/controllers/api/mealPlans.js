@@ -26,8 +26,8 @@ const getAllMealPlans = async (req, res) => {
 
 const createMealPlan = async (req, res) => {
   try {
-    const { title, description, start_date, end_date, user_id } = req.body;
-    // const { userId: user_id } = req.session;
+    const { title, description, start_date, end_date } = req.body;
+    const { userId: user_id } = req.session;
 
     const mealPlan = { title, description, start_date, end_date, user_id };
 

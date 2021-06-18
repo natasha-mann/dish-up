@@ -1,4 +1,4 @@
-const handleSubmit = async (event) => {
+const handleCreateMealPlan = async (event) => {
   event.preventDefault();
 
   const title = $("#title").val();
@@ -45,4 +45,25 @@ const handleSubmit = async (event) => {
   }
 };
 
-$("#create-mealplan-form").submit(handleSubmit);
+const handleSelectMealPlan = async (event) => {
+  event.preventDefault();
+
+  const mealplan_id = $("#mealplan-select").find(":selected").val();
+
+  if (!mealplan_id) {
+    $("#alert-div-select").empty();
+    $("#alert-div-select")
+      .append(`<div id="error-alert" class="alert alert-danger d-flex align-items-center" role="alert">
+    <i class="fas fa-exclamation-triangle me-4"></i>
+    <div class="text-center">
+      Please select a meal plan!
+    </div>
+  </div>`);
+    return;
+  }
+
+  window.location.replace(`/mealplan/${mealplan_id}`);
+};
+
+$("#create-mealplan-form").submit(handleCreateMealPlan);
+$("#select-mealplan-form").submit(handleSelectMealPlan);
