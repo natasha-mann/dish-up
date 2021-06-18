@@ -1,12 +1,14 @@
 const { Router } = require("express");
 const {
-  renderHomepage,
+  renderLandingPage,
+  renderHomePage,
   renderLogin,
   renderSignup,
 } = require("../../controllers/html/public");
 const router = Router();
 
-router.get("/", renderHomepage);
+router.get("/", renderLandingPage);
+router.get("/home", renderHomePage);
 router.get("/login", renderLogin);
 router.get("/signup", renderSignup);
 //insert recipe, results page
