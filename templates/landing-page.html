@@ -8,8 +8,22 @@
       integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
       crossorigin="anonymous"
     />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Roboto:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/ae0443040c.js"
+      crossorigin="anonymous"
+    ></script>
     <link
       href="../public/assets/css/style.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="../public/assets/css/forms.css"
       rel="stylesheet"
       type="text/css"
     />
@@ -62,6 +76,73 @@
         </div>
       </div>
     </nav>
+    <div class="container">
+      <div class="row mt-2">
+        <div class="col-12 col-md-6 mt-5">
+          <div class="form-bg">
+            <div class="container">
+              <div class="row">
+                <div class="col">
+                  <div class="form-container">
+                    <div class="form-icon">
+                      <span><i class="fas fa-user-plus icon-symbol"></i></span>
+                    </div>
+                    <form id="signup-form" class="form-horizontal">
+                      <h3 class="title">JOIN DISH UP</h3>
+                      <div class="form-group">
+                        <input
+                          type="text"
+                          class="form-control"
+                          placeholder="First Name"
+                          id="firstName"
+                        />
+                      </div>
+                      <div class="form-group">
+                        <input
+                          type="text"
+                          class="form-control"
+                          placeholder="Last Name"
+                          id="lastName"
+                        />
+                      </div>
+                      <div class="form-group">
+                        <input
+                          type="text"
+                          class="form-control"
+                          placeholder="Email Address"
+                          id="email"
+                        />
+                      </div>
+                      <div class="form-group">
+                        <input
+                          type="password"
+                          class="form-control"
+                          placeholder="Password"
+                          id="password"
+                        />
+                      </div>
+                      <div class="form-group">
+                        <input
+                          type="password"
+                          class="form-control"
+                          placeholder="Password"
+                          id="confirmPassword"
+                        />
+                      </div>
+                      <div class="form-group">
+                        <button type="submit" class="btn signup">
+                          Sign Up
+                        </button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"

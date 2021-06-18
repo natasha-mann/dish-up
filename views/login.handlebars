@@ -1,1 +1,43 @@
-<h1> Login </h1>
+{{>public-navbar}}
+
+<div class="container">
+  <div class="row mt-2">
+    <div class="col-md-6 col-sm-9 mx-auto mt-5">
+      <div class="form-bg">
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              <div class="form-container">
+                <div class="form-icon">
+                  <span><i class="fas fa-user-lock icon-symbol"></i></span>
+                </div>
+                <form id="login-form" class="form-horizontal">
+                  <h3 class="title">LOGIN</h3>
+                  <div class="form-group">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Email Address"
+                      id="email"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <input
+                      type="password"
+                      class="form-control"
+                      placeholder="Password"
+                      id="password"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <button type="submit" class="btn signup">Login</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
