@@ -60,10 +60,11 @@
                   <div class="form-icon">
                     <span><i class="fa fa-file-alt icon-symbol"></i></span>
                   </div>
-                  <form class="form-horizontal">
+                  <form  id="select-mealplan-form" class="form-horizontal">
                     <h3 class="title">My Meal Plans</h3>
                     <div class="form-group">
                       <select
+                      id="mealplan-select"
                         class="form-select mb-4"
                         size="6"
                         aria-label="size 3 select example"
@@ -75,7 +76,7 @@
                         {{/each}}
                       </select>
                     </div>
-
+                    <div id="alert-div-select"></div>
                     <div class="form-group">
                       <button type="submit" class="btn signup">Let's go!</button>
                     </div>
