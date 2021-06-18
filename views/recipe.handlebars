@@ -1,0 +1,44 @@
+{{> private-navbar}}
+
+    <div class="container mt-3 text-center">
+      <img
+        src="{{url}}"
+        height="300"
+        width="500"
+      />
+      <h1 class="recipe-title">{{title}}</h1>
+      <div>
+        <ul class="list-inline">
+          <li class="list-inline-item">
+            <span class="fw-bold recipe-text">Servings: </span> {{servings}} ||
+          </li>
+          <li class="list-inline-item">
+            <span class="fw-bold recipe-text">Ready in:</span> {{ready_in_minutes}} minutes ||
+          </li>
+          <li class="list-inline-item">
+            <span class="fw-bold recipe-text">Calories:</span> {{calories}}
+          </li>
+        </ul>
+      </div>
+      <div class="mb-5">
+        {{description}}
+      </div>
+      <div class="d-flex flex-row justify-content-center">
+        <div class="mx-2 mb-5 p-3 w-50 ingredients-container">
+          <h4 class="subtitle pb-2">Ingredients</h4>
+          <ul class="text-start text-light">
+            {{#each ingredients}}
+            <li>{{original}}</li>
+            {{/each}}
+          </ul>
+        </div>
+        <div class="mx-2 mb-5 px-2 w-50">
+          <h4 class="subtitle">Instructions</h4>
+          <ol class="text-start">
+            {{#each instructions}}
+            <li>{{step}}</li>
+            {{/each}}
+          </ol>
+        </div>
+      </div>
+    </div>
