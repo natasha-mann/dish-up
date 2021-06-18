@@ -41,6 +41,15 @@ const onSubmit = async (event) => {
     } else {
       window.location.replace("/login");
     }
+  } else {
+    $("#alert-div").empty();
+    $("#alert-div")
+      .append(`<div id="error-alert" class="alert alert-warning d-flex align-items-center" role="alert">
+    <i class="fas fa-exclamation-triangle me-4"></i>
+    <div class="text-center">
+      Passwords don't match. Please try again.
+    </div>
+  </div>`);
   }
 };
 

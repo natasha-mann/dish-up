@@ -1,7 +1,14 @@
 const { Meal } = require("../../models");
 
 const renderLandingPage = (req, res) => {
-  res.render("landing-page");
+  try {
+    const { isLoggedIn } = req.session;
+
+    res.render("landing-page", { isLoggedIn });
+  } catch (error) {
+    console.log(error.message);
+    res.status(500).json({ error: "Failed to render" });
+  }
 };
 
 const renderHomePage = async (req, res) => {
@@ -12,7 +19,7 @@ const renderHomePage = async (req, res) => {
       return meal.get({ plain: true });
     });
 
-    res.render("homepage", { isLoggedIn });
+    res.render("homepage", { isLoggedIn, meals });
   } catch (error) {
     console.log(error.message);
     res.status(500).json({ error: "Failed to render" });
