@@ -55,8 +55,8 @@ body {
   border-radius: 0.3rem;
 }
 
-.meal-table {
-  margin-top: 10% !important;
+.mealplan-info {
+  background-color: #ffc30fcb;
 }
 
 .table-cell {
