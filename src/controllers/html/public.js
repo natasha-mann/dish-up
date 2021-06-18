@@ -11,7 +11,7 @@ const renderLogin = (req, res) => {
 };
 
 const renderSignup = (req, res) => {
-  res.render("signup");
+  res.render("signup", { layout: "signup" });
 };
 
 module.exports = {
