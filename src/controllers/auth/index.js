@@ -37,7 +37,25 @@ const logout = async (req, res) => {
 };
 
 const signup = async (req, res) => {
-  res.send("signup");
+  try {
+    const { firstName, lastName, email, password } = req.body;
+
+    if (firstName && lastName && email && password) {
+      await User.create({
+        first_name: firstName,
+        last_name: lastName,
+        email,
+        password,
+      });
+
+      return res.status(200).json({ success: "User created" });
+    }
+
+    return res.status(400).json({ error: "Failed to create user" });
+  } catch (error) {
+    console.log(error.message);
+    return res.status(500).json({ error: "Failed to create user" });
+  }
 };
 
 module.exports = { login, logout, signup };
