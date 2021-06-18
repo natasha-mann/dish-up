@@ -67,9 +67,15 @@ body {
 .add-btn {
   background-color: var(--green);
   border: none;
+  color: white;
 }
 
 .add-btn:hover {
+  background-color: #8cc73f8e;
+  border: none;
+}
+
+.add-btn:active {
   background-color: #8cc73f8e;
   border: none;
 }
