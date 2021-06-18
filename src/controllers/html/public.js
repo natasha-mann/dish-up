@@ -1,4 +1,8 @@
-const renderHomepage = (req, res) => {
+const renderLandingPage = (req, res) => {
+  res.render("landing-page");
+};
+
+const renderHomePage = (req, res) => {
   res.render("homepage");
 };
 
@@ -10,4 +14,9 @@ const renderSignup = (req, res) => {
   res.render("signup");
 };
 
-module.exports = { renderHomepage, renderLogin, renderSignup };
+module.exports = {
+  renderLandingPage,
+  renderHomePage,
+  renderLogin,
+  renderSignup,
+};
