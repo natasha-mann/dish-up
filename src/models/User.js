@@ -1,6 +1,8 @@
 const { Model, DataTypes } = require("sequelize");
+const bcrypt = require("bcrypt");
 
 const sequelize = require("../config/connection.js");
+const hooks = require("../hooks");
 
 const schema = {
   id: {
@@ -34,6 +36,7 @@ const schema = {
 };
 
 const options = {
+  hooks,
   sequelize,
   modelName: "user",
   timestamps: true,
@@ -41,7 +44,11 @@ const options = {
   freezeTableName: true,
 };
 
-class User extends Model {}
+class User extends Model {
+  async isCorrectPassword(password) {
+    return bcrypt.compare(password, this.password);
+  }
+}
 
 User.init(schema, options);
 
