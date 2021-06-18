@@ -1,5 +1,6 @@
 const { User } = require("../../models");
 
+
 const login = async (req, res) => {
   try {
     const { email, password } = req.body;
@@ -33,7 +34,14 @@ const login = async (req, res) => {
 };
 
 const logout = async (req, res) => {
-  res.send("logout");
+  if (req.session.isLoggedIn) { 
+    req.session.destroy(()=> {
+      return res.status(200).json({success:"logout successful!"})
+    })
+    
+  } else {
+    return res.status(500).json({error:"logout failed!"})
+  }
 };
 
 const signup = async (req, res) => {
