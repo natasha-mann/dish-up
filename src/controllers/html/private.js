@@ -1,7 +1,25 @@
 const { MealPlan, Day, Meal } = require("../../models");
 
-const renderDashboard = (req, res) => {
-  res.render("dashboard", {layout:"dashboard"});
+const renderDashboard = async (req, res) => {
+  try {
+    const { firstName, lastName } = req.session;
+
+    const mealPlanData = await MealPlan.findAll();
+
+    const mealPlans = mealPlanData.map((mealPlan) =>
+      mealPlan.get({ plain: true })
+    );
+
+    return res.render("dashboard", {
+      layout: "dashboard",
+      firstName,
+      lastName,
+      mealPlans,
+    });
+  } catch (error) {
+    console.log(error.message);
+    return res.status(500).json({ error: "Failed to render" });
+  }
 };
 
 const renderMealPlan = async (req, res) => {
@@ -25,7 +43,7 @@ const renderMealPlan = async (req, res) => {
       return res.status(404).json({ error: "Meal plan does not exist" });
     }
 
-    res.status(200).render("mealPlan", mealPlan);
+    res.status(200).render("mealPlan", { layout: "dashboard", mealPlan });
   } catch (error) {
     console.error(error.message);
     return res.status(500).json({ error: "Failed to render meal plan." });

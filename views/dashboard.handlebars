@@ -2,7 +2,7 @@
  <div class="container">
      
     <div class="jumbotron text-center">
-      <h1 class="display-5 ">Hello {{name}}!</h1>
+      <h1 class="display-5 ">Hello {{firstName}}!</h1>
       <p class="lead">Welcome to your dashboard. Get started with a new meal plan below, or check out the ones you have already created!</p>
     </div>
 
@@ -68,12 +68,11 @@
                         size="6"
                         aria-label="size 3 select example"
                       >
-                        <option selected>Open this select menu</option>
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
-                        <option value="4">Four</option>
-                        <option value="5">Five</option>
+                        <option selected>Select a meal plan</option>
+
+                        {{#each mealPlans}}
+                        <option value="{{id}}">{{title}}</option>
+                        {{/each}}
                       </select>
                     </div>
 
