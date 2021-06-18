@@ -47,3 +47,10 @@ body {
 .dashboard-btn:hover {
   background-color: #ffc30f5b;
 }
+
+.jumbotron {
+  padding: 1.5rem 1rem;
+  margin-bottom: 1rem;
+  background-color: #e9ecef;
+  border-radius: 0.3rem;
+}

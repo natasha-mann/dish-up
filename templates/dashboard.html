@@ -72,20 +72,10 @@
       </div>
     </nav>
     <div class="container">
-      <div
-        class="
-          card
-          w-50
-          rounded-pill
-          mx-auto
-          mt-4
-          shadow-lg
-          p-1
-          rounded
-          welcome-card
-        "
-      >
-        <div class="card-body fs-2 fw-bolder text-center">Hello Name!</div>
+     
+      <div class="jumbotron text-center">
+        <h1 class="display-5 ">Hello {{name}}!</h1>
+        <p class="lead">Welcome to your dashboard. Get started with a new meal plan below, or check out the ones you have already created!</p>
       </div>
 
       <div class="row mt-2">
@@ -96,7 +86,7 @@
                 <div class="col">
                   <div class="form-container">
                     <div class="form-icon">
-                      <span><i class="fas fa-plus mt-4"></i></span>
+                      <span><i class="fas fa-plus icon-symbol"></i></span>
                     </div>
                     <form id="create-mealplan-form" class="form-horizontal">
                       <h3 class="title">Create a Meal Plan</h3>
@@ -140,7 +130,7 @@
                   <div class="col">
                     <div class="form-container">
                       <div class="form-icon">
-                        <span><i class="fa fa-file-alt mt-4"></i></span>
+                        <span><i class="fa fa-file-alt icon-symbol"></i></span>
                       </div>
                       <form class="form-horizontal">
                         <h3 class="title">My Meal Plans</h3>
