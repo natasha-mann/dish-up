@@ -1,16 +1,23 @@
 const handleSubmit = async (event) => {
   event.preventDefault();
+
   const email = $("#email").val();
   const password = $("#password").val();
+
+  const user = { email, password };
+
   const options = {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
     },
     redirect: "follow",
-    body: JSON.stringify(email, password),
+    body: JSON.stringify(user),
   };
+
   const response = await fetch("/auth/login", options);
+  console.log(response);
+
   if (response.status !== 200) {
     console.error("Failed login");
     $("#alert-div").empty();
