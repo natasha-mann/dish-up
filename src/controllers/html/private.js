@@ -1,7 +1,25 @@
 const { MealPlan, Day, Meal } = require("../../models");
 
-const renderDashboard = (req, res) => {
-  res.render("dashboard", {layout:"dashboard"});
+const renderDashboard = async (req, res) => {
+  try {
+    const { userId, firstName, lastName } = req.session;
+
+    const mealPlanData = await MealPlan.findAll({ where: { user_id: userId } });
+
+    const mealPlans = mealPlanData.map((mealPlan) =>
+      mealPlan.get({ plain: true })
+    );
+
+    return res.render("dashboard", {
+      layout: "dashboard",
+      firstName,
+      lastName,
+      mealPlans,
+    });
+  } catch (error) {
+    console.log(error.message);
+    return res.status(500).json({ error: "Failed to render" });
+  }
 };
 
 const renderMealPlan = async (req, res) => {
@@ -25,11 +43,22 @@ const renderMealPlan = async (req, res) => {
       return res.status(404).json({ error: "Meal plan does not exist" });
     }
 
-    res.status(200).render("mealPlan", mealPlan);
+    res.status(200).render("mealPlan", { layout: "dashboard", mealPlan });
   } catch (error) {
     console.error(error.message);
     return res.status(500).json({ error: "Failed to render meal plan." });
   }
 };
 
-module.exports = { renderDashboard, renderMealPlan };
+const renderAddMeal = (req, res) => {
+  try {
+    const { id } = req.params;
+    const { day, meal } = req.query;
+    res.status(200).render("addMeal", { layout: "dashboard", day, meal, id });
+  } catch (error) {
+    console.error(error.message);
+    return res.status(500).json({ error: "Failed to render add meal plan." });
+  }
+};
+
+module.exports = { renderDashboard, renderMealPlan, renderAddMeal };

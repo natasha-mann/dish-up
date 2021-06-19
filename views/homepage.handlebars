@@ -1,2 +1,5 @@
+{{#if isLoggedIn}}
+{{>private-navbar}}
+{{else}}
 {{>public-navbar}}
-<h1>Home page</h1>
+{{/if}}

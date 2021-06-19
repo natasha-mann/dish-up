@@ -54,3 +54,28 @@ body {
   background-color: #e9ecef;
   border-radius: 0.3rem;
 }
+
+.mealplan-info {
+  background-color: #ffc30fcb;
+}
+
+.table-cell {
+  height: 10rem;
+  width: 10%;
+}
+
+.add-btn {
+  background-color: var(--green);
+  border: none;
+  color: white;
+}
+
+.add-btn:hover {
+  background-color: #8cc73f8e;
+  border: none;
+}
+
+.add-btn:active {
+  background-color: #8cc73f8e;
+  border: none;
+}
