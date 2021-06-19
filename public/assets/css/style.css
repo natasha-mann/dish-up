@@ -79,3 +79,23 @@ body {
   background-color: #8cc73f8e;
   border: none;
 }
+
+.search-btn {
+  background-color: var(--yellow);
+  border: none;
+}
+
+.search-btn:hover, .search-btn:active {
+  background-color: rgb(212, 226, 19);
+  border: none;
+}
+
+.checkbox {
+  border-color:var(--green);
+  color: rgb(97, 151, 36);
+}
+
+.checkbox:hover, .checkbox:active, .checkbox:focus {
+  background-color:var(--green);
+  border-color: var(--green);
+}
