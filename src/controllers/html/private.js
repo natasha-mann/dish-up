@@ -53,12 +53,14 @@ const renderMealPlan = async (req, res) => {
 
 const renderAddMeal = (req, res) => {
   try {
-    const { id } = req.params;
+    const { id: mealPlanId } = req.params;
     const { day, meal } = req.query;
 
     const { searchInput, diet, intolerance } = req.body;
 
-    res.status(200).render("addMeal", { layout: "dashboard", day, meal, id });
+    res
+      .status(200)
+      .render("addMeal", { layout: "dashboard", day, meal, mealPlanId });
   } catch (error) {
     console.error(error.message);
     return res.status(500).json({ error: "Failed to render add meal plan." });
@@ -66,7 +68,8 @@ const renderAddMeal = (req, res) => {
 };
 
 const renderSearchResults = async (req, res) => {
-  const { id } = req.params;
+  const { id: mealPlanId } = req.params;
+
   const { day, meal } = req.query;
 
   const method = "GET";
@@ -95,7 +98,7 @@ const renderSearchResults = async (req, res) => {
 
   res
     .status(200)
-    .render("addMeal", { layout: "dashboard", meals, id, day, meal });
+    .render("addMeal", { layout: "dashboard", meals, mealPlanId, day, meal });
 };
 
 module.exports = {
