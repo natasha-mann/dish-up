@@ -40,4 +40,31 @@ const handleSubmit = async (event) => {
   // }
 };
 
+const handleCarouselClick = async (event) => {
+  const imageId = event.currentTarget.id;
+  const options = {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    redirect: "follow",
+    body: JSON.stringify({
+      imageId,
+    }),
+  };
+
+  const response = await fetch("/api/meals", options);
+  const carouselMeal = await response.json();
+
+  // if (response.status !== 200) {
+  //   console.error("Failed to render recipe");
+  // } else {
+  //   window.location.replace(
+  //     ``
+  //   );
+  // }
+};
+
+$(".carousel-item").click(handleCarouselClick);
+
 $("#meal-search").submit(handleSubmit);
