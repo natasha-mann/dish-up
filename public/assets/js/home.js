@@ -66,5 +66,4 @@ const handleCarouselClick = async (event) => {
 };
 
 $(".carousel-item").click(handleCarouselClick);
-
 $("#meal-search").submit(handleSubmit);
