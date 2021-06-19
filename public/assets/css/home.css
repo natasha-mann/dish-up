@@ -1,0 +1,125 @@
+:root {
+  --orange: #f36523;
+  --green: #8dc73f;
+  --blue: #00adef;
+  --yellow: #ffc20f;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  background-image: url("../images/dishup-background-landing-page.png");
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+#home-navbar {
+  background-color: var(--orange) !important;
+  color: white !important;
+}
+
+.navbar-text {
+  color: white !important;
+}
+
+.welcome-card {
+  background-color: var(--orange);
+  color: white;
+}
+
+.dashboard-card {
+  height: 80%;
+  color: white;
+  background-color: #f3652388 !important;
+}
+
+.dashboard-btn {
+  background-color: var(--yellow);
+}
+
+.dashboard-btn:hover {
+  background-color: #ffc30f5b;
+}
+
+.jumbotron {
+  padding: 1.5rem 1rem;
+  margin-bottom: 1rem;
+  background-color: #e9ecef;
+  border-radius: 0.3rem;
+}
+
+.mealplan-info {
+  background-color: #ffc30fcb;
+}
+
+.table-cell {
+  height: 10rem;
+  width: 10%;
+}
+
+.add-btn {
+  background-color: var(--green);
+  border: none;
+  color: white;
+}
+
+.add-btn:hover {
+  background-color: #8cc73f8e;
+  border: none;
+}
+
+.add-btn:active {
+  background-color: #8cc73f8e;
+  border: none;
+}
+
+.search-title {
+  color: var(--orange);
+}
+
+.search-btn {
+  background-color: var(--yellow);
+  border: none;
+}
+
+.search-btn:hover,
+.search-btn:active {
+  background-color: rgb(212, 226, 19);
+  border: none;
+}
+
+.carousel-heading {
+  color: black;
+}
+
+.carousel-description {
+  color: black;
+}
+
+.carousel-image {
+  height: 70%;
+  opacity: 0.8;
+}
+
+/* .carousel-home {
+  height: 75% !important;
+} */
+
+/* .checkbox {
+    border-color: var(--green);
+    color: rgb(97, 151, 36);
+  }
+  
+  .checkbox:hover,
+  .checkbox:active,
+  .checkbox:focus {
+    background-color: var(--green);
+    border-color: var(--green);
+  } */
