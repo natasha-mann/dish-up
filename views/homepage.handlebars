@@ -252,54 +252,52 @@
                 ></button>
               </div>
               <div class="carousel-inner carousel-home">
-                <div class="carousel-item active" id="652610">
+                {{#if firstMeal}}
+                  <div class="carousel-item active" id="{{firstMeal.spoonacular_id}}">
                   <img
-                    src="/assets/images/meal-carousel-breakfast-image.jpeg"
+                    src="{{firstMeal.image}}"
                     class="d-block w-100 img-fluid carousel-image"
-                    alt="..."
+                    alt="{{firstMeal.title}}"
                     height="70"
                   />
                   <div class="card-body text-center">
                     <h5 class="carousel-heading">
-                      Poached eggs & steamed veggies
+                      {{firstMeal.title}}
                     </h5>
-                    <p class="carousel-description">
-                      Poached eggs and avocado on a bed of steamed vegetables
-                      and a side of sourdough bread.
-                    </p>
+                    <div class="d-inline-block">
+                    <div>
+                      Ready in: {{firstMeal.ready_in_minutes}} minutes
+                    </div>
+                    <div>
+                      Servings: {{firstMeal.servings}}
+                    </div>
+                    </div>
                   </div>
                 </div>
-                <div class="carousel-item" id="660101">
+                {{/if}}
+                {{#each meals}}
+                <div class="carousel-item" id="{{spoonacular_id}}">
                   <img
-                    src="/assets/images/meal-carousel-card-first-image.png"
+                    src="{{image}}"
                     class="d-block w-100 img-fluid carousel-image"
-                    alt="..."
+                    alt="{{title}}"
                     height="70"
                   />
                   <div class="card-body text-center">
-                    <h5 class="carousel-heading">Beef Ramen</h5>
-                    <p class="carousel-description">
-                      Beef ramen with chunky udon noodles in a sea of soy sauce
-                      with a leafy vegetable topping.
-                    </p>
+                    <h5 class="carousel-heading">
+                      {{title}}
+                    </h5>
+                    <div class="d-inline-block">
+                    <div>
+                      Ready in: {{ready_in_minutes}} minutes
+                    </div>
+                    <div>
+                      Servings: {{servings}}
+                    </div>
+                    </div>
                   </div>
                 </div>
-                <div class="carousel-item" id="715494">
-                  <img
-                    src="/assets/images/meal-carousel-card-image.png"
-                    class="d-block w-100 img-fluid carousel-image"
-                    alt="..."
-                    height="70"
-                  />
-                  <!-- <div class="carousel-caption d-none d-md-block"></div> -->
-                  <div class="card-body text-center">
-                    <h5 class="carousel-heading">Three Bean Quinoa</h5>
-                    <p class="carousel-description">
-                      A medley of pinto beans and black turtle beans with a side
-                      of quinoa and green beans.
-                    </p>
-                  </div>
-                </div>
+                {{/each}}
               </div>
               <button
                 class="carousel-control-prev"

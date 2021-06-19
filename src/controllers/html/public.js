@@ -15,11 +15,16 @@ const renderHomePage = async (req, res) => {
   try {
     const { isLoggedIn } = req.session;
     const mealData = await Meal.findAll();
-    const meals = mealData.map((meal) => {
+    const mealsArray = mealData.map((meal) => {
       return meal.get({ plain: true });
     });
 
-    res.render("homepage", { isLoggedIn, meals });
+    const firstMeal = mealsArray[0];
+    const meals = mealsArray.slice(1);
+
+    console.log(firstMeal, meals);
+
+    res.render("homepage", { isLoggedIn, firstMeal, meals });
   } catch (error) {
     console.log(error.message);
     res.status(500).json({ error: "Failed to render" });

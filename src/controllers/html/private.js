@@ -75,9 +75,19 @@ const renderSearchResults = async (req, res) => {
     .render("addMeal", { layout: "dashboard", mealPlanId, day, meal });
 };
 
+const renderRecipe = async (req, res) => {
+  try {
+    res.render("recipe", { layout: "recipe" });
+  } catch {
+    console.log(error.message);
+    return res.status(500).json({ error: "Failed to render" });
+  }
+};
+
 module.exports = {
   renderDashboard,
   renderMealPlan,
   renderAddMeal,
   renderSearchResults,
+  renderRecipe,
 };

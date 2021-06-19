@@ -2,9 +2,9 @@ const { Router } = require("express");
 const {
   renderLandingPage,
   renderHomePage,
+  renderSearchResults,
   renderLogin,
   renderSignup,
-  renderSearchResults,
 } = require("../../controllers/html/public");
 const router = Router();
 

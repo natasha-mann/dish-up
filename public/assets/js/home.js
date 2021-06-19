@@ -29,7 +29,6 @@ const handleSubmit = async (event) => {
 
   const response = await fetch("/api/meals", options);
   const meals = await response.json();
-  console.log(meals);
 
   // if (response.status !== 200) {
   //   console.error("Failed to render search results");
@@ -42,6 +41,7 @@ const handleSubmit = async (event) => {
 
 const handleCarouselClick = async (event) => {
   const imageId = event.currentTarget.id;
+
   const options = {
     method: "POST",
     headers: {
@@ -53,16 +53,14 @@ const handleCarouselClick = async (event) => {
     }),
   };
 
-  const response = await fetch("/api/meals", options);
+  const response = await fetch("/api/meals/recipe", options);
   const carouselMeal = await response.json();
 
-  // if (response.status !== 200) {
-  //   console.error("Failed to render recipe");
-  // } else {
-  //   window.location.replace(
-  //     ``
-  //   );
-  // }
+  if (response.status !== 200) {
+    console.error("Failed to render recipe");
+  } else {
+    window.location.replace(`/recipe`);
+  }
 };
 
 $(".carousel-item").click(handleCarouselClick);
