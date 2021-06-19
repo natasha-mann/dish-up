@@ -1,2 +1,215 @@
 {{>private-navbar}}
-<h1>Add Meal</h1>
+
+
+  <div class="container-fluid bg-light mt-5">
+      <div class="p-4">
+        <h1 class="text-center search-title">{{day}}- {{meal}}</h1>
+        <div class="d-flex flex-wrap flex-column flex-outer">
+          <input
+            class="form-control form-control-lg mb-3"
+            type="text"
+            placeholder="Search for tomatoes.."
+            aria-label=".form-control-lg example"
+          />
+
+          <div class="text-center">Select dietary requirements</div>
+          <div
+            class="btn-group mb-3 flex-wrap"
+            role="group"
+            aria-label="Basic checkbox toggle button group"
+          >
+            <input
+              type="checkbox"
+              class="btn-check"
+              id="a"
+              autocomplete="off"
+            />
+            <label class="btn btn-outline-success checkbox" for="a"
+              >Gluten Free</label
+            >
+            <input
+              type="checkbox"
+              class="btn-check"
+              id="b"
+              autocomplete="off"
+            />
+            <label class="btn btn-outline-success checkbox" for="b"
+              >Ketogenic</label
+            >
+            <input
+              type="checkbox"
+              class="btn-check"
+              id="c"
+              autocomplete="off"
+            />
+            <label class="btn btn-outline-success checkbox" for="c"
+              >Vegetarian</label
+            >
+            <input
+              type="checkbox"
+              class="btn-check"
+              id="d"
+              autocomplete="off"
+            />
+            <label class="btn btn-outline-success checkbox" for="d"
+              >Lacto-Vegetarian</label
+            >
+            <input
+              type="checkbox"
+              class="btn-check"
+              id="e"
+              autocomplete="off"
+            />
+            <label class="btn btn-outline-success checkbox" for="e"
+              >Ovo-Vegetarian</label
+            >
+            <input
+              type="checkbox"
+              class="btn-check"
+              id="f"
+              autocomplete="off"
+            />
+            <label class="btn btn-outline-success checkbox" for="f"
+              >Vegan</label
+            >
+            <input
+              type="checkbox"
+              class="btn-check"
+              id="g"
+              autocomplete="off"
+            />
+            <label class="btn btn-outline-success checkbox" for="g"
+              >Pescetarian</label
+            >
+            <input
+              type="checkbox"
+              class="btn-check"
+              id="h"
+              autocomplete="off"
+            />
+            <label class="btn btn-outline-success checkbox" for="h"
+              >Paleo</label
+            >
+            <input
+              type="checkbox"
+              class="btn-check"
+              id="i"
+              autocomplete="off"
+            />
+            <label class="btn btn-outline-success checkbox" for="i"
+              >Primal</label
+            >
+            <input
+              type="checkbox"
+              class="btn-check"
+              id="j"
+              autocomplete="off"
+            />
+            <label class="btn btn-outline-success checkbox" for="j"
+              >Whole30</label
+            >
+          </div>
+
+          <div class="text-center">Any intolerances?</div>
+          <div
+            class="btn-group mb-3 flex-wrap"
+            role="group"
+            aria-label="Basic checkbox toggle button group"
+          >
+            <input
+              type="checkbox"
+              class="btn-check"
+              id="1"
+              autocomplete="off"
+            />
+            <label class="btn btn-outline-danger" for="1">Dairy</label>
+            <input
+              type="checkbox"
+              class="btn-check"
+              id="2"
+              autocomplete="off"
+            />
+            <label class="btn btn-outline-danger" for="2">Egg</label>
+            <input
+              type="checkbox"
+              class="btn-check"
+              id="3"
+              autocomplete="off"
+            />
+            <label class="btn btn-outline-danger" for="3">Gluten</label>
+            <input
+              type="checkbox"
+              class="btn-check"
+              id="4"
+              autocomplete="off"
+            />
+            <label class="btn btn-outline-danger" for="4">Grain</label>
+            <input
+              type="checkbox"
+              class="btn-check"
+              id="5"
+              autocomplete="off"
+            />
+            <label class="btn btn-outline-danger" for="5">Peanut</label>
+            <input
+              type="checkbox"
+              class="btn-check"
+              id="6"
+              autocomplete="off"
+            />
+            <label class="btn btn-outline-danger" for="6">Seafood</label>
+            <input
+              type="checkbox"
+              class="btn-check"
+              id="7"
+              autocomplete="off"
+            />
+            <label class="btn btn-outline-danger" for="7">Sesame</label>
+            <input
+              type="checkbox"
+              class="btn-check"
+              id="8"
+              autocomplete="off"
+            />
+            <label class="btn btn-outline-danger" for="8">Shellfish</label>
+            <input
+              type="checkbox"
+              class="btn-check"
+              id="9"
+              autocomplete="off"
+            />
+            <label class="btn btn-outline-danger" for="9">Soy</label>
+            <input
+              type="checkbox"
+              class="btn-check"
+              id="10"
+              autocomplete="off"
+            />
+            <label class="btn btn-outline-danger" for="10">Sulfite</label>
+            <input
+              type="checkbox"
+              class="btn-check"
+              id="11"
+              autocomplete="off"
+            />
+            <label class="btn btn-outline-danger" for="11">Tree</label>
+            <input
+              type="checkbox"
+              class="btn-check"
+              id="12"
+              autocomplete="off"
+            />
+            <label class="btn btn-outline-danger" for="12">Wheat</label>
+          </div>
+          <button type="button" class="btn btn-primary btn-lg search-btn">
+            Search
+          </button>
+        </div>
+      </div>
+      <div class="search-results mx-5 mt-4">
+        <h3 class="text-center search-title mb-4">Results</h3>
+        <div class="d-flex flex-wrap justify-content-center">
+         {{>meal-card}}
+        </div>
+      </div>
+    </div>
