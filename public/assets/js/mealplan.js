@@ -18,7 +18,11 @@ const handleClick = async (event) => {
     `/mealplan/${id}/add?day=${day}&meal=${meal}`,
     options
   );
-  console.log(response);
+  if (response.status !== 200) {
+    console.error("Failed to add meal");
+  } else {
+    window.location.replace(`/mealplan/${id}/add?day=${day}&meal=${meal}`);
+  }
 };
 
 $('[name="mealPlanTable"]').click(handleClick);
