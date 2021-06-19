@@ -7,6 +7,7 @@
 
   <div class="container-fluid bg-light mt-5">
       <div class="p-4">
+        <h1>Find Foods...</h1>
         <form id="meal-search"class="d-flex flex-wrap flex-column">
           <input
             class="form-control form-control-lg mb-3"
@@ -211,4 +212,113 @@
             Search
           </button>
         </form>
+              <div class="row justify-content-center">
+        <h2>Recently Added</h2>
+        <div class="col-lg-8 col-sm-12 carousel-container">
+          <div class="card m-3">
+            <div
+              id="carouselExampleCaptions"
+              class="carousel slide"
+              data-bs-ride="carousel"
+            >
+              <div class="carousel-indicators">
+                <button
+                  type="button"
+                  data-bs-target="#carouselExampleCaptions"
+                  data-bs-slide-to="0"
+                  class="active"
+                  aria-current="true"
+                  aria-label="Slide 1"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#carouselExampleCaptions"
+                  data-bs-slide-to="1"
+                  aria-label="Slide 2"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#carouselExampleCaptions"
+                  data-bs-slide-to="2"
+                  aria-label="Slide 3"
+                ></button>
+              </div>
+              <div class="carousel-inner carousel-home">
+                <div class="carousel-item active" id="652610">
+                  <img
+                    src="/assets/images/meal-carousel-breakfast-image.jpeg"
+                    class="d-block w-100 img-fluid carousel-image"
+                    alt="..."
+                    height="70"
+                  />
+                  <div class="card-body text-center">
+                    <h5 class="carousel-heading">
+                      Poached eggs & steamed veggies
+                    </h5>
+                    <p class="carousel-description">
+                      Poached eggs and avocado on a bed of steamed vegetables
+                      and a side of sourdough bread.
+                    </p>
+                  </div>
+                </div>
+                <div class="carousel-item" id="660101">
+                  <img
+                    src="/assets/images/meal-carousel-card-first-image.png"
+                    class="d-block w-100 img-fluid carousel-image"
+                    alt="..."
+                    height="70"
+                  />
+                  <div class="card-body text-center">
+                    <h5 class="carousel-heading">Beef Ramen</h5>
+                    <p class="carousel-description">
+                      Beef ramen with chunky udon noodles in a sea of soy sauce
+                      with a leafy vegetable topping.
+                    </p>
+                  </div>
+                </div>
+                <div class="carousel-item" id="715494">
+                  <img
+                    src="/assets/images/meal-carousel-card-image.png"
+                    class="d-block w-100 img-fluid carousel-image"
+                    alt="..."
+                    height="70"
+                  />
+                  <!-- <div class="carousel-caption d-none d-md-block"></div> -->
+                  <div class="card-body text-center">
+                    <h5 class="carousel-heading">Three Bean Quinoa</h5>
+                    <p class="carousel-description">
+                      A medley of pinto beans and black turtle beans with a side
+                      of quinoa and green beans.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="prev"
+              >
+                <span
+                  class="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="next"
+              >
+                <span
+                  class="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
       </div>
