@@ -66,6 +66,9 @@ const renderAddMeal = (req, res) => {
 };
 
 const renderSearchResults = async (req, res) => {
+  const { id } = req.params;
+  const { day, meal } = req.query;
+
   const method = "GET";
   const url =
     "https://api.spoonacular.com/recipes/complexSearch?apiKey=afcf068a6e5d4679a7bf651d36da89ce&query=salmon,tomatoes&number=5&addRecipeNutrition=true";
@@ -89,8 +92,10 @@ const renderSearchResults = async (req, res) => {
       servings,
     };
   });
-  console.log(meals);
-  res.status(200).render("addMeal", { layout: "dashboard", meals });
+
+  res
+    .status(200)
+    .render("addMeal", { layout: "dashboard", meals, id, day, meal });
 };
 
 module.exports = {
