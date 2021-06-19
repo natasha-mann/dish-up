@@ -29,6 +29,11 @@ body {
   color: white !important;
 }
 
+h1 {
+  color: var(--green);
+  text-align: center;
+}
+
 .welcome-card {
   background-color: var(--orange);
   color: white;
@@ -95,7 +100,27 @@ body {
   border: none;
 }
 
-.carousel-heading {
+h2 {
+  text-align: center;
+  color: var(--orange);
+}
+
+.carousel-container {
+  max-width: 450px;
+}
+
+.carousel-inner {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  max-width: 450px;
+}
+
+.carousel-item {
+  max-height: 600px;
+  max-width: 450px;
+}
+
+*/ .carousel-heading {
   color: black;
 }
 
@@ -104,8 +129,9 @@ body {
 }
 
 .carousel-image {
-  height: 70%;
   opacity: 0.8;
+  max-height: 300px;
+  /* object-fit: cover; */
 }
 
 /* .carousel-home {
