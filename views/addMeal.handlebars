@@ -3,109 +3,111 @@
 
   <div class="container-fluid bg-light mt-5">
       <div class="p-4">
-        <h1 class="text-center search-title">{{day}}- {{meal}}</h1>
-        <div class="d-flex flex-wrap flex-column flex-outer">
+        <h1 id="search-title" data-meal="{{meal}}" data-day="{{day}}" data-id="{{mealPlanId}}" class="text-center search-title">{{day}} - {{meal}}</h1>
+        <form id="meal-search"class="d-flex flex-wrap flex-column">
           <input
             class="form-control form-control-lg mb-3"
             type="text"
             placeholder="Search for tomatoes.."
             aria-label=".form-control-lg example"
+            id="search-input"
           />
 
           <div class="text-center">Select dietary requirements</div>
           <div
             class="btn-group mb-3 flex-wrap"
+            id="diet-input"
             role="group"
             aria-label="Basic checkbox toggle button group"
           >
             <input
               type="checkbox"
               class="btn-check"
-              id="a"
+              id="glutenFree"
               autocomplete="off"
             />
-            <label class="btn btn-outline-success checkbox" for="a"
+            <label class="btn btn-outline-success checkbox" for="glutenFree"
               >Gluten Free</label
             >
             <input
               type="checkbox"
               class="btn-check"
-              id="b"
+              id="ketogenic"
               autocomplete="off"
             />
-            <label class="btn btn-outline-success checkbox" for="b"
+            <label class="btn btn-outline-success checkbox" for="ketogenic"
               >Ketogenic</label
             >
             <input
               type="checkbox"
               class="btn-check"
-              id="c"
+              id="vegetarian"
               autocomplete="off"
             />
-            <label class="btn btn-outline-success checkbox" for="c"
+            <label class="btn btn-outline-success checkbox" for="vegetarian"
               >Vegetarian</label
             >
             <input
               type="checkbox"
               class="btn-check"
-              id="d"
+              id="lacto-vegetarian"
               autocomplete="off"
             />
-            <label class="btn btn-outline-success checkbox" for="d"
+            <label class="btn btn-outline-success checkbox" for="lacto-vegetarian"
               >Lacto-Vegetarian</label
             >
             <input
               type="checkbox"
               class="btn-check"
-              id="e"
+              id="ovo-vegetarian"
               autocomplete="off"
             />
-            <label class="btn btn-outline-success checkbox" for="e"
+            <label class="btn btn-outline-success checkbox" for="ovo-vegetarian"
               >Ovo-Vegetarian</label
             >
             <input
               type="checkbox"
               class="btn-check"
-              id="f"
+              id="vegan"
               autocomplete="off"
             />
-            <label class="btn btn-outline-success checkbox" for="f"
+            <label class="btn btn-outline-success checkbox" for="vegan"
               >Vegan</label
             >
             <input
               type="checkbox"
               class="btn-check"
-              id="g"
+              id="pescetarian"
               autocomplete="off"
             />
-            <label class="btn btn-outline-success checkbox" for="g"
+            <label class="btn btn-outline-success checkbox" for="pescetarian"
               >Pescetarian</label
             >
             <input
               type="checkbox"
               class="btn-check"
-              id="h"
+              id="paleo"
               autocomplete="off"
             />
-            <label class="btn btn-outline-success checkbox" for="h"
+            <label class="btn btn-outline-success checkbox" for="paleo"
               >Paleo</label
             >
             <input
               type="checkbox"
               class="btn-check"
-              id="i"
+              id="primal"
               autocomplete="off"
             />
-            <label class="btn btn-outline-success checkbox" for="i"
+            <label class="btn btn-outline-success checkbox" for="primal"
               >Primal</label
             >
             <input
               type="checkbox"
               class="btn-check"
-              id="j"
+              id="whole30"
               autocomplete="off"
             />
-            <label class="btn btn-outline-success checkbox" for="j"
+            <label class="btn btn-outline-success checkbox" for="whole30"
               >Whole30</label
             >
           </div>
@@ -201,15 +203,21 @@
             />
             <label class="btn btn-outline-danger" for="12">Wheat</label>
           </div>
-          <button type="button" class="btn btn-primary btn-lg search-btn">
+          <button type="submit" class="btn btn-primary btn-lg search-btn">
             Search
           </button>
-        </div>
+        </form>
       </div>
-      <div class="search-results mx-5 mt-4">
+     
+      {{#if meals}}
+       <div class="search-results mx-5 mt-4">
         <h3 class="text-center search-title mb-4">Results</h3>
         <div class="d-flex flex-wrap justify-content-center">
+           {{#each meals}}
          {{>meal-card}}
+         {{/each}}
         </div>
       </div>
+         
+         {{/if}}
     </div>
