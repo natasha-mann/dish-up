@@ -1,0 +1,390 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://kit.fontawesome.com/ae0443040c.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="../public/assets/css/style.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="../public/assets/css/forms.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <title>Dish Up</title>
+  </head>
+
+  <body>
+    <nav
+      id="home-navbar"
+      class="
+        navbar navbar-expand-lg navbar-light
+        bg-light
+        d-flex
+        justify-content-center
+        text-light
+      "
+    >
+      <div class="container-fluid d-flex">
+        <a class="navbar-brand px-3 text-light" href="/"
+          ><img height="50" src="../public/assets/images/dishup-logo.png"
+        /></a>
+        <button
+          class="navbar-toggler text-light"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarTogglerDemo02"
+          aria-controls="navbarTogglerDemo02"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon text-light"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse flex-grow-0"
+          id="navbarTogglerDemo02"
+        >
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 px-3 text-light">
+            <li class="nav-item px-4">
+              <a
+                class="nav-link active text-light"
+                aria-current="page"
+                href="/home"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item px-2 mx-2">
+              <a class="nav-link text-light" href="/dashboard">Dashboard</a>
+            </li>
+
+            <button type="button" class="btn btn-outline-light" id="logout-btn">
+              Logout
+            </button>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container-fluid bg-light mt-5">
+      <div class="p-4">
+        <h1 class="text-center search-title">Monday - Breakfast</h1>
+        <div class="d-flex flex-wrap flex-column flex-outer">
+          <input
+            class="form-control form-control-lg mb-3"
+            type="text"
+            placeholder="Search for tomatoes.."
+            aria-label=".form-control-lg example"
+          />
+
+          <div class="text-center">Select dietary requirements</div>
+          <div
+            class="btn-group mb-3 flex-wrap"
+            role="group"
+            aria-label="Basic checkbox toggle button group"
+          >
+            <input
+              type="checkbox"
+              class="btn-check"
+              id="a"
+              autocomplete="off"
+            />
+            <label class="btn btn-outline-success checkbox" for="a"
+              >Gluten Free</label
+            >
+            <input
+              type="checkbox"
+              class="btn-check"
+              id="b"
+              autocomplete="off"
+            />
+            <label class="btn btn-outline-success checkbox" for="b"
+              >Ketogenic</label
+            >
+            <input
+              type="checkbox"
+              class="btn-check"
+              id="c"
+              autocomplete="off"
+            />
+            <label class="btn btn-outline-success checkbox" for="c"
+              >Vegetarian</label
+            >
+            <input
+              type="checkbox"
+              class="btn-check"
+              id="d"
+              autocomplete="off"
+            />
+            <label class="btn btn-outline-success checkbox" for="d"
+              >Lacto-Vegetarian</label
+            >
+            <input
+              type="checkbox"
+              class="btn-check"
+              id="e"
+              autocomplete="off"
+            />
+            <label class="btn btn-outline-success checkbox" for="e"
+              >Ovo-Vegetarian</label
+            >
+            <input
+              type="checkbox"
+              class="btn-check"
+              id="f"
+              autocomplete="off"
+            />
+            <label class="btn btn-outline-success checkbox" for="f"
+              >Vegan</label
+            >
+            <input
+              type="checkbox"
+              class="btn-check"
+              id="g"
+              autocomplete="off"
+            />
+            <label class="btn btn-outline-success checkbox" for="g"
+              >Pescetarian</label
+            >
+            <input
+              type="checkbox"
+              class="btn-check"
+              id="h"
+              autocomplete="off"
+            />
+            <label class="btn btn-outline-success checkbox" for="h"
+              >Paleo</label
+            >
+            <input
+              type="checkbox"
+              class="btn-check"
+              id="i"
+              autocomplete="off"
+            />
+            <label class="btn btn-outline-success checkbox" for="i"
+              >Primal</label
+            >
+            <input
+              type="checkbox"
+              class="btn-check"
+              id="j"
+              autocomplete="off"
+            />
+            <label class="btn btn-outline-success checkbox" for="j"
+              >Whole30</label
+            >
+          </div>
+
+          <div class="text-center">Any intolerances?</div>
+          <div
+            class="btn-group mb-3 flex-wrap"
+            role="group"
+            aria-label="Basic checkbox toggle button group"
+          >
+            <input
+              type="checkbox"
+              class="btn-check"
+              id="1"
+              autocomplete="off"
+            />
+            <label class="btn btn-outline-danger" for="1">Dairy</label>
+            <input
+              type="checkbox"
+              class="btn-check"
+              id="2"
+              autocomplete="off"
+            />
+            <label class="btn btn-outline-danger" for="2">Egg</label>
+            <input
+              type="checkbox"
+              class="btn-check"
+              id="3"
+              autocomplete="off"
+            />
+            <label class="btn btn-outline-danger" for="3">Gluten</label>
+            <input
+              type="checkbox"
+              class="btn-check"
+              id="4"
+              autocomplete="off"
+            />
+            <label class="btn btn-outline-danger" for="4">Grain</label>
+            <input
+              type="checkbox"
+              class="btn-check"
+              id="5"
+              autocomplete="off"
+            />
+            <label class="btn btn-outline-danger" for="5">Peanut</label>
+            <input
+              type="checkbox"
+              class="btn-check"
+              id="6"
+              autocomplete="off"
+            />
+            <label class="btn btn-outline-danger" for="6">Seafood</label>
+            <input
+              type="checkbox"
+              class="btn-check"
+              id="7"
+              autocomplete="off"
+            />
+            <label class="btn btn-outline-danger" for="7">Sesame</label>
+            <input
+              type="checkbox"
+              class="btn-check"
+              id="8"
+              autocomplete="off"
+            />
+            <label class="btn btn-outline-danger" for="8">Shellfish</label>
+            <input
+              type="checkbox"
+              class="btn-check"
+              id="9"
+              autocomplete="off"
+            />
+            <label class="btn btn-outline-danger" for="9">Soy</label>
+            <input
+              type="checkbox"
+              class="btn-check"
+              id="10"
+              autocomplete="off"
+            />
+            <label class="btn btn-outline-danger" for="10">Sulfite</label>
+            <input
+              type="checkbox"
+              class="btn-check"
+              id="11"
+              autocomplete="off"
+            />
+            <label class="btn btn-outline-danger" for="11">Tree</label>
+            <input
+              type="checkbox"
+              class="btn-check"
+              id="12"
+              autocomplete="off"
+            />
+            <label class="btn btn-outline-danger" for="12">Wheat</label>
+          </div>
+          <button type="button" class="btn btn-primary btn-lg search-btn">
+            Search
+          </button>
+        </div>
+      </div>
+      <div class="search-results mx-5 mt-4">
+        <h3 class="text-center search-title mb-4">Results</h3>
+        <div class="d-flex flex-wrap justify-content-center">
+          <div
+            class="card shadow mb-5 mx-4 bg-body rounded"
+            style="width: 18rem"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8Zm9vZHxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60"
+              class="card-img-top"
+              alt="Meal"
+            />
+            <div class="card-body text-center">
+              <h5 class="card-title search-title">
+                Roasted red peppers and tomatoes salad
+              </h5>
+              <div class="card-text text-start">
+                <div>Ready in: 45 minutes</div>
+                <div>Servings: 2</div>
+              </div>
+              <a
+                href="/recipes/${meal_id}"
+                class="btn btn-primary view-btn mt-3"
+                >View</a
+              >
+              <a
+                href="/mealplan/${mealplan_id}"
+                class="btn btn-primary add-btn mt-3"
+                >Add</a
+              >
+            </div>
+          </div>
+          <div
+            class="card shadow mb-5 mx-4 bg-body rounded"
+            style="width: 18rem"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8Zm9vZHxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60"
+              class="card-img-top"
+              alt="Meal"
+            />
+            <div class="card-body text-center">
+              <h5 class="card-title search-title">
+                Roasted red peppers and tomatoes salad
+              </h5>
+              <div class="card-text text-start">
+                <div>Ready in: 45 minutes</div>
+                <div>Servings: 2</div>
+              </div>
+              <a
+                href="/recipes/${meal_id}"
+                class="btn btn-primary view-btn mt-3"
+                >View</a
+              >
+              <a
+                href="/mealplan/${mealplan_id}"
+                class="btn btn-primary add-btn mt-3"
+                >Add</a
+              >
+            </div>
+          </div>
+          <div
+            class="card shadow mb-5 mx-4 bg-body rounded"
+            style="width: 18rem"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8Zm9vZHxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60"
+              class="card-img-top"
+              alt="Meal"
+            />
+            <div class="card-body text-center">
+              <h5 class="card-title search-title">
+                Roasted red peppers and tomatoes salad
+              </h5>
+              <div class="card-text text-start">
+                <div>Ready in: 45 minutes</div>
+                <div>Servings: 2</div>
+              </div>
+              <a
+                href="/recipes/${meal_id}"
+                class="btn btn-primary view-btn mt-3"
+                >View</a
+              >
+              <a
+                href="/mealplan/${mealplan_id}"
+                class="btn btn-primary add-btn mt-3"
+                >Add</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+      integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+  </body>
+</html>
