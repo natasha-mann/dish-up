@@ -70,37 +70,9 @@ const renderSearchResults = async (req, res) => {
 
   const { day, meal } = req.query;
 
-  const { searchInput, diet, intolerance } = req.body;
-
-  const url = `https://api.spoonacular.com/recipes/complexSearch?apiKey=aef1629a564f4778a914c956f90dbdb5&query=${searchInput}&number=10&addRecipeNutrition=true&diet=${diet}&intolerances=${intolerance}`;
-
-  const options = {
-    method: "GET",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    redirect: "follow",
-  };
-
-  const response = await fetch(url, options);
-  const data = await response.json();
-  const mealsArray = data.results;
-
-  const meals = mealsArray.map((each) => {
-    const { id, title, image, readyInMinutes, servings } = each;
-
-    return {
-      id,
-      title,
-      image,
-      readyInMinutes,
-      servings,
-    };
-  });
-
   res
     .status(200)
-    .render("addMeal", { layout: "dashboard", meals, mealPlanId, day, meal });
+    .render("addMeal", { layout: "dashboard", mealPlanId, day, meal });
 };
 
 module.exports = {

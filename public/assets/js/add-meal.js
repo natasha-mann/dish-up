@@ -33,13 +33,11 @@ const handleSubmit = async (event) => {
     }),
   };
 
-  const response = await fetch(
-    `/mealplan/${id}/add/results?day=${day}&meal=${meal}`,
-    options
-  );
+  const response = await fetch("/api/meals", options);
+  const meals = await response.json();
 
   if (response.status !== 200) {
-    console.error("Failed to search");
+    console.error("Failed to render search results");
   } else {
     window.location.replace(
       `/mealplan/${id}/add/results?day=${day}&meal=${meal}`

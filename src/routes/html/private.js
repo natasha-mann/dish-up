@@ -13,6 +13,6 @@ router.get("/mealplan/:id", renderMealPlan);
 
 router.get("/mealplan/:id/add", renderAddMeal);
 
-router.post("/mealplan/:id/add/results", renderSearchResults);
+router.get("/mealplan/:id/add/results", renderSearchResults);
 
 module.exports = router;
