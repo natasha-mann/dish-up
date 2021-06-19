@@ -56,8 +56,6 @@ const renderAddMeal = (req, res) => {
     const { id: mealPlanId } = req.params;
     const { day, meal } = req.query;
 
-    const { searchInput, diet, intolerance } = req.body;
-
     res
       .status(200)
       .render("addMeal", { layout: "dashboard", day, meal, mealPlanId });
@@ -72,15 +70,19 @@ const renderSearchResults = async (req, res) => {
 
   const { day, meal } = req.query;
 
-  const method = "GET";
-  const url =
-    "https://api.spoonacular.com/recipes/complexSearch?apiKey=afcf068a6e5d4679a7bf651d36da89ce&query=salmon,tomatoes&number=5&addRecipeNutrition=true";
-  const headers = {
-    // apiKey: "afcf068a6e5d4679a7bf651d36da89ce",
-    "Content-Type": "application/json",
+  const { searchInput, diet, intolerance } = req.body;
+
+  const url = `https://api.spoonacular.com/recipes/complexSearch?apiKey=aef1629a564f4778a914c956f90dbdb5&query=${searchInput}&number=10&addRecipeNutrition=true&diet=${diet}&intolerances=${intolerance}`;
+
+  const options = {
+    method: "GET",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    redirect: "follow",
   };
 
-  const response = await fetch(url, headers, method);
+  const response = await fetch(url, options);
   const data = await response.json();
   const mealsArray = data.results;
 
