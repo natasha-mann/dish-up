@@ -52,8 +52,9 @@ const renderMealPlan = async (req, res) => {
 
 const renderAddMeal = (req, res) => {
   try {
-    const { day, meal } = req.params;
-    res.status(200).render("addMeal", { layout: "dashboard", day, meal });
+    const { id } = req.params;
+    const { day, meal } = req.query;
+    res.status(200).render("addMeal", { layout: "dashboard", day, meal, id });
   } catch (error) {
     console.error(error.message);
     return res.status(500).json({ error: "Failed to render add meal plan." });
