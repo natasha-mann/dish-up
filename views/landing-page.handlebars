@@ -1,1 +1,5 @@
-{{> public-navbar}}
+{{#if isLoggedIn}}
+{{>private-navbar}}
+{{else}}
+{{>public-navbar}}
+{{/if}}
