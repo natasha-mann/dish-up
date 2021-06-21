@@ -42,6 +42,9 @@ const isSunday = (days, options) => {
   return options.fn(result[0]);
 };
 
+const toUpperCase = (string) =>
+  string.charAt(0).toUpperCase() + string.slice(1);
+
 module.exports = {
   isMonday,
   isTuesday,
@@ -50,4 +53,5 @@ module.exports = {
   isFriday,
   isSaturday,
   isSunday,
+  toUpperCase,
 };
