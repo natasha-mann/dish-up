@@ -4,7 +4,7 @@
 
 <div class="text-center my-3 pt-2 pb-1 mealplan-info">
   <h1>{{mealPlan.title}}</h1>
-  <p>{{mealPlan.description}}</p>
+  <p>{{mealPlan.description}}</p> 
 </div>
   
   <div class="table-responsive">
@@ -30,7 +30,15 @@
 {{#if breakfast}}
   <div class="card mealplan-card">
     <img src="{{breakfast.image}}" class="card-img-top" />
-    <p class="small mt-2">{{breakfast.title}}</p>
+    <div class="card-body">
+    <p class="small">{{breakfast.title}}</p> 
+   </div>
+   <div class="card-footer p-0 m-0">
+    <div class="d-grid">
+    <button class="edit-btn  py-1" ><i data-day="monday"
+    data-meal="breakfast" class="fas fa-pen"></i></button>
+    </div>
+    </div>
   </div>
   {{else}}
 <button
@@ -39,17 +47,26 @@
     class="btn p-3 add-btn"
     type="button"
   >
-    <i class="fas fa-plus"></i>
+    <i data-day="monday"
+    data-meal="breakfast" class="fas fa-plus"></i>
   </button>
   {{/if}}
   {{/isMonday}}
 </td>
-      <td class="table-cell">
-        {{#isTuesday mealPlan.days as |day|}} 
+<td class="table-cell">
+{{#isTuesday mealPlan.days as |day|}} 
 {{#if breakfast}}
-  <div class="card mealplan-card">
+   <div class="card mealplan-card">
     <img src="{{breakfast.image}}" class="card-img-top" />
-    <p class="small mt-2">{{breakfast.title}}</p>
+    <div class="card-body px-0">
+    <p class="small">{{breakfast.title}}</p> 
+   </div>
+   <div class="card-footer p-0 m-0">
+    <div class="d-grid">
+    <button class="edit-btn  py-1" ><i data-day="tuesday"
+    data-meal="breakfast" class="fas fa-pen"></i></button>
+    </div>
+    </div>
   </div>
   {{else}}
 <button
@@ -58,7 +75,8 @@
     class="btn p-3 add-btn"
     type="button"
   >
-    <i class="fas fa-plus"></i>
+    <i data-day="tuesday"
+    data-meal="breakfast" class="fas fa-plus"></i>
   </button>
   {{/if}}
   {{/isTuesday}}
@@ -66,9 +84,17 @@
   <td class="table-cell">
     {{#isWednesday mealPlan.days as |day|}} 
 {{#if breakfast}}
-  <div class="card mealplan-card">
+   <div class="card mealplan-card">
     <img src="{{breakfast.image}}" class="card-img-top" />
-    <p class="small mt-2">{{breakfast.title}}</p>
+    <div class="card-body px-0">
+    <p class="small">{{breakfast.title}}</p> 
+   </div>
+   <div class="card-footer p-0 m-0">
+    <div class="d-grid">
+    <button class="edit-btn  py-1" ><i data-day="wednesday"
+    data-meal="breakfast" class="fas fa-pen"></i></button>
+    </div>
+    </div>
   </div>
   {{else}}
 <button
@@ -77,7 +103,8 @@
     class="btn p-3 add-btn"
     type="button"
   >
-    <i class="fas fa-plus"></i>
+    <i data-day="wednesday"
+    data-meal="breakfast" class="fas fa-plus"></i>
   </button>
   {{/if}}
   {{/isWednesday}}
@@ -85,9 +112,17 @@
   <td class="table-cell">
     {{#isThursday mealPlan.days as |day|}} 
 {{#if breakfast}}
-  <div class="card mealplan-card">
+   <div class="card mealplan-card">
     <img src="{{breakfast.image}}" class="card-img-top" />
-    <p class="small mt-2">{{breakfast.title}}</p>
+    <div class="card-body px-0">
+    <p class="small">{{breakfast.title}}</p> 
+   </div>
+   <div class="card-footer p-0 m-0">
+    <div class="d-grid">
+    <button class="edit-btn  py-1" ><i data-day="thursday"
+    data-meal="breakfast" class="fas fa-pen"></i></button>
+    </div>
+    </div>
   </div>
   {{else}}
 <button
@@ -96,7 +131,8 @@
     class="btn p-3 add-btn"
     type="button"
   >
-    <i class="fas fa-plus"></i>
+    <i data-day="thursday"
+    data-meal="breakfast" class="fas fa-plus"></i>
   </button>
   {{/if}}
   {{/isThursday}}
@@ -104,9 +140,17 @@
   <td class="table-cell">
     {{#isFriday mealPlan.days as |day|}} 
 {{#if breakfast}}
-  <div class="card mealplan-card">
+ <div class="card mealplan-card">
     <img src="{{breakfast.image}}" class="card-img-top" />
-    <p class="small mt-2">{{breakfast.title}}</p>
+    <div class="card-body px-0">
+    <p class="small">{{breakfast.title}}</p> 
+   </div>
+   <div class="card-footer p-0 m-0">
+    <div class="d-grid">
+    <button class="edit-btn  py-1" ><i data-day="friday"
+    data-meal="breakfast" class="fas fa-pen"></i></button>
+    </div>
+    </div>
   </div>
   {{else}}
 <button
@@ -115,7 +159,8 @@
     class="btn p-3 add-btn"
     type="button"
   >
-    <i class="fas fa-plus"></i>
+    <i data-day="friday"
+    data-meal="breakfast"  class="fas fa-plus"></i>
   </button>
   {{/if}}
   {{/isFriday}}
@@ -125,7 +170,15 @@
 {{#if breakfast}}
   <div class="card mealplan-card">
     <img src="{{breakfast.image}}" class="card-img-top" />
-    <p class="small mt-2">{{breakfast.title}}</p>
+    <div class="card-body px-0">
+    <p class="small">{{breakfast.title}}</p> 
+   </div>
+   <div class="card-footer p-0 m-0">
+    <div class="d-grid">
+    <button class="edit-btn  py-1" ><i data-day="saturday"
+    data-meal="breakfast" class="fas fa-pen"></i></button>
+    </div>
+    </div>
   </div>
   {{else}}
 <button
@@ -134,7 +187,8 @@
     class="btn p-3 add-btn"
     type="button"
   >
-    <i class="fas fa-plus"></i>
+    <i data-day="saturday"
+    data-meal="breakfast" class="fas fa-plus"></i>
   </button>
   {{/if}}
   {{/isSaturday}}
@@ -144,7 +198,15 @@
 {{#if breakfast}}
   <div class="card mealplan-card">
     <img src="{{breakfast.image}}" class="card-img-top" />
-    <p class="small mt-2">{{breakfast.title}}</p>
+    <div class="card-body px-0">
+    <p class="small">{{breakfast.title}}</p> 
+   </div>
+   <div class="card-footer p-0 m-0">
+    <div class="d-grid">
+    <button class="edit-btn  py-1" ><i data-day="sunday"
+    data-meal="breakfast" class="fas fa-pen"></i></button>
+    </div>
+    </div>
   </div>
   {{else}}
 <button
@@ -153,7 +215,8 @@
     class="btn p-3 add-btn"
     type="button"
   >
-    <i class="fas fa-plus"></i>
+    <i data-day="sunday"
+    data-meal="breakfast" class="fas fa-plus"></i>
   </button>
   {{/if}}
   {{/isSunday}}
@@ -165,7 +228,15 @@
 {{#if lunch}}
   <div class="card mealplan-card">
     <img src="{{lunch.image}}" class="card-img-top" />
-    <p class="small mt-2">{{lunch.title}}</p>
+    <div class="card-body px-0">
+    <p class="small">{{lunch.title}}</p> 
+   </div>
+   <div class="card-footer p-0 m-0">
+    <div class="d-grid">
+    <button class="edit-btn  py-1" ><i data-day="monday"
+    data-meal="lunch" class="fas fa-pen"></i></button>
+    </div>
+    </div>
   </div>
   {{else}}
 <button
@@ -174,7 +245,8 @@
     class="btn p-3 add-btn"
     type="button"
   >
-    <i class="fas fa-plus"></i>
+    <i data-day="monday"
+    data-meal="lunch" class="fas fa-plus"></i>
   </button>
   {{/if}}
   {{/isMonday}}
@@ -184,7 +256,15 @@
 {{#if lunch}}
   <div class="card mealplan-card">
     <img src="{{lunch.image}}" class="card-img-top" />
-    <p class="small mt-2">{{lunch.title}}</p>
+    <div class="card-body px-0">
+    <p class="small">{{lunch.title}}</p> 
+   </div>
+   <div class="card-footer p-0 m-0">
+    <div class="d-grid">
+    <button class="edit-btn  py-1" ><i data-day="tuesday"
+    data-meal="lunch" class="fas fa-pen"></i></button>
+    </div>
+    </div>
   </div>
   {{else}}
 <button
@@ -193,7 +273,8 @@
     class="btn p-3 add-btn"
     type="button"
   >
-    <i class="fas fa-plus"></i>
+    <i data-day="tuesday"
+    data-meal="lunch" class="fas fa-plus"></i>
   </button>
   {{/if}}
   {{/isTuesday}}
@@ -203,7 +284,15 @@
 {{#if lunch}}
   <div class="card mealplan-card">
     <img src="{{lunch.image}}" class="card-img-top" />
-    <p class="small mt-2">{{lunch.title}}</p>
+    <div class="card-body px-0">
+    <p class="small">{{lunch.title}}</p> 
+   </div>
+   <div class="card-footer p-0 m-0">
+    <div class="d-grid">
+    <button class="edit-btn  py-1" ><i data-day="wednesday"
+    data-meal="lunch" class="fas fa-pen"></i></button>
+    </div>
+    </div>
   </div>
   {{else}}
 <button
@@ -212,7 +301,8 @@
     class="btn p-3 add-btn"
     type="button"
   >
-    <i class="fas fa-plus"></i>
+    <i data-day="wednesday"
+    data-meal="lunch" class="fas fa-plus"></i>
   </button>
   {{/if}}
   {{/isWednesday}}
@@ -222,7 +312,15 @@
 {{#if lunch}}
   <div class="card mealplan-card">
     <img src="{{lunch.image}}" class="card-img-top" />
-    <p class="small mt-2">{{lunch.title}}</p>
+    <div class="card-body px-0">
+    <p class="small">{{lunch.title}}</p> 
+   </div>
+   <div class="card-footer p-0 m-0">
+    <div class="d-grid">
+    <button class="edit-btn  py-1" ><i data-day="thursday"
+    data-meal="lunch" class="fas fa-pen"></i></button>
+    </div>
+    </div>
   </div>
   {{else}}
 <button
@@ -231,7 +329,8 @@
     class="btn p-3 add-btn"
     type="button"
   >
-    <i class="fas fa-plus"></i>
+    <i data-day="thursday"
+    data-meal="lunch" class="fas fa-plus"></i>
   </button>
   {{/if}}
   {{/isThursday}}
@@ -241,7 +340,15 @@
 {{#if lunch}}
   <div class="card mealplan-card">
     <img src="{{lunch.image}}" class="card-img-top" />
-    <p class="small mt-2">{{lunch.title}}</p>
+    <div class="card-body px-0">
+    <p class="small">{{lunch.title}}</p> 
+   </div>
+   <div class="card-footer p-0 m-0">
+    <div class="d-grid">
+    <button class="edit-btn  py-1" ><i data-day="friday"
+    data-meal="lunch" class="fas fa-pen"></i></button>
+    </div>
+    </div>
   </div>
   {{else}}
 <button
@@ -250,7 +357,8 @@
     class="btn p-3 add-btn"
     type="button"
   >
-    <i class="fas fa-plus"></i>
+    <i data-day="friday"
+    data-meal="lunch" class="fas fa-plus"></i>
   </button>
   {{/if}}
   {{/isFriday}}
@@ -260,7 +368,15 @@
 {{#if lunch}}
   <div class="card mealplan-card">
     <img src="{{lunch.image}}" class="card-img-top" />
-    <p class="small mt-2">{{lunch.title}}</p>
+    <div class="card-body px-0">
+    <p class="small">{{lunch.title}}</p> 
+   </div>
+   <div class="card-footer p-0 m-0">
+    <div class="d-grid">
+    <button class="edit-btn  py-1" ><i data-day="saturday"
+    data-meal="lunch" class="fas fa-pen"></i></button>
+    </div>
+    </div>
   </div>
   {{else}}
 <button
@@ -269,7 +385,8 @@
     class="btn p-3 add-btn"
     type="button"
   >
-    <i class="fas fa-plus"></i>
+    <i data-day="saturday"
+    data-meal="lunch" class="fas fa-plus"></i>
   </button>
   {{/if}}
   {{/isSaturday}}
@@ -279,7 +396,15 @@
 {{#if lunch}}
   <div class="card mealplan-card">
     <img src="{{lunch.image}}" class="card-img-top" />
-    <p class="small mt-2">{{lunch.title}}</p>
+    <div class="card-body px-0">
+    <p class="small">{{lunch.title}}</p> 
+   </div>
+   <div class="card-footer p-0 m-0">
+    <div class="d-grid">
+    <button class="edit-btn  py-1" ><i data-day="sunday"
+    data-meal="lunch" class="fas fa-pen"></i></button>
+    </div>
+    </div>
   </div>
   {{else}}
 <button
@@ -288,7 +413,8 @@
     class="btn p-3 add-btn"
     type="button"
   >
-    <i class="fas fa-plus"></i>
+    <i data-day="sunday"
+    data-meal="lunch" class="fas fa-plus"></i>
   </button>
   {{/if}}
   {{/isSunday}}
@@ -301,7 +427,15 @@
 {{#if dinner}}
   <div class="card mealplan-card">
     <img src="{{dinner.image}}" class="card-img-top" />
-    <p class="small mt-2">{{dinner.title}}</p>
+    <div class="card-body px-0">
+    <p class="small">{{dinner.title}}</p> 
+   </div>
+   <div class="card-footer p-0 m-0">
+    <div class="d-grid">
+    <button class="edit-btn  py-1" ><i data-day="monday"
+    data-meal="dinner" class="fas fa-pen"></i></button>
+    </div>
+    </div>
   </div>
   {{else}}
 <button
@@ -310,7 +444,8 @@
     class="btn p-3 add-btn"
     type="button"
   >
-    <i class="fas fa-plus"></i>
+    <i data-day="monday"
+    data-meal="dinner" class="fas fa-plus"></i>
   </button>
   {{/if}}
   {{/isMonday}}
@@ -320,7 +455,15 @@
 {{#if dinner}}
   <div class="card mealplan-card">
     <img src="{{dinner.image}}" class="card-img-top" />
-    <p class="small mt-2">{{dinner.title}}</p>
+    <div class="card-body px-0">
+    <p class="small">{{dinner.title}}</p> 
+   </div>
+   <div class="card-footer p-0 m-0">
+    <div class="d-grid">
+    <button class="edit-btn  py-1" ><i data-day="tuesday"
+    data-meal="dinner" class="fas fa-pen"></i></button>
+    </div>
+    </div>
   </div>
   {{else}}
 <button
@@ -329,7 +472,8 @@
     class="btn p-3 add-btn"
     type="button"
   >
-    <i class="fas fa-plus"></i>
+    <i data-day="tuesday"
+    data-meal="dinner" class="fas fa-plus"></i>
   </button>
   {{/if}}
   {{/isTuesday}}
@@ -339,7 +483,15 @@
 {{#if dinner}}
   <div class="card mealplan-card">
     <img src="{{dinner.image}}" class="card-img-top" />
-    <p class="small mt-2">{{dinner.title}}</p>
+    <div class="card-body px-0">
+    <p class="small">{{dinner.title}}</p> 
+   </div>
+   <div class="card-footer p-0 m-0">
+    <div class="d-grid">
+    <button class="edit-btn  py-1" ><i data-day="wednesday"
+    data-meal="dinner" class="fas fa-pen"></i></button>
+    </div>
+    </div>
   </div>
   {{else}}
 <button
@@ -348,7 +500,8 @@
     class="btn p-3 add-btn"
     type="button"
   >
-    <i class="fas fa-plus"></i>
+    <i data-day="wednesday"
+    data-meal="dinner" class="fas fa-plus"></i>
   </button>
   {{/if}}
   {{/isWednesday}}
@@ -358,7 +511,15 @@
 {{#if dinner}}
   <div class="card mealplan-card">
     <img src="{{dinner.image}}" class="card-img-top" />
-    <p class="small mt-2">{{dinner.title}}</p>
+    <div class="card-body px-0">
+    <p class="small">{{dinner.title}}</p> 
+   </div>
+   <div class="card-footer p-0 m-0">
+    <div class="d-grid">
+    <button class="edit-btn  py-1" ><i data-day="thursday"
+    data-meal="dinner" class="fas fa-pen"></i></button>
+    </div>
+    </div>
   </div>
   {{else}}
 <button
@@ -367,7 +528,8 @@
     class="btn p-3 add-btn"
     type="button"
   >
-    <i class="fas fa-plus"></i>
+    <i data-day="thursday"
+    data-meal="dinner" class="fas fa-plus"></i>
   </button>
   {{/if}}
   {{/isThursday}}
@@ -375,9 +537,17 @@
   <td class="table-cell">
     {{#isFriday mealPlan.days as |day|}} 
 {{#if dinner}}
-  <div class="card mealplan-card">
+ <div class="card mealplan-card">
     <img src="{{dinner.image}}" class="card-img-top" />
-    <p class="small mt-2">{{dinner.title}}</p>
+    <div class="card-body px-0">
+    <p class="small">{{dinner.title}}</p> 
+   </div>
+   <div class="card-footer p-0 m-0">
+    <div class="d-grid">
+    <button class="edit-btn  py-1" ><i data-day="friday"
+    data-meal="dinner" class="fas fa-pen"></i></button>
+    </div>
+    </div>
   </div>
   {{else}}
 <button
@@ -386,7 +556,8 @@
     class="btn p-3 add-btn"
     type="button"
   >
-    <i class="fas fa-plus"></i>
+    <i data-day="friday"
+    data-meal="dinner" class="fas fa-plus"></i>
   </button>
   {{/if}}
   {{/isFriday}}
@@ -394,9 +565,17 @@
   <td class="table-cell">
     {{#isSaturday mealPlan.days as |day|}} 
 {{#if dinner}}
-  <div class="card mealplan-card">
+ <div class="card mealplan-card">
     <img src="{{dinner.image}}" class="card-img-top" />
-    <p class="small mt-2">{{dinner.title}}</p>
+    <div class="card-body px-0">
+    <p class="small">{{dinner.title}}</p> 
+   </div>
+   <div class="card-footer p-0 m-0">
+    <div class="d-grid">
+    <button class="edit-btn  py-1" ><i data-day="saturday"
+    data-meal="dinner" class="fas fa-pen"></i></button>
+    </div>
+    </div>
   </div>
   {{else}}
 <button
@@ -405,7 +584,8 @@
     class="btn p-3 add-btn"
     type="button"
   >
-    <i class="fas fa-plus"></i>
+    <i data-day="saturday"
+    data-meal="dinner" class="fas fa-plus"></i>
   </button>
   {{/if}}
   {{/isSaturday}}
@@ -415,7 +595,15 @@
 {{#if dinner}}
   <div class="card mealplan-card">
     <img src="{{dinner.image}}" class="card-img-top" />
-    <p class="small mt-2">{{dinner.title}}</p>
+    <div class="card-body px-0">
+    <p class="small">{{dinner.title}}</p> 
+   </div>
+   <div class="card-footer p-0 m-0">
+    <div class="d-grid">
+    <button class="edit-btn  py-1" ><i data-day="sunday"
+    data-meal="dinner" class="fas fa-pen"></i></button>
+    </div>
+    </div>
   </div>
   {{else}}
 <button
@@ -424,7 +612,8 @@
     class="btn p-3 add-btn"
     type="button"
   >
-    <i class="fas fa-plus"></i>
+    <i data-day="sunday"
+    data-meal="dinner" class="fas fa-plus"></i>
   </button>
   {{/if}}
   {{/isSunday}}

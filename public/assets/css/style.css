@@ -67,6 +67,21 @@ body {
   height: 50%;
 }
 
+.card-body {
+  height: 40%;
+}
+
+.edit-btn {
+  background-color: var(--green);
+  border: none;
+  color: white;
+}
+
+.edit-btn:hover {
+  background-color: #8cc73f8e;
+  border: none;
+}
+
 .table-cell {
   height: 10rem;
   width: 10%;
