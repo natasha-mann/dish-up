@@ -16,12 +16,12 @@
             <span class="fw-bold recipe-text">Ready in:</span> {{recipe.readyInMinutes}} minutes ||
           </li>
           <li class="list-inline-item">
-            <span class="fw-bold recipe-text">Calories:</span> {{calories}}
+            <span class="fw-bold recipe-text">Calories:</span> {{recipe.calories}}
           </li>
         </ul>
       </div>
       <div class="mb-5">
-        {{recipe.summary}}
+        {{{recipe.summary}}}
       </div>
       <div class="          d-flex
           flex-lg-nowrap flex-wrap
@@ -30,16 +30,16 @@
         <div class="mx-2 mb-5 p-3 ingredients-container">
           <h4 class="subtitle pb-2">Ingredients</h4>
           <ul class="text-start text-light">
-            {{#each ingredients}}
-            <li>{{original}}</li>
+            {{#each recipe.ingredients}}
+            <li>{{this}}</li>
             {{/each}}
           </ul>
         </div>
         <div class="mx-2 mb-5">
           <h4 class="subtitle">Instructions</h4>
           <ol class="text-start">
-            {{#each instructions}}
-            <li>{{step}}</li>
+            {{#each recipe.steps}}
+            <li>{{this}}</li>
             {{/each}}
           </ol>
         </div>

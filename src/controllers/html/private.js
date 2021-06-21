@@ -159,6 +159,8 @@ const renderRecipe = async (req, res) => {
       return step
     })
 
+    console.log(steps)
+
     
 
 
