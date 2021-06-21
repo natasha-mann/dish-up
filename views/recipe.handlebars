@@ -23,11 +23,10 @@
       <div class="mb-5">
         {{{recipe.summary}}}
       </div>
-      <div class="          d-flex
+      <div class="d-flex
           flex-lg-nowrap flex-wrap
-          justify-content-center
-          flex-container">
-        <div class="mx-2 mb-5 p-3 ingredients-container">
+          justify-content-center row">
+        <div class="mx-2 mb-5 p-3 col-4 ingredients-container">
           <h4 class="subtitle pb-2">Ingredients</h4>
           <ul class="text-start text-light">
             {{#each recipe.ingredients}}
@@ -35,7 +34,7 @@
             {{/each}}
           </ul>
         </div>
-        <div class="mx-2 mb-5">
+        <div class="mx-2 mb-5 col-6">
           <h4 class="subtitle">Instructions</h4>
           <ol class="text-start">
             {{#each recipe.steps}}
