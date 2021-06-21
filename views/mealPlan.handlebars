@@ -24,34 +24,411 @@
   <tbody>
     <tr>
       <th class="table-cell" scope="row">Breakfast</th>
-      <td class="table-cell"><button data-day="Monday" data-meal="breakfast" class="btn p-3 add-btn" type="button"><i class="fas fa-plus"></i></button></td>
-      <td class="table-cell"><button data-day="Tuesday" data-meal="breakfast" class="btn p-3 add-btn" type="button"><i class="fas fa-plus"></i></button></td>
-      <td class="table-cell"><button data-day="Wednesday" data-meal="breakfast" class="btn p-3 add-btn" type="button"><i class="fas fa-plus"></i></button></td>
-      <td class="table-cell"><button data-day="Thursday" data-meal="breakfast" class="btn p-3 add-btn" type="button"><i class="fas fa-plus"></i></button></td>
-      <td class="table-cell"><button data-day="Friday" data-meal="breakfast" class="btn p-3 add-btn" type="button"><i class="fas fa-plus"></i></button></td>
-      <td class="table-cell"><button data-day="Saturday" data-meal="breakfast" class="btn p-3 add-btn" type="button"><i class="fas fa-plus"></i></button></td>
-      <td class="table-cell"><button data-day="Sunday" data-meal="breakfast" class="btn p-3 add-btn" type="button"><i class="fas fa-plus"></i></button></td>
+      <td class="table-cell">
+
+{{#isMonday mealPlan.days as |day|}} 
+{{#if breakfast}}
+  <div class="card mealplan-card">
+    <img src="{{breakfast.image}}" class="card-img-top" />
+    <p class="small mt-2">{{breakfast.title}}</p>
+  </div>
+  {{else}}
+<button
+    data-day="monday"
+    data-meal="breakfast"
+    class="btn p-3 add-btn"
+    type="button"
+  >
+    <i class="fas fa-plus"></i>
+  </button>
+  {{/if}}
+  {{/isMonday}}
+</td>
+      <td class="table-cell">
+        {{#isTuesday mealPlan.days as |day|}} 
+{{#if breakfast}}
+  <div class="card mealplan-card">
+    <img src="{{breakfast.image}}" class="card-img-top" />
+    <p class="small mt-2">{{breakfast.title}}</p>
+  </div>
+  {{else}}
+<button
+    data-day="tuesday"
+    data-meal="breakfast"
+    class="btn p-3 add-btn"
+    type="button"
+  >
+    <i class="fas fa-plus"></i>
+  </button>
+  {{/if}}
+  {{/isTuesday}}
+  </td>
+  <td class="table-cell">
+    {{#isWednesday mealPlan.days as |day|}} 
+{{#if breakfast}}
+  <div class="card mealplan-card">
+    <img src="{{breakfast.image}}" class="card-img-top" />
+    <p class="small mt-2">{{breakfast.title}}</p>
+  </div>
+  {{else}}
+<button
+    data-day="wednesday"
+    data-meal="breakfast"
+    class="btn p-3 add-btn"
+    type="button"
+  >
+    <i class="fas fa-plus"></i>
+  </button>
+  {{/if}}
+  {{/isWednesday}}
+  </td>
+  <td class="table-cell">
+    {{#isThursday mealPlan.days as |day|}} 
+{{#if breakfast}}
+  <div class="card mealplan-card">
+    <img src="{{breakfast.image}}" class="card-img-top" />
+    <p class="small mt-2">{{breakfast.title}}</p>
+  </div>
+  {{else}}
+<button
+    data-day="thursday"
+    data-meal="breakfast"
+    class="btn p-3 add-btn"
+    type="button"
+  >
+    <i class="fas fa-plus"></i>
+  </button>
+  {{/if}}
+  {{/isThursday}}
+  </td>
+  <td class="table-cell">
+    {{#isFriday mealPlan.days as |day|}} 
+{{#if breakfast}}
+  <div class="card mealplan-card">
+    <img src="{{breakfast.image}}" class="card-img-top" />
+    <p class="small mt-2">{{breakfast.title}}</p>
+  </div>
+  {{else}}
+<button
+    data-day="friday"
+    data-meal="breakfast"
+    class="btn p-3 add-btn"
+    type="button"
+  >
+    <i class="fas fa-plus"></i>
+  </button>
+  {{/if}}
+  {{/isFriday}}
+  </td>
+  <td class="table-cell">
+    {{#isSaturday mealPlan.days as |day|}} 
+{{#if breakfast}}
+  <div class="card mealplan-card">
+    <img src="{{breakfast.image}}" class="card-img-top" />
+    <p class="small mt-2">{{breakfast.title}}</p>
+  </div>
+  {{else}}
+<button
+    data-day="saturday"
+    data-meal="breakfast"
+    class="btn p-3 add-btn"
+    type="button"
+  >
+    <i class="fas fa-plus"></i>
+  </button>
+  {{/if}}
+  {{/isSaturday}}
+  </td>
+  <td class="table-cell">
+{{#isSunday mealPlan.days as |day|}} 
+{{#if breakfast}}
+  <div class="card mealplan-card">
+    <img src="{{breakfast.image}}" class="card-img-top" />
+    <p class="small mt-2">{{breakfast.title}}</p>
+  </div>
+  {{else}}
+<button
+    data-day="sunday"
+    data-meal="breakfast"
+    class="btn p-3 add-btn"
+    type="button"
+  >
+    <i class="fas fa-plus"></i>
+  </button>
+  {{/if}}
+  {{/isSunday}}
+  </td>
     </tr>
     <tr>
       <th class="table-cell" scope="row">Lunch</th>
-      <td class="table-cell"><button data-day="Monday" data-meal="lunch" class="btn p-3 add-btn" type="button"><i class="fas fa-plus"></i></button></td>
-      <td class="table-cell"><button data-day="Tuesday" data-meal="lunch" class="btn p-3 add-btn" type="button"><i class="fas fa-plus"></i></button></td>
-      <td class="table-cell"><button data-day="Wednesday" data-meal="lunch" class="btn p-3 add-btn" type="button"><i class="fas fa-plus"></i></button></td>
-      <td class="table-cell"><button data-day="Thursday" data-meal="lunch" class="btn p-3 add-btn" type="button"><i class="fas fa-plus"></i></button></td>
-      <td class="table-cell"><button data-day="Friday" data-meal="lunch" class="btn p-3 add-btn" type="button"><i class="fas fa-plus"></i></button></td>
-      <td class="table-cell"><button data-day="Saturday" data-meal="lunch" class="btn p-3 add-btn" type="button"><i class="fas fa-plus"></i></button></td>
-       <td class="table-cell"><button data-day="Sunday" data-meal="lunch" class="btn p-3 add-btn" type="button"><i class="fas fa-plus"></i></button></td>
+      <td class="table-cell">{{#isMonday mealPlan.days as |day|}} 
+{{#if lunch}}
+  <div class="card mealplan-card">
+    <img src="{{lunch.image}}" class="card-img-top" />
+    <p class="small mt-2">{{lunch.title}}</p>
+  </div>
+  {{else}}
+<button
+    data-day="monday"
+    data-meal="lunch"
+    class="btn p-3 add-btn"
+    type="button"
+  >
+    <i class="fas fa-plus"></i>
+  </button>
+  {{/if}}
+  {{/isMonday}}
+</td>
+      <td class="table-cell">
+        {{#isTuesday mealPlan.days as |day|}} 
+{{#if lunch}}
+  <div class="card mealplan-card">
+    <img src="{{lunch.image}}" class="card-img-top" />
+    <p class="small mt-2">{{lunch.title}}</p>
+  </div>
+  {{else}}
+<button
+    data-day="tuesday"
+    data-meal="lunch"
+    class="btn p-3 add-btn"
+    type="button"
+  >
+    <i class="fas fa-plus"></i>
+  </button>
+  {{/if}}
+  {{/isTuesday}}
+  </td>
+  <td class="table-cell">
+    {{#isWednesday mealPlan.days as |day|}} 
+{{#if lunch}}
+  <div class="card mealplan-card">
+    <img src="{{lunch.image}}" class="card-img-top" />
+    <p class="small mt-2">{{lunch.title}}</p>
+  </div>
+  {{else}}
+<button
+    data-day="wednesday"
+    data-meal="lunch"
+    class="btn p-3 add-btn"
+    type="button"
+  >
+    <i class="fas fa-plus"></i>
+  </button>
+  {{/if}}
+  {{/isWednesday}}
+  </td>
+  <td class="table-cell">
+    {{#isThursday mealPlan.days as |day|}} 
+{{#if lunch}}
+  <div class="card mealplan-card">
+    <img src="{{lunch.image}}" class="card-img-top" />
+    <p class="small mt-2">{{lunch.title}}</p>
+  </div>
+  {{else}}
+<button
+    data-day="thursday"
+    data-meal="lunch"
+    class="btn p-3 add-btn"
+    type="button"
+  >
+    <i class="fas fa-plus"></i>
+  </button>
+  {{/if}}
+  {{/isThursday}}
+  </td>
+  <td class="table-cell">
+    {{#isFriday mealPlan.days as |day|}} 
+{{#if lunch}}
+  <div class="card mealplan-card">
+    <img src="{{lunch.image}}" class="card-img-top" />
+    <p class="small mt-2">{{lunch.title}}</p>
+  </div>
+  {{else}}
+<button
+    data-day="friday"
+    data-meal="lunch"
+    class="btn p-3 add-btn"
+    type="button"
+  >
+    <i class="fas fa-plus"></i>
+  </button>
+  {{/if}}
+  {{/isFriday}}
+  </td>
+  <td class="table-cell">
+    {{#isSaturday mealPlan.days as |day|}} 
+{{#if lunch}}
+  <div class="card mealplan-card">
+    <img src="{{lunch.image}}" class="card-img-top" />
+    <p class="small mt-2">{{lunch.title}}</p>
+  </div>
+  {{else}}
+<button
+    data-day="saturday"
+    data-meal="lunch"
+    class="btn p-3 add-btn"
+    type="button"
+  >
+    <i class="fas fa-plus"></i>
+  </button>
+  {{/if}}
+  {{/isSaturday}}
+  </td>
+  <td class="table-cell">
+{{#isSunday mealPlan.days as |day|}} 
+{{#if lunch}}
+  <div class="card mealplan-card">
+    <img src="{{lunch.image}}" class="card-img-top" />
+    <p class="small mt-2">{{lunch.title}}</p>
+  </div>
+  {{else}}
+<button
+    data-day="sunday"
+    data-meal="lunch"
+    class="btn p-3 add-btn"
+    type="button"
+  >
+    <i class="fas fa-plus"></i>
+  </button>
+  {{/if}}
+  {{/isSunday}}
+  </td>
     </tr>
 
     <tr>
       <th class="table-cell" scope="row">Dinner</th>
-      <td class="table-cell"><button data-day="Monday" data-meal="dinner" class="btn p-3 add-btn" type="button"><i class="fas fa-plus"></i></button></td>
-      <td class="table-cell"><button data-day="Tuesday" data-meal="dinner" class="btn p-3 add-btn" type="button"><i class="fas fa-plus"></i></button></td>
-      <td class="table-cell"><button data-day="Wednesday" data-meal="dinner" class="btn p-3 add-btn" type="button"><i class="fas fa-plus"></i></button></td>
-      <td class="table-cell"><button data-day="Thursday" data-meal="dinner" class="btn p-3 add-btn" type="button"><i class="fas fa-plus"></i></button></td>
-      <td class="table-cell"><button data-day="Friday" data-meal="dinner" class="btn p-3 add-btn" type="button"><i class="fas fa-plus"></i></button></td>
-      <td class="table-cell"><button data-day="Saturday" data-meal="dinner" class="btn p-3 add-btn" type="button"><i class="fas fa-plus"></i></button></td>
-       <td class="table-cell"><button data-day="Sunday" data-meal="dinner" class="btn p-3 add-btn" type="button"><i class="fas fa-plus"></i></button></td>
+      <td class="table-cell">{{#isMonday mealPlan.days as |day|}} 
+{{#if dinner}}
+  <div class="card mealplan-card">
+    <img src="{{dinner.image}}" class="card-img-top" />
+    <p class="small mt-2">{{dinner.title}}</p>
+  </div>
+  {{else}}
+<button
+    data-day="monday"
+    data-meal="dinner"
+    class="btn p-3 add-btn"
+    type="button"
+  >
+    <i class="fas fa-plus"></i>
+  </button>
+  {{/if}}
+  {{/isMonday}}
+</td>
+      <td class="table-cell">
+        {{#isTuesday mealPlan.days as |day|}} 
+{{#if dinner}}
+  <div class="card mealplan-card">
+    <img src="{{dinner.image}}" class="card-img-top" />
+    <p class="small mt-2">{{dinner.title}}</p>
+  </div>
+  {{else}}
+<button
+    data-day="tuesday"
+    data-meal="dinner"
+    class="btn p-3 add-btn"
+    type="button"
+  >
+    <i class="fas fa-plus"></i>
+  </button>
+  {{/if}}
+  {{/isTuesday}}
+  </td>
+  <td class="table-cell">
+    {{#isWednesday mealPlan.days as |day|}} 
+{{#if dinner}}
+  <div class="card mealplan-card">
+    <img src="{{dinner.image}}" class="card-img-top" />
+    <p class="small mt-2">{{dinner.title}}</p>
+  </div>
+  {{else}}
+<button
+    data-day="wednesday"
+    data-meal="dinner"
+    class="btn p-3 add-btn"
+    type="button"
+  >
+    <i class="fas fa-plus"></i>
+  </button>
+  {{/if}}
+  {{/isWednesday}}
+  </td>
+  <td class="table-cell">
+    {{#isThursday mealPlan.days as |day|}} 
+{{#if dinner}}
+  <div class="card mealplan-card">
+    <img src="{{dinner.image}}" class="card-img-top" />
+    <p class="small mt-2">{{dinner.title}}</p>
+  </div>
+  {{else}}
+<button
+    data-day="thursday"
+    data-meal="dinner"
+    class="btn p-3 add-btn"
+    type="button"
+  >
+    <i class="fas fa-plus"></i>
+  </button>
+  {{/if}}
+  {{/isThursday}}
+  </td>
+  <td class="table-cell">
+    {{#isFriday mealPlan.days as |day|}} 
+{{#if dinner}}
+  <div class="card mealplan-card">
+    <img src="{{dinner.image}}" class="card-img-top" />
+    <p class="small mt-2">{{dinner.title}}</p>
+  </div>
+  {{else}}
+<button
+    data-day="friday"
+    data-meal="dinner"
+    class="btn p-3 add-btn"
+    type="button"
+  >
+    <i class="fas fa-plus"></i>
+  </button>
+  {{/if}}
+  {{/isFriday}}
+  </td>
+  <td class="table-cell">
+    {{#isSaturday mealPlan.days as |day|}} 
+{{#if dinner}}
+  <div class="card mealplan-card">
+    <img src="{{dinner.image}}" class="card-img-top" />
+    <p class="small mt-2">{{dinner.title}}</p>
+  </div>
+  {{else}}
+<button
+    data-day="saturday"
+    data-meal="dinner"
+    class="btn p-3 add-btn"
+    type="button"
+  >
+    <i class="fas fa-plus"></i>
+  </button>
+  {{/if}}
+  {{/isSaturday}}
+  </td>
+  <td class="table-cell">
+{{#isSunday mealPlan.days as |day|}} 
+{{#if dinner}}
+  <div class="card mealplan-card">
+    <img src="{{dinner.image}}" class="card-img-top" />
+    <p class="small mt-2">{{dinner.title}}</p>
+  </div>
+  {{else}}
+<button
+    data-day="sunday"
+    data-meal="dinner"
+    class="btn p-3 add-btn"
+    type="button"
+  >
+    <i class="fas fa-plus"></i>
+  </button>
+  {{/if}}
+  {{/isSunday}}
+  </td>
     </tr>
    
   </tbody>

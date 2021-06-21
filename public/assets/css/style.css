@@ -59,6 +59,14 @@ body {
   background-color: #ffc30fcb;
 }
 
+.mealplan-card {
+  height: 95%;
+}
+
+.card-img-top {
+  height: 50%;
+}
+
 .table-cell {
   height: 10rem;
   width: 10%;
