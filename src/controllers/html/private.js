@@ -65,12 +65,73 @@ const renderAddMeal = (req, res) => {
   }
 };
 
+const renderUpdateMeal = (req, res) => {
+  try {
+    const { id: mealPlanId } = req.params;
+    const { day, meal } = req.query;
+
+    res
+      .status(200)
+      .render("updateMeal", { layout: "dashboard", day, meal, mealPlanId });
+  } catch (error) {
+    console.error(error.message);
+    return res
+      .status(500)
+      .json({ error: "Failed to render update meal plan." });
+  }
+};
+
 const renderSearchResults = async (req, res) => {
   const { id: mealPlanId } = req.params;
 
   const { day, meal, searchInput, diet, intolerance } = req.query;
 
   const url = `https://api.spoonacular.com/recipes/complexSearch?apiKey=aef1629a564f4778a914c956f90dbdb5&query=${searchInput}&number=10&addRecipeNutrition=true&diet=${diet}&intolerances=${intolerance}`;
+
+  const options = {
+    method: "GET",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    redirect: "follow",
+  };
+
+  const response = await fetch(url, options);
+  const data = await response.json();
+  const mealsArray = data.results;
+
+  const searchMeals = mealsArray.map((each) => {
+    const { id, title, image, readyInMinutes, servings, calories } = each;
+
+    return {
+      id,
+      title,
+      image,
+      readyInMinutes,
+      servings,
+      calories,
+    };
+  });
+
+  if (!searchMeals) {
+    return res.status(404).json({ error: "No results" });
+  }
+
+  res.status(200).render("addMeal", {
+    layout: "dashboard",
+    mealPlanId,
+    day,
+    meal,
+    searchMeals,
+  });
+};
+
+const renderUpdateResults = async (req, res) => {
+  const { id: mealPlanId } = req.params;
+
+  const { day, meal, searchInput, diet, intolerance } = req.query;
+
+  const url = `https://api.spoonacular.com/recipes/complexSearch?apiKey=6bd693686d904fbc9b2291fadaeb8d99&query=${searchInput}&number=10&addRecipeNutrition=true&diet=${diet}&intolerances=${intolerance}`;
 
   const options = {
     method: "GET",
@@ -100,7 +161,7 @@ const renderSearchResults = async (req, res) => {
     return res.status(404).json({ error: "No results" });
   }
 
-  res.status(200).render("addMeal", {
+  res.status(200).render("updateMeal", {
     layout: "dashboard",
     mealPlanId,
     day,
@@ -189,6 +250,8 @@ module.exports = {
   renderDashboard,
   renderMealPlan,
   renderAddMeal,
+  renderUpdateMeal,
   renderSearchResults,
+  renderUpdateResults,
   renderRecipe,
 };

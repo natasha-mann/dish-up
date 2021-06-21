@@ -6,7 +6,6 @@ const handlebars = require("express-handlebars");
 const session = require("express-session");
 const SequelizeStore = require("connect-session-sequelize")(session.Store);
 
-
 const routes = require("./routes");
 const sequelize = require("./config/connection");
 const logger = require("./middleware/logger");
