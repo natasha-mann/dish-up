@@ -14,28 +14,11 @@ const handleSubmit = async (event) => {
     })
     .get();
 
-  // const options = {
-  //   method: "POST",
-  //   headers: {
-  //     "Content-Type": "application/json",
-  //   },
-  //   redirect: "follow",
-  //   body: JSON.stringify({
-  //     searchInput,
-  //     diet,
-  //     intolerance,
-  //   }),
-  // };
+  
+    window.location.replace(
+      `/home/results?searchInput=${searchInput}&diet=${diet}&intolerance=${intolerance}`)
+    }
 
-  // const response = await fetch("/api/meals", options);
-  // const meals = await response.json();
-
-  // if (response.status !== 200) {
-  //   console.error("Failed to render search results");
-  // } else {
-  //   window.location.replace(
-  //     `/mealplan/${id}/add/results?day=${day}&meal=${meal}`
-};
 
 const handleCarouselClick = async (event) => {
   const mealId = event.currentTarget.id;

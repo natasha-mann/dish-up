@@ -1,4 +1,5 @@
 const { Meal } = require("../../models");
+const fetch = require("node-fetch");
 
 const renderLandingPage = (req, res) => {
   try {
@@ -33,38 +34,46 @@ const renderSearchResults = async (req, res) => {
   try {
     const { isLoggedIn } = req.session;
 
-    const searchMeals = [
-      {
-        id: 637876,
-        image: "https://spoonacular.com/recipeImages/637876-312x231.jpg",
-        readyInMinutes: 45,
-        servings: 6,
-        title: "Chicken 65",
-      },
-      {
-        id: 637876,
-        image: "https://spoonacular.com/recipeImages/637876-312x231.jpg",
-        readyInMinutes: 45,
-        servings: 6,
-        title: "Chicken 65",
-      },
-      {
-        id: 637876,
-        image: "https://spoonacular.com/recipeImages/637876-312x231.jpg",
-        readyInMinutes: 45,
-        servings: 6,
-        title: "Chicken 65",
-      },
-      {
-        id: 637876,
-        image: "https://spoonacular.com/recipeImages/637876-312x231.jpg",
-        readyInMinutes: 45,
-        servings: 6,
-        title: "Chicken 65",
-      },
-    ];
+    const { day, meal, searchInput, diet, intolerance } = req.query;
 
-    res.render("homepage", { isLoggedIn, searchMeals });
+    const url = `https://api.spoonacular.com/recipes/complexSearch?apiKey=7f1744dbc1d04e0a9153423050f1d307&query=${searchInput}&number=10&addRecipeNutrition=true&diet=${diet}&intolerances=${intolerance}`;
+
+  const options = {
+    method: "GET",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    redirect: "follow",
+  }
+
+  const response = await fetch(url, options);
+  const data = await response.json();
+  const mealsArray = data.results;
+
+  const searchMeals = mealsArray.map((each) => {
+    const { id, title, image, readyInMinutes, servings } = each;
+
+    return {
+      id,
+      title,
+      image,
+      readyInMinutes,
+      servings,
+    };
+  });
+
+  if (!searchMeals) {
+    return res.status(404).json({ error: "No results" });
+  }
+
+  res.status(200).render("homepage", {
+    isLoggedIn,
+    day,
+    meal,
+    searchMeals,
+  });
+
+    
   } catch (error) {
     console.log(error.message);
     res.status(500).json({ error: "Failed to render" });
