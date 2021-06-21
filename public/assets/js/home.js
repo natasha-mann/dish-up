@@ -40,20 +40,8 @@ const handleSubmit = async (event) => {
 const handleCarouselClick = async (event) => {
   const mealId = event.currentTarget.id;
 
-  // const options = {
-  //   method: "POST",
-  //   headers: {
-  //     "Content-Type": "application/json",
-  //   },
-  //   redirect: "follow",
-  //   body: JSON.stringify({
-  //     imageId,
-  //   }),
-  // };
-
-  // const response = await fetch("/api/meals/recipe", options);
-  // const carouselMeal = await response.json();
-  window.location.replace(`/recipe?id=${mealId}`);
+  
+  window.location.replace(`/recipe?mealId=${mealId}`);
 };
 
 $(".carousel-item").click(handleCarouselClick);

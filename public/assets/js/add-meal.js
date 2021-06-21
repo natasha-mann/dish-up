@@ -24,4 +24,11 @@ const handleSubmit = async (event) => {
   );
 };
 
+const handleViewClick = (event) => {
+  const mealId = event.currentTarget.id;
+
+  window.location.replace(`/recipe?mealId=${mealId}`);
+};
+
 $("#meal-search").submit(handleSubmit);
+$('[name="view-btn"]').click(handleViewClick);
