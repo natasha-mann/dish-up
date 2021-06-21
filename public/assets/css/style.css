@@ -18,6 +18,7 @@ body {
   background-position: center;
   background-attachment: fixed;
   background-repeat: no-repeat;
+  font-family: "Lato", sans-serif;
 }
 
 #home-navbar {
@@ -95,18 +96,6 @@ body {
   border: none;
 }
 
-/* .checkbox {
-  border-color: var(--green);
-  color: rgb(97, 151, 36);
-}
-
-.checkbox:hover,
-.checkbox:active,
-.checkbox:focus {
-  background-color: var(--green);
-  border-color: var(--green);
-} */
-
 .view-btn {
   background-color: var(--orange);
   border: none;
@@ -117,4 +106,89 @@ body {
 .view-btn:active {
   background-color: #f36523af;
   border: none;
+}
+
+.welcome-block {
+  height: 60%;
+  border-radius: 10px;
+  /* opacity: 0.95; */
+  background-image: linear-gradient(#f36523, #f28f47);
+  border: 5px solid white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.column-welcome {
+  position: absolute;
+  top: 50%;
+  left: 58%;
+  transform: translate(-50%, -50%);
+  height: 3rem;
+}
+
+#welcome-h2 {
+  color: white;
+  font-weight: bolder;
+  font-size: 2.75rem;
+  text-shadow: 2px 2px var(--green);
+}
+
+.welcome-instructions {
+  position: absolute;
+  top: 20%;
+  left: 55%;
+  color: white;
+  transform: translate(-50%, -50%);
+  height: 4rem;
+}
+
+.li-span-1 {
+  color: var(--green);
+  font-weight: bolder;
+  font-size: 3rem;
+  text-shadow: 2px 2px white;
+  padding-right: 0.5rem;
+}
+
+ol li {
+  font-size: 1.5rem;
+  list-style-type: none;
+  /* padding-left: 0.5rem; */
+  /* padding-right: 0.5rem; */
+}
+
+li {
+  font-size: 1.5rem;
+  /* padding-left: 0.5rem; */
+  /* padding-right: 0.5rem; */
+}
+
+@media screen and (max-width: 1200px) {
+  #welcome-h2 {
+    color: white;
+    font-weight: bolder;
+    font-size: 2.25rem;
+    text-shadow: 2px 2px var(--green);
+  }
+  .column-welcome {
+    position: absolute;
+    top: 50%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+    height: 3rem;
+  }
+  .welcome-instructions {
+    position: absolute;
+    top: 20%;
+    left: 55%;
+    color: white;
+    transform: translate(-50%, -50%);
+    height: 3rem;
+  }
+  .li-span-1 {
+    color: var(--green);
+    font-weight: bolder;
+    font-size: 2.75rem;
+    text-shadow: 2px 2px white;
+    padding-right: 0.5rem;
+  }
 }
