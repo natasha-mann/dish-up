@@ -2,6 +2,7 @@ const isMonday = (days, options) => {
   const result = days.filter((e) => {
     return e.name === "monday";
   });
+
   return options.fn(result[0]);
 };
 
