@@ -101,7 +101,7 @@ const renderSearchResults = async (req, res) => {
   const mealsArray = data.results;
 
   const searchMeals = mealsArray.map((each) => {
-    const { id, title, image, readyInMinutes, servings } = each;
+    const { id, title, image, readyInMinutes, servings, calories } = each;
 
     return {
       id,
@@ -109,6 +109,7 @@ const renderSearchResults = async (req, res) => {
       image,
       readyInMinutes,
       servings,
+      calories,
     };
   });
 
@@ -130,7 +131,7 @@ const renderUpdateResults = async (req, res) => {
 
   const { day, meal, searchInput, diet, intolerance } = req.query;
 
-  const url = `https://api.spoonacular.com/recipes/complexSearch?apiKey=aef1629a564f4778a914c956f90dbdb5&query=${searchInput}&number=10&addRecipeNutrition=true&diet=${diet}&intolerances=${intolerance}`;
+  const url = `https://api.spoonacular.com/recipes/complexSearch?apiKey=6bd693686d904fbc9b2291fadaeb8d99&query=${searchInput}&number=10&addRecipeNutrition=true&diet=${diet}&intolerances=${intolerance}`;
 
   const options = {
     method: "GET",

@@ -213,20 +213,20 @@
       {{#if searchMeals}}
        <div class="search-results mx-5 mt-4">
         <h3 class="text-center search-title mb-4">Results</h3>
-        <div class="d-flex flex-wrap justify-content-center">
+        <div id="searchResults" class="d-flex flex-wrap justify-content-center">
           {{#each searchMeals}}
-<div id="mealCard" data-name="{{id}}" data-calories="{{calories}}" class="card shadow mb-5 mx-4 bg-body rounded" style="width: 18rem">
-  <img id="image" data-name="{{image}}" src="{{image}}" class="card-img-top" alt="{{title}}" />
+<div id="mealCard"  class="card shadow mb-5 mx-4 bg-body rounded" style="width: 18rem">
+  <img id="image"  src="{{image}}" class="card-img-top" alt="{{title}}" />
   <div class="card-body text-center">
-    <h5 id="title" data-name="{{title}}" class="card-title search-title">
+    <h5 id="title" class="card-title search-title">
       {{title}}
     </h5>
     <div class="card-text text-start">
-      <div id="readyInMinutes" data-name="{{readyInMinutes}}">Ready in: {{readyInMinutes}} minutes</div>
-      <div id="servings" data-name="{{servings}}">Servings: {{servings}}</div>
+      <div id="readyInMinutes" >Ready in: {{readyInMinutes}} minutes</div>
+      <div id="servings" >Servings: {{servings}}</div>
     </div>
     <a href="/recipes/{{id}}" class="btn btn-primary view-btn mt-3">View</a>
-    <button
+    <button data-title="{{title}}" data-servings="{{servings}}" data-ready="{{readyInMinutes}}" data-image="{{image}}"  data-id="{{id}}" 
       type="button"
       name="updateMeal"
       id="{{../mealPlanId}}"
