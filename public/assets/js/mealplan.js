@@ -14,14 +14,16 @@ const handleClick = async (event) => {
     redirect: "follow",
   };
 
-  const response = await fetch(
-    `/mealplan/${id}/add?day=${day}&meal=${meal}`,
-    options
-  );
-  if (response.status !== 200) {
-    console.error("Failed to add meal");
-  } else {
-    window.location.replace(`/mealplan/${id}/add?day=${day}&meal=${meal}`);
+  if (day && meal) {
+    const response = await fetch(
+      `/mealplan/${id}/add?day=${day}&meal=${meal}`,
+      options
+    );
+    if (response.status !== 200) {
+      console.error("Failed to add meal");
+    } else {
+      window.location.replace(`/mealplan/${id}/add?day=${day}&meal=${meal}`);
+    }
   }
 };
 

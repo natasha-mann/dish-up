@@ -70,8 +70,6 @@ const renderSearchResults = async (req, res) => {
 
   const { day, meal, searchInput, diet, intolerance } = req.query;
 
-  console.log(day, meal, searchInput, diet, intolerance);
-
   const url = `https://api.spoonacular.com/recipes/complexSearch?apiKey=aef1629a564f4778a914c956f90dbdb5&query=${searchInput}&number=10&addRecipeNutrition=true&diet=${diet}&intolerances=${intolerance}`;
 
   const options = {

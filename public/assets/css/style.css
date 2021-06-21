@@ -55,15 +55,6 @@ body {
   border-radius: 0.3rem;
 }
 
-.mealplan-info {
-  background-color: #ffc30fcb;
-}
-
-.table-cell {
-  height: 10rem;
-  width: 10%;
-}
-
 .add-btn {
   background-color: var(--green);
   border: none;
@@ -91,21 +82,9 @@ body {
 
 .search-btn:hover,
 .search-btn:active {
-  background-color: rgb(212, 226, 19);
+  background-color: #ffc30f88;
   border: none;
 }
-
-/* .checkbox {
-  border-color: var(--green);
-  color: rgb(97, 151, 36);
-}
-
-.checkbox:hover,
-.checkbox:active,
-.checkbox:focus {
-  background-color: var(--green);
-  border-color: var(--green);
-} */
 
 .view-btn {
   background-color: var(--orange);
