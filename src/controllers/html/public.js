@@ -22,8 +22,6 @@ const renderHomePage = async (req, res) => {
     const firstMeal = mealsArray[0];
     const meals = mealsArray.slice(1);
 
-    console.log(firstMeal, meals);
-
     res.render("homepage", { isLoggedIn, firstMeal, meals });
   } catch (error) {
     console.log(error.message);
