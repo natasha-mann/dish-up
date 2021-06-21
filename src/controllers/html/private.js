@@ -68,17 +68,95 @@ const renderAddMeal = (req, res) => {
 const renderSearchResults = async (req, res) => {
   const { id: mealPlanId } = req.params;
 
-  const { day, meal } = req.query;
+  const { day, meal, searchInput, diet, intolerance } = req.query;
 
-  res
-    .status(200)
-    .render("addMeal", { layout: "dashboard", mealPlanId, day, meal });
+  console.log(day, meal, searchInput, diet, intolerance);
+
+  const url = `https://api.spoonacular.com/recipes/complexSearch?apiKey=aef1629a564f4778a914c956f90dbdb5&query=${searchInput}&number=10&addRecipeNutrition=true&diet=${diet}&intolerances=${intolerance}`;
+
+  const options = {
+    method: "GET",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    redirect: "follow",
+  };
+
+  const response = await fetch(url, options);
+  const data = await response.json();
+  const mealsArray = data.results;
+
+  const searchMeals = mealsArray.map((each) => {
+    const { id, title, image, readyInMinutes, servings } = each;
+
+    return {
+      id,
+      title,
+      image,
+      readyInMinutes,
+      servings,
+    };
+  });
+
+  if (!searchMeals) {
+    return res.status(404).json({ error: "No results" });
+  }
+
+  res.status(200).render("addMeal", {
+    layout: "dashboard",
+    mealPlanId,
+    day,
+    meal,
+    searchMeals,
+  });
 };
 
 const renderRecipe = async (req, res) => {
   try {
-    res.render("recipe", { layout: "recipe" });
-  } catch {
+    const { mealId } = req.query;
+
+    const url = `https://api.spoonacular.com/recipes/${mealId}/information?includeNutrition=true&apiKey=aef1629a564f4778a914c956f90dbdb5`;
+
+    const options = {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      redirect: "follow",
+    };
+
+    const response = await fetch(url, options);
+    const data = await response.json();
+
+    console.log(data);
+
+    if (!data) {
+      return res.status(404).json({ error: "No results" });
+    }
+    const {
+      id,
+      title,
+      image,
+      summary,
+      readyInMinutes,
+      servings,
+      extendedIngredients,
+      nutrition,
+      analyzedInstructions,
+    } = data;
+
+    const recipe = {
+      id,
+      title,
+      image,
+      summary,
+      readyInMinutes,
+      servings,
+      analyzedInstructions,
+    };
+
+    res.status(200).render("recipe", { layout: "recipe", recipe });
+  } catch (error) {
     console.log(error.message);
     return res.status(500).json({ error: "Failed to render" });
   }

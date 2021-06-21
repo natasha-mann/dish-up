@@ -2,18 +2,18 @@
 
     <div class="container mt-3 text-center">
       <img
-        src="{{url}}"
+        src="{{recipe.image}}"
         height="300"
         width="500"
       />
-      <h1 class="recipe-title">{{title}}</h1>
+      <h1 class="recipe-title">{{recipe.title}}</h1>
       <div>
         <ul class="list-inline">
           <li class="list-inline-item">
-            <span class="fw-bold recipe-text">Servings: </span> {{servings}} ||
+            <span class="fw-bold recipe-text">Servings: </span> {{recipe.servings}} ||
           </li>
           <li class="list-inline-item">
-            <span class="fw-bold recipe-text">Ready in:</span> {{ready_in_minutes}} minutes ||
+            <span class="fw-bold recipe-text">Ready in:</span> {{recipe.readyInMinutes}} minutes ||
           </li>
           <li class="list-inline-item">
             <span class="fw-bold recipe-text">Calories:</span> {{calories}}
@@ -21,7 +21,7 @@
         </ul>
       </div>
       <div class="mb-5">
-        {{description}}
+        {{recipe.summary}}
       </div>
       <div class="          d-flex
           flex-lg-nowrap flex-wrap

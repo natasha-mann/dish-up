@@ -8,6 +8,6 @@ const router = Router();
 
 router.use(publicRoutes);
 
-router.use(auth,privateRoutes);
+router.use(auth, privateRoutes);
 
 module.exports = router;
