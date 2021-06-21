@@ -6,6 +6,8 @@ const handleClick = async (event) => {
   const meal = $(selectedButton).attr("data-meal");
   const id = $(event.currentTarget).attr("id");
 
+  const add = $(selectedButton).hasClass("add-meal");
+
   const options = {
     method: "GET",
     headers: {
@@ -15,14 +17,28 @@ const handleClick = async (event) => {
   };
 
   if (day && meal) {
-    const response = await fetch(
-      `/mealplan/${id}/add?day=${day}&meal=${meal}`,
-      options
-    );
-    if (response.status !== 200) {
-      console.error("Failed to add meal");
+    if (add) {
+      const response = await fetch(
+        `/mealplan/${id}/add?day=${day}&meal=${meal}`,
+        options
+      );
+      if (response.status !== 200) {
+        console.error("Failed to add meal");
+      } else {
+        window.location.replace(`/mealplan/${id}/add?day=${day}&meal=${meal}`);
+      }
     } else {
-      window.location.replace(`/mealplan/${id}/add?day=${day}&meal=${meal}`);
+      const response = await fetch(
+        `/mealplan/${id}/update?day=${day}&meal=${meal}`,
+        options
+      );
+      if (response.status !== 200) {
+        console.error("Failed to add meal");
+      } else {
+        window.location.replace(
+          `/mealplan/${id}/update?day=${day}&meal=${meal}`
+        );
+      }
     }
   }
 };
