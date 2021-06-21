@@ -97,3 +97,7 @@ body {
   background-color: #f36523af;
   border: none;
 }
+
+#no-results-header {
+  color: var(--orange);
+}

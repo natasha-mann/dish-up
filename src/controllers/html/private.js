@@ -56,9 +56,12 @@ const renderAddMeal = (req, res) => {
     const { id: mealPlanId } = req.params;
     const { day, meal } = req.query;
 
-    res
-      .status(200)
-      .render("addMeal", { layout: "dashboard", day, meal, mealPlanId });
+    res.status(200).render("addMeal", {
+      layout: "dashboard",
+      day,
+      meal,
+      mealPlanId,
+    });
   } catch (error) {
     console.error(error.message);
     return res.status(500).json({ error: "Failed to render add meal plan." });
@@ -70,7 +73,7 @@ const renderSearchResults = async (req, res) => {
 
   const { day, meal, searchInput, diet, intolerance } = req.query;
 
-  const url = `https://api.spoonacular.com/recipes/complexSearch?apiKey=aef1629a564f4778a914c956f90dbdb5&query=${searchInput}&number=10&addRecipeNutrition=true&diet=${diet}&intolerances=${intolerance}`;
+  const url = `https://api.spoonacular.com/recipes/complexSearch?apiKey=7f1744dbc1d04e0a9153423050f1d307&query=${searchInput}&number=10&addRecipeNutrition=true&diet=${diet}&intolerances=${intolerance}`;
 
   const options = {
     method: "GET",
@@ -96,9 +99,7 @@ const renderSearchResults = async (req, res) => {
     };
   });
 
-  if (!searchMeals) {
-    return res.status(404).json({ error: "No results" });
-  }
+  const noSearchResults = searchMeals.length === 0;
 
   res.status(200).render("addMeal", {
     layout: "dashboard",
@@ -106,6 +107,7 @@ const renderSearchResults = async (req, res) => {
     day,
     meal,
     searchMeals,
+    noSearchResults,
   });
 };
 

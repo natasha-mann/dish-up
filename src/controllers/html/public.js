@@ -38,42 +38,39 @@ const renderSearchResults = async (req, res) => {
 
     const url = `https://api.spoonacular.com/recipes/complexSearch?apiKey=7f1744dbc1d04e0a9153423050f1d307&query=${searchInput}&number=10&addRecipeNutrition=true&diet=${diet}&intolerances=${intolerance}`;
 
-  const options = {
-    method: "GET",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    redirect: "follow",
-  }
-
-  const response = await fetch(url, options);
-  const data = await response.json();
-  const mealsArray = data.results;
-
-  const searchMeals = mealsArray.map((each) => {
-    const { id, title, image, readyInMinutes, servings } = each;
-
-    return {
-      id,
-      title,
-      image,
-      readyInMinutes,
-      servings,
+    const options = {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      redirect: "follow",
     };
-  });
 
-  if (!searchMeals) {
-    return res.status(404).json({ error: "No results" });
-  }
+    const response = await fetch(url, options);
+    const data = await response.json();
+    const mealsArray = data.results;
 
-  res.status(200).render("homepage", {
-    isLoggedIn,
-    day,
-    meal,
-    searchMeals,
-  });
+    const searchMeals = mealsArray.map((each) => {
+      const { id, title, image, readyInMinutes, servings } = each;
 
-    
+      return {
+        id,
+        title,
+        image,
+        readyInMinutes,
+        servings,
+      };
+    });
+
+    const noSearchResults = searchMeals.length === 0;
+
+    res.status(200).render("homepage", {
+      isLoggedIn,
+      day,
+      meal,
+      searchMeals,
+      noSearchResults,
+    });
   } catch (error) {
     console.log(error.message);
     res.status(500).json({ error: "Failed to render" });
