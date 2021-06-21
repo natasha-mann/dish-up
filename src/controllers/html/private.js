@@ -126,7 +126,7 @@ const renderRecipe = async (req, res) => {
     const response = await fetch(url, options);
     const data = await response.json();
 
-    console.log(data);
+    
 
     if (!data) {
       return res.status(404).json({ error: "No results" });
@@ -142,15 +142,40 @@ const renderRecipe = async (req, res) => {
       nutrition,
       analyzedInstructions,
     } = data;
+    
+    const calories = nutrition.nutrients[0].amount
+    
 
+    const ingredients = extendedIngredients.map((each)=>{
+      const { original } = each
+      return original
+    })
+    
+
+    const instructions = analyzedInstructions[0].steps
+
+    const steps = instructions.map((each)=>{
+      const { step } = each
+      return step
+    })
+
+    console.log(steps)
+
+    
+
+
+    
+    
     const recipe = {
       id,
       title,
       image,
       summary,
+      calories,
       readyInMinutes,
+      ingredients,
       servings,
-      analyzedInstructions,
+      steps,
     };
 
     res.status(200).render("recipe", { layout: "recipe", recipe });
