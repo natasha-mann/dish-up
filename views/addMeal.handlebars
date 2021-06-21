@@ -209,9 +209,11 @@
           </button>
         </form>
       </div>
-     
-      {{#if searchMeals}}
-       <div class="search-results mx-5 mt-4">
+             {{#if noSearchResults}}
+                {{> no-results}}
+              {{else}}
+                {{#if searchMeals}}
+              <div class="search-results mx-5 mt-4">
         <h3 class="text-center search-title mb-4">Results</h3>
         <div class="d-flex flex-wrap justify-content-center">
           {{#each searchMeals}}
@@ -233,10 +235,9 @@
     >Add</button>
   </div>
 </div>
-
           {{/each}}
         </div>
       </div>
-         
-         {{/if}}
+      {{/if}}
+        {{/if}}
     </div>
