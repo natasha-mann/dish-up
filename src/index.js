@@ -24,6 +24,7 @@ const sessionOptions = {
   store: new SequelizeStore({
     db: sequelize,
   }),
+  cookie: { maxAge: 600000 },
 };
 
 const handlebarsOptions = { helpers, arrayHelpers };
