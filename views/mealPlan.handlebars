@@ -28,16 +28,18 @@
       <td class="table-cell">
 
 {{#isMonday mealPlan.days as |day|}} 
+
 {{#if breakfast}}
   <div class="card mealplan-card">
+    
     <img src="{{breakfast.image}}" class="card-img-top" />
     <div class="card-body">
     <p class="small">{{breakfast.title}}</p> 
    </div>
    <div class="card-footer p-0 m-0">
     <div class="d-grid">
-    <button data-day="monday"
-    data-meal="breakfast" class="edit-btn py-1" ><i data-day="monday"
+    <button data-day="monday" data-id="{{id}}"
+    data-meal="breakfast" class="edit-btn py-1" ><i data-day="monday" data-id="{{id}}"
     data-meal="breakfast" class="fas fa-pen"></i></button>
     </div>
     </div>
@@ -46,11 +48,13 @@
 <button
     data-day="monday"
     data-meal="breakfast"
+    data-id="{{id}}"
     class="btn p-3 add-btn add-meal"
     type="button"
   >
     <i data-day="monday"
-    data-meal="breakfast" class="fas fa-plus add-meal"></i>
+    data-meal="breakfast" 
+    data-id="{{id}}"class="fas fa-plus add-meal"></i>
   </button>
   {{/if}}
   {{/isMonday}}
@@ -65,8 +69,8 @@
    </div>
    <div class="card-footer p-0 m-0">
     <div class="d-grid">
-    <button data-day="tuesday"
-    data-meal="breakfast" class="edit-btn  py-1" ><i data-day="tuesday"
+    <button data-day="tuesday" data-id="{{id}}"
+    data-meal="breakfast" class="edit-btn  py-1" ><i data-day="tuesday" data-id="{{id}}"
     data-meal="breakfast" class="fas fa-pen"></i></button>
     </div>
     </div>
@@ -74,11 +78,12 @@
   {{else}}
 <button
     data-day="tuesday"
+    data-id="{{id}}"
     data-meal="breakfast"
     class="btn p-3 add-btn add-meal"
     type="button"
   >
-    <i data-day="tuesday"
+    <i data-day="tuesday" data-id="{{id}}"
     data-meal="breakfast" class="fas fa-plus add-meal"></i>
   </button>
   {{/if}}
@@ -94,20 +99,20 @@
    </div>
    <div class="card-footer p-0 m-0">
     <div class="d-grid">
-    <button data-day="wednesday"
-    data-meal="breakfast" class="edit-btn  py-1" ><i data-day="wednesday"
+    <button data-id="{{id}}" data-day="wednesday"
+    data-meal="breakfast" class="edit-btn  py-1" ><i data-id="{{id}}" data-day="wednesday"
     data-meal="breakfast" class="fas fa-pen"></i></button>
     </div>
     </div>
   </div>
   {{else}}
 <button
-    data-day="wednesday"
+    data-id="{{id}}" data-day="wednesday"
     data-meal="breakfast"
     class="btn p-3 add-btn add-meal"
     type="button"
   >
-    <i data-day="wednesday"
+    <i data-id="{{id}}" data-day="wednesday"
     data-meal="breakfast" class="fas fa-plus add-meal"></i>
   </button>
   {{/if}}
@@ -123,20 +128,20 @@
    </div>
    <div class="card-footer p-0 m-0">
     <div class="d-grid">
-    <button data-day="thursday"
-    data-meal="breakfast" class="edit-btn  py-1" ><i data-day="thursday"
+    <button data-id="{{id}}" data-day="thursday"
+    data-meal="breakfast" class="edit-btn  py-1" ><i data-id="{{id}}" data-day="thursday"
     data-meal="breakfast" class="fas fa-pen"></i></button>
     </div>
     </div>
   </div>
   {{else}}
 <button
-    data-day="thursday"
+    data-id="{{id}}" data-day="thursday"
     data-meal="breakfast"
     class="btn p-3 add-btn add-meal"
     type="button"
   >
-    <i data-day="thursday"
+    <i data-id="{{id}}" data-day="thursday"
     data-meal="breakfast" class="fas fa-plus add-meal"></i>
   </button>
   {{/if}}
@@ -152,20 +157,20 @@
    </div>
    <div class="card-footer p-0 m-0">
     <div class="d-grid">
-    <button data-day="friday"
-    data-meal="breakfast" class="edit-btn  py-1" ><i data-day="friday"
+    <button data-id="{{id}}" data-day="friday"
+    data-meal="breakfast" class="edit-btn  py-1" ><i data-id="{{id}}" data-day="friday"
     data-meal="breakfast" class="fas fa-pen"></i></button>
     </div>
     </div>
   </div>
   {{else}}
 <button
-    data-day="friday"
+    data-id="{{id}}" data-day="friday"
     data-meal="breakfast"
     class="btn p-3 add-btn add-meal"
     type="button"
   >
-    <i data-day="friday"
+    <i data-id="{{id}}" data-day="friday"
     data-meal="breakfast"  class="fas fa-plus add-meal"></i>
   </button>
   {{/if}}
@@ -181,20 +186,20 @@
    </div>
    <div class="card-footer p-0 m-0">
     <div class="d-grid">
-    <button data-day="saturday"
-    data-meal="breakfast" class="edit-btn  py-1" ><i data-day="saturday"
+    <button data-id="{{id}}" data-day="saturday"
+    data-meal="breakfast" class="edit-btn  py-1" ><i data-id="{{id}}" data-day="saturday"
     data-meal="breakfast" class="fas fa-pen"></i></button>
     </div>
     </div>
   </div>
   {{else}}
 <button
-    data-day="saturday"
+    data-id="{{id}}" data-day="saturday"
     data-meal="breakfast"
     class="btn p-3 add-btn add-meal"
     type="button"
   >
-    <i data-day="saturday"
+    <i data-id="{{id}}" data-day="saturday"
     data-meal="breakfast" class="fas fa-plus add-meal"></i>
   </button>
   {{/if}}
@@ -210,20 +215,20 @@
    </div>
    <div class="card-footer p-0 m-0">
     <div class="d-grid">
-    <button data-day="sunday"
-    data-meal="breakfast" class="edit-btn  py-1" ><i data-day="sunday"
+    <button data-id="{{id}}" data-day="sunday"
+    data-meal="breakfast" class="edit-btn  py-1" ><i data-id="{{id}}" data-day="sunday"
     data-meal="breakfast" class="fas fa-pen"></i></button>
     </div>
     </div>
   </div>
   {{else}}
 <button
-    data-day="sunday"
+    data-id="{{id}}" data-day="sunday"
     data-meal="breakfast"
     class="btn p-3 add-btn add-meal"
     type="button"
   >
-    <i data-day="sunday"
+    <i data-id="{{id}}" data-day="sunday"
     data-meal="breakfast" class="fas fa-plus add-meal"></i>
   </button>
   {{/if}}
@@ -241,20 +246,20 @@
    </div>
    <div class="card-footer p-0 m-0">
     <div class="d-grid">
-    <button data-day="monday"
-    data-meal="lunch" class="edit-btn  py-1" ><i data-day="monday"
+    <button data-id="{{id}}" data-day="monday"
+    data-meal="lunch" class="edit-btn  py-1" ><i data-id="{{id}}" data-day="monday"
     data-meal="lunch" class="fas fa-pen"></i></button>
     </div>
     </div>
   </div>
   {{else}}
 <button
-    data-day="monday"
+    data-id="{{id}}" data-day="monday"
     data-meal="lunch"
     class="btn p-3 add-btn add-meal"
     type="button"
   >
-    <i data-day="monday"
+    <i data-id="{{id}}" data-day="monday"
     data-meal="lunch" class="fas fa-plus add-meal"></i>
   </button>
   {{/if}}
@@ -270,20 +275,20 @@
    </div>
    <div class="card-footer p-0 m-0">
     <div class="d-grid">
-    <button data-day="tuesday"
-    data-meal="lunch" class="edit-btn  py-1" ><i data-day="tuesday"
+    <button data-id="{{id}}" data-day="tuesday"
+    data-meal="lunch" class="edit-btn  py-1" ><i data-id="{{id}}" data-day="tuesday"
     data-meal="lunch" class="fas fa-pen"></i></button>
     </div>
     </div>
   </div>
   {{else}}
 <button
-    data-day="tuesday"
+    data-id="{{id}}" data-day="tuesday"
     data-meal="lunch"
     class="btn p-3 add-btn add-meal"
     type="button"
   >
-    <i data-day="tuesday"
+    <i data-id="{{id}}" data-day="tuesday"
     data-meal="lunch" class="fas fa-plus add-meal"></i>
   </button>
   {{/if}}
@@ -299,20 +304,20 @@
    </div>
    <div class="card-footer p-0 m-0">
     <div class="d-grid">
-    <button data-day="wednesday"
-    data-meal="lunch" class="edit-btn  py-1" ><i data-day="wednesday"
+    <button data-id="{{id}}" data-day="wednesday"
+    data-meal="lunch" class="edit-btn  py-1" ><i data-id="{{id}}" data-day="wednesday"
     data-meal="lunch" class="fas fa-pen"></i></button>
     </div>
     </div>
   </div>
   {{else}}
 <button
-    data-day="wednesday"
+    data-id="{{id}}" data-day="wednesday"
     data-meal="lunch"
     class="btn p-3 add-btn add-meal"
     type="button"
   >
-    <i data-day="wednesday"
+    <i data-id="{{id}}" data-day="wednesday"
     data-meal="lunch" class="fas fa-plus add-meal"></i>
   </button>
   {{/if}}
@@ -328,20 +333,20 @@
    </div>
    <div class="card-footer p-0 m-0">
     <div class="d-grid">
-    <button  data-day="thursday"
-    data-meal="lunch" class="edit-btn  py-1" ><i data-day="thursday"
+    <button  data-id="{{id}}" data-day="thursday"
+    data-meal="lunch" class="edit-btn  py-1" ><i data-id="{{id}}" data-day="thursday"
     data-meal="lunch" class="fas fa-pen"></i></button>
     </div>
     </div>
   </div>
   {{else}}
 <button
-    data-day="thursday"
+    data-id="{{id}}" data-day="thursday"
     data-meal="lunch"
     class="btn p-3 add-btn add-meal"
     type="button"
   >
-    <i data-day="thursday"
+    <i data-id="{{id}}" data-day="thursday"
     data-meal="lunch" class="fas fa-plus add-meal"></i>
   </button>
   {{/if}}
@@ -357,20 +362,20 @@
    </div>
    <div class="card-footer p-0 m-0">
     <div class="d-grid">
-    <button data-day="friday"
-    data-meal="lunch" class="edit-btn  py-1" ><i data-day="friday"
+    <button data-id="{{id}}" data-day="friday"
+    data-meal="lunch" class="edit-btn  py-1" ><i data-id="{{id}}" data-day="friday"
     data-meal="lunch" class="fas fa-pen"></i></button>
     </div>
     </div>
   </div>
   {{else}}
 <button
-    data-day="friday"
+    data-id="{{id}}" data-day="friday"
     data-meal="lunch"
     class="btn p-3 add-btn add-meal"
     type="button"
   >
-    <i data-day="friday"
+    <i data-id="{{id}}" data-day="friday"
     data-meal="lunch" class="fas fa-plus add-meal"></i>
   </button>
   {{/if}}
@@ -386,20 +391,20 @@
    </div>
    <div class="card-footer p-0 m-0">
     <div class="d-grid">
-    <button  data-day="saturday"
-    data-meal="lunch" class="edit-btn  py-1" ><i data-day="saturday"
+    <button  data-id="{{id}}" data-day="saturday"
+    data-meal="lunch" class="edit-btn  py-1" ><i data-id="{{id}}" data-day="saturday"
     data-meal="lunch" class="fas fa-pen"></i></button>
     </div>
     </div>
   </div>
   {{else}}
 <button
-    data-day="saturday"
+    data-id="{{id}}" data-day="saturday"
     data-meal="lunch"
     class="btn p-3 add-btn add-meal"
     type="button"
   >
-    <i data-day="saturday"
+    <i data-id="{{id}}" data-day="saturday"
     data-meal="lunch" class="fas fa-plus add-meal"></i>
   </button>
   {{/if}}
@@ -415,20 +420,20 @@
    </div>
    <div class="card-footer p-0 m-0">
     <div class="d-grid">
-    <button data-day="sunday"
-    data-meal="lunch" class="edit-btn  py-1" ><i data-day="sunday"
+    <button data-id="{{id}}" data-day="sunday"
+    data-meal="lunch" class="edit-btn  py-1" ><i data-id="{{id}}" data-day="sunday"
     data-meal="lunch" class="fas fa-pen"></i></button>
     </div>
     </div>
   </div>
   {{else}}
 <button
-    data-day="sunday"
+    data-id="{{id}}" data-day="sunday"
     data-meal="lunch"
     class="btn p-3 add-btn add-meal"
     type="button"
   >
-    <i data-day="sunday"
+    <i data-id="{{id}}" data-day="sunday"
     data-meal="lunch" class="fas fa-plus add-meal"></i>
   </button>
   {{/if}}
@@ -447,20 +452,20 @@
    </div>
    <div class="card-footer p-0 m-0">
     <div class="d-grid">
-    <button data-day="monday"
-    data-meal="dinner" class="edit-btn  py-1" ><i data-day="monday"
+    <button data-id="{{id}}" data-day="monday"
+    data-meal="dinner" class="edit-btn  py-1" ><i data-id="{{id}}" data-day="monday"
     data-meal="dinner" class="fas fa-pen"></i></button>
     </div>
     </div>
   </div>
   {{else}}
 <button
-    data-day="monday"
+    data-id="{{id}}" data-day="monday"
     data-meal="dinner"
     class="btn p-3 add-btn add-meal"
     type="button"
   >
-    <i data-day="monday"
+    <i data-id="{{id}}" data-day="monday"
     data-meal="dinner" class="fas fa-plus add-meal"></i>
   </button>
   {{/if}}
@@ -476,20 +481,20 @@
    </div>
    <div class="card-footer p-0 m-0">
     <div class="d-grid">
-    <button data-day="tuesday"
-    data-meal="dinner" class="edit-btn  py-1" ><i data-day="tuesday"
+    <button data-id="{{id}}" data-day="tuesday"
+    data-meal="dinner" class="edit-btn  py-1" ><i data-id="{{id}}" data-day="tuesday"
     data-meal="dinner" class="fas fa-pen"></i></button>
     </div>
     </div>
   </div>
   {{else}}
 <button
-    data-day="tuesday"
+    data-id="{{id}}" data-day="tuesday"
     data-meal="dinner"
     class="btn p-3 add-btn add-meal"
     type="button"
   >
-    <i data-day="tuesday"
+    <i data-id="{{id}}" data-day="tuesday"
     data-meal="dinner" class="fas fa-plus add-meal"></i>
   </button>
   {{/if}}
@@ -505,20 +510,20 @@
    </div>
    <div class="card-footer p-0 m-0">
     <div class="d-grid">
-    <button data-day="wednesday"
-    data-meal="dinner" class="edit-btn  py-1" ><i data-day="wednesday"
+    <button data-id="{{id}}" data-day="wednesday"
+    data-meal="dinner" class="edit-btn  py-1" ><i data-id="{{id}}" data-day="wednesday"
     data-meal="dinner" class="fas fa-pen"></i></button>
     </div>
     </div>
   </div>
   {{else}}
 <button
-    data-day="wednesday"
+    data-id="{{id}}" data-day="wednesday"
     data-meal="dinner"
     class="btn p-3 add-btn add-meal"
     type="button"
   >
-    <i data-day="wednesday"
+    <i data-id="{{id}}" data-day="wednesday"
     data-meal="dinner" class="fas fa-plus add-meal"></i>
   </button>
   {{/if}}
@@ -534,20 +539,20 @@
    </div>
    <div class="card-footer p-0 m-0">
     <div class="d-grid">
-    <button data-day="thursday"
-    data-meal="dinner" class="edit-btn  py-1" ><i data-day="thursday"
+    <button data-id="{{id}}" data-day="thursday"
+    data-meal="dinner" class="edit-btn  py-1" ><i data-id="{{id}}" data-day="thursday"
     data-meal="dinner" class="fas fa-pen"></i></button>
     </div>
     </div>
   </div>
   {{else}}
 <button
-    data-day="thursday"
+    data-id="{{id}}" data-day="thursday"
     data-meal="dinner"
     class="btn p-3 add-btn add-meal"
     type="button"
   >
-    <i data-day="thursday"
+    <i data-id="{{id}}" data-day="thursday"
     data-meal="dinner" class="fas fa-plus add-meal"></i>
   </button>
   {{/if}}
@@ -563,20 +568,20 @@
    </div>
    <div class="card-footer p-0 m-0">
     <div class="d-grid">
-    <button data-day="friday"
-    data-meal="dinner" class="edit-btn  py-1" ><i data-day="friday"
+    <button data-id="{{id}}" data-day="friday"
+    data-meal="dinner" class="edit-btn  py-1" ><i data-id="{{id}}" data-day="friday"
     data-meal="dinner" class="fas fa-pen"></i></button>
     </div>
     </div>
   </div>
   {{else}}
 <button
-    data-day="friday"
+    data-id="{{id}}" data-day="friday"
     data-meal="dinner"
     class="btn p-3 add-btn add-meal"
     type="button"
   >
-    <i data-day="friday"
+    <i data-id="{{id}}" data-day="friday"
     data-meal="dinner" class="fas fa-plus add-meal"></i>
   </button>
   {{/if}}
@@ -592,20 +597,20 @@
    </div>
    <div class="card-footer p-0 m-0">
     <div class="d-grid">
-    <button data-day="saturday"
-    data-meal="dinner" class="edit-btn  py-1" ><i data-day="saturday"
+    <button data-id="{{id}}" data-day="saturday"
+    data-meal="dinner" class="edit-btn  py-1" ><i data-id="{{id}}" data-day="saturday"
     data-meal="dinner" class="fas fa-pen"></i></button>
     </div>
     </div>
   </div>
   {{else}}
 <button
-    data-day="saturday"
+    data-id="{{id}}" data-day="saturday"
     data-meal="dinner"
     class="btn p-3 add-btn add-meal"
     type="button"
   >
-    <i data-day="saturday"
+    <i data-id="{{id}}" data-day="saturday"
     data-meal="dinner" class="fas fa-plus add-meal"></i>
   </button>
   {{/if}}
@@ -621,20 +626,20 @@
    </div>
    <div class="card-footer p-0 m-0">
     <div class="d-grid">
-    <button data-day="sunday"
-    data-meal="dinner" class="edit-btn  py-1" ><i data-day="sunday"
+    <button data-id="{{id}}" data-day="sunday"
+    data-meal="dinner" class="edit-btn  py-1" ><i data-id="{{id}}" data-day="sunday"
     data-meal="dinner" class="fas fa-pen"></i></button>
     </div>
     </div>
   </div>
   {{else}}
 <button
-    data-day="sunday"
+    data-id="{{id}}" data-day="sunday"
     data-meal="dinner"
     class="btn p-3 add-btn add-meal"
     type="button"
   >
-    <i data-day="sunday"
+    <i data-id="{{id}}" data-day="sunday"
     data-meal="dinner" class="fas fa-plus add-meal"></i>
   </button>
   {{/if}}

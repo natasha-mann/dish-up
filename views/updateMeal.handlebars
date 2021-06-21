@@ -3,7 +3,7 @@
 
   <div class="container bg-light mt-5">
       <div class="p-4">
-        <h1 id="search-title" data-meal="{{meal}}" data-day="{{day}}" data-id="{{mealPlanId}}" class="text-center search-title">{{toUpperCase day}} - {{toUpperCase meal}}</h1>
+        <h1 id="search-title" data-dayId="{{dayId}}" data-meal="{{meal}}" data-day="{{day}}" data-id="{{mealPlanId}}" class="text-center search-title">{{toUpperCase day}} - {{toUpperCase meal}}</h1>
         <form id="update-search"class="d-flex flex-wrap flex-column">
           <input
             class="form-control form-control-lg mb-3"
@@ -226,7 +226,7 @@
       <div id="servings" >Servings: {{servings}}</div>
     </div>
     <a href="/recipes/{{id}}" class="btn btn-primary view-btn mt-3">View</a>
-    <button data-title="{{title}}" data-servings="{{servings}}" data-ready="{{readyInMinutes}}" data-image="{{image}}"  data-id="{{id}}" 
+    <button  data-title="{{title}}" data-servings="{{servings}}" data-ready="{{readyInMinutes}}" data-image="{{image}}"  data-id="{{id}}" 
       type="button"
       name="updateMeal"
       id="{{../mealPlanId}}"

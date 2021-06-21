@@ -54,13 +54,14 @@ const renderMealPlan = async (req, res) => {
 const renderAddMeal = (req, res) => {
   try {
     const { id: mealPlanId } = req.params;
-    const { day, meal } = req.query;
+    const { day, meal, dayId } = req.query;
 
     res.status(200).render("addMeal", {
       layout: "dashboard",
       day,
       meal,
       mealPlanId,
+      dayId,
     });
   } catch (error) {
     console.error(error.message);
@@ -71,11 +72,16 @@ const renderAddMeal = (req, res) => {
 const renderUpdateMeal = (req, res) => {
   try {
     const { id: mealPlanId } = req.params;
-    const { day, meal } = req.query;
+    const { day, meal, dayId } = req.query;
+    console.log(dayId);
 
-    res
-      .status(200)
-      .render("updateMeal", { layout: "dashboard", day, meal, mealPlanId });
+    res.status(200).render("updateMeal", {
+      layout: "dashboard",
+      day,
+      meal,
+      mealPlanId,
+      dayId,
+    });
   } catch (error) {
     console.error(error.message);
     return res
@@ -87,7 +93,7 @@ const renderUpdateMeal = (req, res) => {
 const renderSearchResults = async (req, res) => {
   const { id: mealPlanId } = req.params;
 
-  const { day, meal, searchInput, diet, intolerance } = req.query;
+  const { day, meal, dayId, searchInput, diet, intolerance } = req.query;
 
   const url = `https://api.spoonacular.com/recipes/complexSearch?apiKey=7f1744dbc1d04e0a9153423050f1d307&query=${searchInput}&number=10&addRecipeNutrition=true&diet=${diet}&intolerances=${intolerance}`;
 
@@ -123,6 +129,7 @@ const renderSearchResults = async (req, res) => {
     mealPlanId,
     day,
     meal,
+    dayId,
     searchMeals,
     noSearchResults,
   });
@@ -131,7 +138,7 @@ const renderSearchResults = async (req, res) => {
 const renderUpdateResults = async (req, res) => {
   const { id: mealPlanId } = req.params;
 
-  const { day, meal, searchInput, diet, intolerance } = req.query;
+  const { day, meal, dayId, searchInput, diet, intolerance } = req.query;
 
   const url = `https://api.spoonacular.com/recipes/complexSearch?apiKey=6bd693686d904fbc9b2291fadaeb8d99&query=${searchInput}&number=10&addRecipeNutrition=true&diet=${diet}&intolerances=${intolerance}`;
 
@@ -168,6 +175,7 @@ const renderUpdateResults = async (req, res) => {
     mealPlanId,
     day,
     meal,
+    dayId,
     searchMeals,
   });
 };
@@ -217,8 +225,6 @@ const renderRecipe = async (req, res) => {
       const { step } = each;
       return step;
     });
-
-    console.log(steps);
 
     const recipe = {
       id,

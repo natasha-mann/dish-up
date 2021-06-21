@@ -1,9 +1,10 @@
-const handleUpdateSubmit = async (event) => {
+const handleUpdateSearch = async (event) => {
   event.preventDefault();
 
   const meal = $("#search-title").attr("data-meal");
   const day = $("#search-title").attr("data-day");
   const id = $("#search-title").attr("data-id");
+  const dayId = $("#search-title").attr("data-dayId");
 
   const searchInput = $("#search-input").val();
   const diet = $("#diet-input")
@@ -20,7 +21,7 @@ const handleUpdateSubmit = async (event) => {
     .get();
 
   window.location.replace(
-    `/mealplan/${id}/update/results?day=${day}&meal=${meal}&searchInput=${searchInput}&diet=${diet}&intolerance=${intolerance}`
+    `/mealplan/${id}/update/results?day=${day}&meal=${meal}&dayId=${dayId}&searchInput=${searchInput}&diet=${diet}&intolerance=${intolerance}`
   );
 };
 
@@ -32,6 +33,7 @@ const handleUpdate = async (event) => {
   const mealPlanId = $('[name="updateMeal"]').attr("id");
   const day = $("#search-title").attr("data-day");
   const meal = $("#search-title").attr("data-meal");
+  const dayId = $("#search-title").attr("data-dayId");
   const spoonacularId = $(card).attr("data-id");
   const title = $(card).attr("data-title");
   const readyInMinutes = $(card).attr("data-ready");
@@ -48,6 +50,7 @@ const handleUpdate = async (event) => {
       mealPlanId,
       day,
       meal,
+      dayId,
       spoonacularId,
       title,
       readyInMinutes,
@@ -63,5 +66,5 @@ const handleUpdate = async (event) => {
   }
 };
 
-$("#update-search").submit(handleUpdateSubmit);
+$("#update-search").submit(handleUpdateSearch);
 $("#searchResults").click(handleUpdate);
