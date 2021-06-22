@@ -40,8 +40,4 @@ const createMealPlan = async (req, res) => {
   }
 };
 
-const addMeal = async (req, res) => {
-  res.send("add meal");
-};
-
-module.exports = { getAllMealPlans, createMealPlan, addMeal };
+module.exports = { getAllMealPlans, createMealPlan };
