@@ -1,9 +1,3 @@
-// const Swiper = require("swiper");
-// import Swiper styles
-// import "swiper/swiper-bundle.css";
-
-console.log("this is the carousel file");
-
 const createSwiper = () => {
   console.log("swiper created");
   const swiper = new Swiper(".swiper-container", {
