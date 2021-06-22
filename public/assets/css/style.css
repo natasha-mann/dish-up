@@ -101,3 +101,16 @@ body {
 #no-results-header {
   color: var(--orange);
 }
+
+.footer {
+  background-color: var(--orange);
+}
+
+.copyright {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.btn-link:hover {
+  background-color: var(--yellow);
+}
+
