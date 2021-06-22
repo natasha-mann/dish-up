@@ -10,6 +10,16 @@ const addMeal = async (req, res) => {
       image,
     } = req.body;
 
+    const meal = await Meal.findOne({
+      where: {
+        spoonacular_id,
+      },
+    });
+
+    if (meal) {
+      return res.status(200).json(meal);
+    }
+
     const newMeal = await Meal.create({
       spoonacular_id,
       title,

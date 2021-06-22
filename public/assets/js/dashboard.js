@@ -41,7 +41,7 @@ const handleCreateMealPlan = async (event) => {
     console.error("Unable to create meal plan");
   } else {
     const { id } = data;
-    window.location.replace(`/mealplan/${id}`);
+    window.location.assign(`/mealplan/${id}`);
   }
 };
 
@@ -62,7 +62,7 @@ const handleSelectMealPlan = async (event) => {
     return;
   }
 
-  window.location.replace(`/mealplan/${mealplan_id}`);
+  window.location.assign(`/mealplan/${mealplan_id}`);
 };
 
 $("#create-mealplan-form").submit(handleCreateMealPlan);

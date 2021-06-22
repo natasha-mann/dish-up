@@ -28,7 +28,7 @@ const handleSubmit = async (event) => {
     </div>
   </div>`);
   } else {
-    window.location.replace("/dashboard");
+    window.location.assign("/dashboard");
   }
 };
 

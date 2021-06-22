@@ -29,7 +29,7 @@ const handleClick = async (event) => {
       if (response.status !== 200) {
         console.error("Failed to add meal");
       } else {
-        window.location.replace(
+        window.location.assign(
           `/mealplan/${id}/add?day=${day}&meal=${meal}&dayId=${dayId}`
         );
       }
@@ -75,7 +75,7 @@ const handleClick = async (event) => {
 
   if (viewMeal) {
     const spoonacularId = $(selectedMeal).attr("data-spoon");
-    window.location.replace(`/recipe?mealId=${spoonacularId}`);
+    window.location.assign(`/recipe?mealId=${spoonacularId}`);
   }
 };
 

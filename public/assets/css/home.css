@@ -1,11 +1,9 @@
-h1 {
-  color: var(--green);
-  text-align: center;
+.home-title {
+  color: var(--orange);
 }
 
-h2 {
-  text-align: center;
-  color: var(--orange);
+.mealplan-info {
+  background-color: #ffc30fcb;
 }
 
 .carousel-container {
@@ -34,6 +32,7 @@ h2 {
 .carousel-image {
   opacity: 0.8;
   max-height: 300px;
+  cursor: pointer;
   /* object-fit: cover; */
 }
 
