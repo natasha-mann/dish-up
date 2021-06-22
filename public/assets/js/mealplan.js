@@ -1,13 +1,16 @@
 const handleClick = async (event) => {
   event.preventDefault();
-  const selectedButton = event.target;
-  //Fix click on icon
-  const day = $(selectedButton).attr("data-day");
-  const meal = $(selectedButton).attr("data-meal");
-  const id = $(event.currentTarget).attr("id");
-  const dayId = $(selectedButton).attr("data-id");
+  const selectedMeal = event.target;
 
-  const add = $(selectedButton).hasClass("add-meal");
+  const day = $(selectedMeal).attr("data-day");
+  const meal = $(selectedMeal).attr("data-meal");
+  const id = $(event.currentTarget).attr("id");
+  const dayId = $(selectedMeal).attr("data-id");
+
+  const addMeal = $(selectedMeal).hasClass("add-meal");
+  const editMeal = $(selectedMeal).hasClass("edit-meal");
+  const deleteMeal = $(selectedMeal).hasClass("delete-meal");
+  const viewMeal = $(selectedMeal).hasClass("card-img-top");
 
   const options = {
     method: "GET",
@@ -18,7 +21,7 @@ const handleClick = async (event) => {
   };
 
   if (day && meal) {
-    if (add) {
+    if (addMeal) {
       const response = await fetch(
         `/mealplan/${id}/add?day=${day}&meal=${meal}&dayId=${dayId}`,
         options
@@ -30,7 +33,9 @@ const handleClick = async (event) => {
           `/mealplan/${id}/add?day=${day}&meal=${meal}&dayId=${dayId}`
         );
       }
-    } else {
+    }
+
+    if (editMeal) {
       const response = await fetch(
         `/mealplan/${id}/update?day=${day}&meal=${meal}&dayId=${dayId}`,
         options
@@ -38,11 +43,19 @@ const handleClick = async (event) => {
       if (response.status !== 200) {
         console.error("Failed to update meal");
       } else {
-        window.location.replace(
+        window.location.assign(
           `/mealplan/${id}/update?day=${day}&meal=${meal}&dayId=${dayId}`
         );
       }
     }
+
+    if (deleteMeal) {
+    }
+  }
+
+  if (viewMeal) {
+    const spoonacularId = $(selectedMeal).attr("data-spoon");
+    window.location.replace(`/recipe?mealId=${spoonacularId}`);
   }
 };
 

@@ -1,4 +1,3 @@
-const fetch = require("node-fetch");
 const { Meal } = require("../../models");
 
 const addMeal = async (req, res) => {
@@ -8,7 +7,6 @@ const addMeal = async (req, res) => {
       title,
       readyInMinutes: ready_in_minutes,
       servings,
-      calories,
       image,
     } = req.body;
 
@@ -17,14 +15,13 @@ const addMeal = async (req, res) => {
       title,
       ready_in_minutes,
       servings,
-      calories,
       image,
     });
 
     if (!newMeal) {
       return res.status(404).json({ error: "unable to add meal" });
     }
-    return res.status(200).json({ success: "meal successfully added" });
+    return res.status(200).json(newMeal);
   } catch (error) {
     console.error(`${error.message}`);
     return res.status(500).json({ error: "failed to add" });

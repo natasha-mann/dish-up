@@ -11,7 +11,7 @@
   <table name="mealPlanTable" id={{mealPlan.id}} class="table w-100 table-bordered table-light mt-2 align-middle text-center meal-table">
   
   <thead>
-    <tr>
+    <tr> 
       <th scope="col"></th>
       <th scope="col">Monday</th>
       <th scope="col">Tuesday</th>
@@ -32,15 +32,17 @@
 {{#if breakfast}}
   <div class="card mealplan-card">
     
-    <img src="{{breakfast.image}}" class="card-img-top" />
+    <img data-spoon="{{breakfast.spoonacular_id}}" src="{{breakfast.image}}" class="card-img-top" />
     <div class="card-body">
     <p class="small">{{breakfast.title}}</p> 
    </div>
    <div class="card-footer p-0 m-0">
-    <div class="d-grid">
+    <div class="d-grid d-flex d-flex">
+    <button  class="edit-btn edit-meal py-1 w-50 w-50" ><i data-day="monday" data-id="{{id}}"
+    data-meal="breakfast" class="fas fa-pen edit-meal"></i></button>
     <button data-day="monday" data-id="{{id}}"
-    data-meal="breakfast" class="edit-btn py-1" ><i data-day="monday" data-id="{{id}}"
-    data-meal="breakfast" class="fas fa-pen"></i></button>
+    data-meal="breakfast" class="delete-btn delete-meal py-1 w-50 w-50" ><i data-day="monday" data-id="{{id}}"
+    data-meal="breakfast" class="fas fa-trash-alt delete-meal"></i></button>
     </div>
     </div>
   </div>
@@ -63,15 +65,18 @@
 {{#isTuesday mealPlan.days as |day|}} 
 {{#if breakfast}}
    <div class="card mealplan-card">
-    <img src="{{breakfast.image}}" class="card-img-top" />
+    <img data-spoon="{{breakfast.spoonacular_id}}" src="{{breakfast.image}}" class="card-img-top " />
     <div class="card-body px-0">
     <p class="small">{{breakfast.title}}</p> 
    </div>
    <div class="card-footer p-0 m-0">
-    <div class="d-grid">
+    <div class="d-grid d-flex d-flex">
     <button data-day="tuesday" data-id="{{id}}"
-    data-meal="breakfast" class="edit-btn  py-1" ><i data-day="tuesday" data-id="{{id}}"
-    data-meal="breakfast" class="fas fa-pen"></i></button>
+    data-meal="breakfast" class="edit-btn edit-meal  py-1 w-50" ><i data-day="tuesday" data-id="{{id}}"
+    data-meal="breakfast" class="fas fa-pen edit-meal"></i></button>
+    <button data-day="tuesday" data-id="{{id}}"
+    data-meal="breakfast" class="delete-btn delete-meal  py-1 w-50" ><i data-day="tuesday" data-id="{{id}}"
+    data-meal="breakfast" class="fas fa-trash-alt delete-meal"></i></button>
     </div>
     </div>
   </div>
@@ -93,15 +98,18 @@
     {{#isWednesday mealPlan.days as |day|}} 
 {{#if breakfast}}
    <div class="card mealplan-card">
-    <img src="{{breakfast.image}}" class="card-img-top" />
+    <img data-spoon="{{breakfast.spoonacular_id}}" src="{{breakfast.image}}" class="card-img-top" />
     <div class="card-body px-0">
     <p class="small">{{breakfast.title}}</p> 
    </div>
    <div class="card-footer p-0 m-0">
-    <div class="d-grid">
+    <div class="d-grid d-flex">
     <button data-id="{{id}}" data-day="wednesday"
-    data-meal="breakfast" class="edit-btn  py-1" ><i data-id="{{id}}" data-day="wednesday"
-    data-meal="breakfast" class="fas fa-pen"></i></button>
+    data-meal="breakfast" class="edit-btn edit-meal  py-1 w-50" ><i data-id="{{id}}" data-day="wednesday"
+    data-meal="breakfast" class="fas fa-pen edit-meal"></i></button>
+    <button data-id="{{id}}" data-day="wednesday"
+    data-meal="breakfast" class="delete-btn delete-meal  py-1 w-50" ><i data-id="{{id}}" data-day="wednesday"
+    data-meal="breakfast" class="fas fa-trash-alt delete-meal"></i></button>
     </div>
     </div>
   </div>
@@ -122,15 +130,18 @@
     {{#isThursday mealPlan.days as |day|}} 
 {{#if breakfast}}
    <div class="card mealplan-card">
-    <img src="{{breakfast.image}}" class="card-img-top" />
+    <img data-spoon="{{breakfast.spoonacular_id}}" src="{{breakfast.image}}" class="card-img-top" />
     <div class="card-body px-0">
     <p class="small">{{breakfast.title}}</p> 
    </div>
    <div class="card-footer p-0 m-0">
-    <div class="d-grid">
+    <div class="d-grid d-flex">
     <button data-id="{{id}}" data-day="thursday"
-    data-meal="breakfast" class="edit-btn  py-1" ><i data-id="{{id}}" data-day="thursday"
-    data-meal="breakfast" class="fas fa-pen"></i></button>
+    data-meal="breakfast" class="edit-btn edit-meal  py-1 w-50" ><i data-id="{{id}}" data-day="thursday"
+    data-meal="breakfast" class="fas fa-pen edit-meal"></i></button>
+     <button data-id="{{id}}" data-day="thursday"
+    data-meal="breakfast" class="delete-btn delete-meal  py-1 w-50" ><i data-id="{{id}}" data-day="thursday"
+    data-meal="breakfast" class="fas fa-trash-alt delete-meal"></i></button>
     </div>
     </div>
   </div>
@@ -151,15 +162,18 @@
     {{#isFriday mealPlan.days as |day|}} 
 {{#if breakfast}}
  <div class="card mealplan-card">
-    <img src="{{breakfast.image}}" class="card-img-top" />
+    <img data-spoon="{{breakfast.spoonacular_id}}" src="{{breakfast.image}}" class="card-img-top " />
     <div class="card-body px-0">
     <p class="small">{{breakfast.title}}</p> 
    </div>
    <div class="card-footer p-0 m-0">
-    <div class="d-grid">
+    <div class="d-grid d-flex">
     <button data-id="{{id}}" data-day="friday"
-    data-meal="breakfast" class="edit-btn  py-1" ><i data-id="{{id}}" data-day="friday"
-    data-meal="breakfast" class="fas fa-pen"></i></button>
+    data-meal="breakfast" class="edit-btn edit-meal  py-1 w-50" ><i data-id="{{id}}" data-day="friday"
+    data-meal="breakfast" class="fas fa-pen edit-meal"></i></button>
+    <button data-id="{{id}}" data-day="friday"
+    data-meal="breakfast" class="delete-btn delete-meal  py-1 w-50" ><i data-id="{{id}}" data-day="friday"
+    data-meal="breakfast" class="fas fa-trash-alt delete-meal"></i></button>
     </div>
     </div>
   </div>
@@ -180,15 +194,18 @@
     {{#isSaturday mealPlan.days as |day|}} 
 {{#if breakfast}}
   <div class="card mealplan-card">
-    <img src="{{breakfast.image}}" class="card-img-top" />
+    <img data-spoon="{{breakfast.spoonacular_id}}" src="{{breakfast.image}}" class="card-img-top" />
     <div class="card-body px-0">
     <p class="small">{{breakfast.title}}</p> 
    </div>
    <div class="card-footer p-0 m-0">
-    <div class="d-grid">
+    <div class="d-grid d-flex">
     <button data-id="{{id}}" data-day="saturday"
-    data-meal="breakfast" class="edit-btn  py-1" ><i data-id="{{id}}" data-day="saturday"
-    data-meal="breakfast" class="fas fa-pen"></i></button>
+    data-meal="breakfast" class="edit-btn edit-meal  py-1 w-50" ><i data-id="{{id}}" data-day="saturday"
+    data-meal="breakfast" class="fas fa-pen edit-meal"></i></button>
+     <button data-id="{{id}}" data-day="saturday"
+    data-meal="breakfast" class="delete-btn delete-meal  py-1 w-50" ><i data-id="{{id}}" data-day="saturday"
+    data-meal="breakfast" class="fas fa-trash-alt delete-meal"></i></button>
     </div>
     </div>
   </div>
@@ -209,15 +226,18 @@
 {{#isSunday mealPlan.days as |day|}} 
 {{#if breakfast}}
   <div class="card mealplan-card">
-    <img src="{{breakfast.image}}" class="card-img-top" />
+    <img data-spoon="{{breakfast.spoonacular_id}}" src="{{breakfast.image}}" class="card-img-top" />
     <div class="card-body px-0">
     <p class="small">{{breakfast.title}}</p> 
    </div>
    <div class="card-footer p-0 m-0">
-    <div class="d-grid">
+    <div class="d-grid d-flex">
     <button data-id="{{id}}" data-day="sunday"
-    data-meal="breakfast" class="edit-btn  py-1" ><i data-id="{{id}}" data-day="sunday"
-    data-meal="breakfast" class="fas fa-pen"></i></button>
+    data-meal="breakfast" class="edit-btn edit-meal  py-1 w-50" ><i data-id="{{id}}" data-day="sunday"
+    data-meal="breakfast" class="fas fa-pen edit-meal"></i></button>
+    <button data-id="{{id}}" data-day="sunday"
+    data-meal="breakfast" class="delete-btn delete-meal  py-1 w-50" ><i data-id="{{id}}" data-day="sunday"
+    data-meal="breakfast" class="fas fa-trash-alt delete-meal"></i></button>
     </div>
     </div>
   </div>
@@ -240,15 +260,18 @@
       <td class="table-cell">{{#isMonday mealPlan.days as |day|}} 
 {{#if lunch}}
   <div class="card mealplan-card">
-    <img src="{{lunch.image}}" class="card-img-top" />
+    <img data-spoon="{{lunch.spoonacular_id}}" src="{{lunch.image}}" class="card-img-top" />
     <div class="card-body px-0">
     <p class="small">{{lunch.title}}</p> 
    </div>
    <div class="card-footer p-0 m-0">
-    <div class="d-grid">
+    <div class="d-grid d-flex">
     <button data-id="{{id}}" data-day="monday"
-    data-meal="lunch" class="edit-btn  py-1" ><i data-id="{{id}}" data-day="monday"
-    data-meal="lunch" class="fas fa-pen"></i></button>
+    data-meal="lunch" class="edit-btn edit-meal  py-1 w-50" ><i data-id="{{id}}" data-day="monday"
+    data-meal="lunch" class="fas fa-pen edit-meal"></i></button>
+     <button data-id="{{id}}" data-day="monday"
+    data-meal="lunch" class="delete-btn delete-meal  py-1 w-50" ><i data-id="{{id}}" data-day="monday"
+    data-meal="lunch" class="fas fa-trash-alt delete-meal"></i></button>
     </div>
     </div>
   </div>
@@ -269,15 +292,18 @@
         {{#isTuesday mealPlan.days as |day|}} 
 {{#if lunch}}
   <div class="card mealplan-card">
-    <img src="{{lunch.image}}" class="card-img-top" />
+    <img data-spoon="{{lunch.spoonacular_id}}" src="{{lunch.image}}" class="card-img-top" />
     <div class="card-body px-0">
     <p class="small">{{lunch.title}}</p> 
    </div>
    <div class="card-footer p-0 m-0">
-    <div class="d-grid">
+    <div class="d-grid d-flex">
     <button data-id="{{id}}" data-day="tuesday"
-    data-meal="lunch" class="edit-btn  py-1" ><i data-id="{{id}}" data-day="tuesday"
-    data-meal="lunch" class="fas fa-pen"></i></button>
+    data-meal="lunch" class="edit-btn edit-meal  py-1 w-50" ><i data-id="{{id}}" data-day="tuesday"
+    data-meal="lunch" class="fas fa-pen edit-meal"></i></button>
+    <button data-id="{{id}}" data-day="tuesday"
+    data-meal="lunch" class="delete-btn delete-meal  py-1 w-50" ><i data-id="{{id}}" data-day="tuesday"
+    data-meal="lunch" class="fas fa-trash-alt delete-meal"></i></button>
     </div>
     </div>
   </div>
@@ -298,15 +324,18 @@
     {{#isWednesday mealPlan.days as |day|}} 
 {{#if lunch}}
   <div class="card mealplan-card">
-    <img src="{{lunch.image}}" class="card-img-top" />
+    <img data-spoon="{{lunch.spoonacular_id}}" src="{{lunch.image}}" class="card-img-top" />
     <div class="card-body px-0">
     <p class="small">{{lunch.title}}</p> 
    </div>
    <div class="card-footer p-0 m-0">
-    <div class="d-grid">
+    <div class="d-grid d-flex">
     <button data-id="{{id}}" data-day="wednesday"
-    data-meal="lunch" class="edit-btn  py-1" ><i data-id="{{id}}" data-day="wednesday"
-    data-meal="lunch" class="fas fa-pen"></i></button>
+    data-meal="lunch" class="edit-btn edit-meal  py-1 w-50" ><i data-id="{{id}}" data-day="wednesday"
+    data-meal="lunch" class="fas fa-pen edit-meal"></i></button>
+    <button data-id="{{id}}" data-day="wednesday"
+    data-meal="lunch" class="delete-btn delete-meal  py-1 w-50" ><i data-id="{{id}}" data-day="wednesday"
+    data-meal="lunch" class="fas fa-trash-alt delete-meal"></i></button>
     </div>
     </div>
   </div>
@@ -327,15 +356,18 @@
     {{#isThursday mealPlan.days as |day|}} 
 {{#if lunch}}
   <div class="card mealplan-card">
-    <img src="{{lunch.image}}" class="card-img-top" />
+    <img data-spoon="{{lunch.spoonacular_id}}" src="{{lunch.image}}" class="card-img-top" />
     <div class="card-body px-0">
     <p class="small">{{lunch.title}}</p> 
    </div>
    <div class="card-footer p-0 m-0">
-    <div class="d-grid">
+    <div class="d-grid d-flex">
     <button  data-id="{{id}}" data-day="thursday"
-    data-meal="lunch" class="edit-btn  py-1" ><i data-id="{{id}}" data-day="thursday"
-    data-meal="lunch" class="fas fa-pen"></i></button>
+    data-meal="lunch" class="edit-btn edit-meal  py-1 w-50" ><i data-id="{{id}}" data-day="thursday"
+    data-meal="lunch" class="fas fa-pen edit-meal"></i></button>
+    <button  data-id="{{id}}" data-day="thursday"
+    data-meal="lunch" class="delete-btn delete-meal  py-1 w-50" ><i data-id="{{id}}" data-day="thursday"
+    data-meal="lunch" class="fas fa-trash-alt delete-meal"></i></button>
     </div>
     </div>
   </div>
@@ -356,15 +388,18 @@
     {{#isFriday mealPlan.days as |day|}} 
 {{#if lunch}}
   <div class="card mealplan-card">
-    <img src="{{lunch.image}}" class="card-img-top" />
+    <img data-spoon="{{lunch.spoonacular_id}}" src="{{lunch.image}}" class="card-img-top" />
     <div class="card-body px-0">
     <p class="small">{{lunch.title}}</p> 
    </div>
    <div class="card-footer p-0 m-0">
-    <div class="d-grid">
+    <div class="d-grid d-flex">
     <button data-id="{{id}}" data-day="friday"
-    data-meal="lunch" class="edit-btn  py-1" ><i data-id="{{id}}" data-day="friday"
-    data-meal="lunch" class="fas fa-pen"></i></button>
+    data-meal="lunch" class="edit-btn edit-meal  py-1 w-50" ><i data-id="{{id}}" data-day="friday"
+    data-meal="lunch" class="fas fa-pen edit-meal"></i></button>
+    <button data-id="{{id}}" data-day="friday"
+    data-meal="lunch" class="delete-btn delete-meal  py-1 w-50" ><i data-id="{{id}}" data-day="friday"
+    data-meal="lunch" class="fas fa-trash-alt delete-meal"></i></button>
     </div>
     </div>
   </div>
@@ -385,15 +420,18 @@
     {{#isSaturday mealPlan.days as |day|}} 
 {{#if lunch}}
   <div class="card mealplan-card">
-    <img src="{{lunch.image}}" class="card-img-top" />
+    <img data-spoon="{{lunch.spoonacular_id}}" src="{{lunch.image}}" class="card-img-top" />
     <div class="card-body px-0">
     <p class="small">{{lunch.title}}</p> 
    </div>
    <div class="card-footer p-0 m-0">
-    <div class="d-grid">
+    <div class="d-grid d-flex">
     <button  data-id="{{id}}" data-day="saturday"
-    data-meal="lunch" class="edit-btn  py-1" ><i data-id="{{id}}" data-day="saturday"
-    data-meal="lunch" class="fas fa-pen"></i></button>
+    data-meal="lunch" class="edit-btn edit-meal  py-1 w-50" ><i data-id="{{id}}" data-day="saturday"
+    data-meal="lunch" class="fas fa-pen edit-meal"></i></button>
+    <button  data-id="{{id}}" data-day="saturday"
+    data-meal="lunch" class="delete-btn delete-meal  py-1 w-50" ><i data-id="{{id}}" data-day="saturday"
+    data-meal="lunch" class="fas fa-trash-alt delete-meal"></i></button>
     </div>
     </div>
   </div>
@@ -414,15 +452,18 @@
 {{#isSunday mealPlan.days as |day|}} 
 {{#if lunch}}
   <div class="card mealplan-card">
-    <img src="{{lunch.image}}" class="card-img-top" />
+    <img data-spoon="{{lunch.spoonacular_id}}" src="{{lunch.image}}" class="card-img-top" />
     <div class="card-body px-0">
     <p class="small">{{lunch.title}}</p> 
    </div>
    <div class="card-footer p-0 m-0">
-    <div class="d-grid">
+    <div class="d-grid d-flex">
     <button data-id="{{id}}" data-day="sunday"
-    data-meal="lunch" class="edit-btn  py-1" ><i data-id="{{id}}" data-day="sunday"
-    data-meal="lunch" class="fas fa-pen"></i></button>
+    data-meal="lunch" class="edit-btn edit-meal  py-1 w-50" ><i data-id="{{id}}" data-day="sunday"
+    data-meal="lunch" class="fas fa-pen edit-meal"></i></button>
+     <button data-id="{{id}}" data-day="sunday"
+    data-meal="lunch" class="delete-btn delete-meal  py-1 w-50" ><i data-id="{{id}}" data-day="sunday"
+    data-meal="lunch" class="fas fa-trash-alt delete-meal"></i></button>
     </div>
     </div>
   </div>
@@ -446,15 +487,18 @@
       <td class="table-cell">{{#isMonday mealPlan.days as |day|}} 
 {{#if dinner}}
   <div class="card mealplan-card">
-    <img src="{{dinner.image}}" class="card-img-top" />
+    <img data-spoon="{{dinner.spoonacular_id}}" src="{{dinner.image}}" class="card-img-top" />
     <div class="card-body px-0">
     <p class="small">{{dinner.title}}</p> 
    </div>
    <div class="card-footer p-0 m-0">
-    <div class="d-grid">
+    <div class="d-grid d-flex">
     <button data-id="{{id}}" data-day="monday"
-    data-meal="dinner" class="edit-btn  py-1" ><i data-id="{{id}}" data-day="monday"
-    data-meal="dinner" class="fas fa-pen"></i></button>
+    data-meal="dinner" class="edit-btn edit-meal  py-1 w-50" ><i data-id="{{id}}" data-day="monday"
+    data-meal="dinner" class="fas fa-pen edit-meal"></i></button>
+     <button data-id="{{id}}" data-day="monday"
+    data-meal="dinner" class="delete-btn delete-meal  py-1 w-50" ><i data-id="{{id}}" data-day="monday"
+    data-meal="dinner" class="fas fa-trash-alt delete-meal"></i></button>
     </div>
     </div>
   </div>
@@ -475,15 +519,18 @@
         {{#isTuesday mealPlan.days as |day|}} 
 {{#if dinner}}
   <div class="card mealplan-card">
-    <img src="{{dinner.image}}" class="card-img-top" />
+    <img data-spoon="{{dinner.spoonacular_id}}" src="{{dinner.image}}" class="card-img-top" />
     <div class="card-body px-0">
     <p class="small">{{dinner.title}}</p> 
    </div>
    <div class="card-footer p-0 m-0">
-    <div class="d-grid">
+    <div class="d-grid d-flex">
     <button data-id="{{id}}" data-day="tuesday"
-    data-meal="dinner" class="edit-btn  py-1" ><i data-id="{{id}}" data-day="tuesday"
-    data-meal="dinner" class="fas fa-pen"></i></button>
+    data-meal="dinner" class="edit-btn edit-meal  py-1 w-50" ><i data-id="{{id}}" data-day="tuesday"
+    data-meal="dinner" class="fas fa-pen edit-meal"></i></button>
+     <button data-id="{{id}}" data-day="tuesday"
+    data-meal="dinner" class="delete-btn delete-meal  py-1 w-50" ><i data-id="{{id}}" data-day="tuesday"
+    data-meal="dinner" class="fas fa-trash-alt delete-meal"></i></button>
     </div>
     </div>
   </div>
@@ -504,15 +551,18 @@
     {{#isWednesday mealPlan.days as |day|}} 
 {{#if dinner}}
   <div class="card mealplan-card">
-    <img src="{{dinner.image}}" class="card-img-top" />
+    <img data-spoon="{{dinner.spoonacular_id}}" src="{{dinner.image}}" class="card-img-top" />
     <div class="card-body px-0">
     <p class="small">{{dinner.title}}</p> 
    </div>
    <div class="card-footer p-0 m-0">
-    <div class="d-grid">
+    <div class="d-grid d-flex">
     <button data-id="{{id}}" data-day="wednesday"
-    data-meal="dinner" class="edit-btn  py-1" ><i data-id="{{id}}" data-day="wednesday"
-    data-meal="dinner" class="fas fa-pen"></i></button>
+    data-meal="dinner" class="edit-btn edit-meal  py-1 w-50" ><i data-id="{{id}}" data-day="wednesday"
+    data-meal="dinner" class="fas fa-pen edit-meal"></i></button>
+    <button data-id="{{id}}" data-day="wednesday"
+    data-meal="dinner" class="delete-btn delete-meal  py-1 w-50" ><i data-id="{{id}}" data-day="wednesday"
+    data-meal="dinner" class="fas fa-trash-alt delete-meal"></i></button>
     </div>
     </div>
   </div>
@@ -533,15 +583,18 @@
     {{#isThursday mealPlan.days as |day|}} 
 {{#if dinner}}
   <div class="card mealplan-card">
-    <img src="{{dinner.image}}" class="card-img-top" />
+    <img data-spoon="{{dinner.spoonacular_id}}" src="{{dinner.image}}" class="card-img-top" />
     <div class="card-body px-0">
     <p class="small">{{dinner.title}}</p> 
    </div>
    <div class="card-footer p-0 m-0">
-    <div class="d-grid">
+    <div class="d-grid d-flex">
     <button data-id="{{id}}" data-day="thursday"
-    data-meal="dinner" class="edit-btn  py-1" ><i data-id="{{id}}" data-day="thursday"
-    data-meal="dinner" class="fas fa-pen"></i></button>
+    data-meal="dinner" class="edit-btn edit-meal  py-1 w-50" ><i data-id="{{id}}" data-day="thursday"
+    data-meal="dinner" class="fas fa-pen edit-meal"></i></button>
+    <button data-id="{{id}}" data-day="thursday"
+    data-meal="dinner" class="delete-btn delete-meal  py-1 w-50" ><i data-id="{{id}}" data-day="thursday"
+    data-meal="dinner" class="fas fa-trash-alt delete-meal"></i></button>
     </div>
     </div>
   </div>
@@ -562,15 +615,18 @@
     {{#isFriday mealPlan.days as |day|}} 
 {{#if dinner}}
  <div class="card mealplan-card">
-    <img src="{{dinner.image}}" class="card-img-top" />
+    <img data-spoon="{{dinner.spoonacular_id}}" src="{{dinner.image}}" class="card-img-top" />
     <div class="card-body px-0">
     <p class="small">{{dinner.title}}</p> 
    </div>
    <div class="card-footer p-0 m-0">
-    <div class="d-grid">
+    <div class="d-grid d-flex">
     <button data-id="{{id}}" data-day="friday"
-    data-meal="dinner" class="edit-btn  py-1" ><i data-id="{{id}}" data-day="friday"
-    data-meal="dinner" class="fas fa-pen"></i></button>
+    data-meal="dinner" class="edit-btn edit-meal  py-1 w-50" ><i data-id="{{id}}" data-day="friday"
+    data-meal="dinner" class="fas fa-pen edit-meal"></i></button>
+    <button data-id="{{id}}" data-day="friday"
+    data-meal="dinner" class="delete-btn delete-meal  py-1 w-50" ><i data-id="{{id}}" data-day="friday"
+    data-meal="dinner" class="fas fa-trash-alt delete-meal"></i></button>
     </div>
     </div>
   </div>
@@ -591,15 +647,18 @@
     {{#isSaturday mealPlan.days as |day|}} 
 {{#if dinner}}
  <div class="card mealplan-card">
-    <img src="{{dinner.image}}" class="card-img-top" />
+    <img data-spoon="{{dinner.spoonacular_id}}" src="{{dinner.image}}" class="card-img-top" />
     <div class="card-body px-0">
     <p class="small">{{dinner.title}}</p> 
    </div>
    <div class="card-footer p-0 m-0">
-    <div class="d-grid">
+    <div class="d-grid d-flex">
     <button data-id="{{id}}" data-day="saturday"
-    data-meal="dinner" class="edit-btn  py-1" ><i data-id="{{id}}" data-day="saturday"
-    data-meal="dinner" class="fas fa-pen"></i></button>
+    data-meal="dinner" class="edit-btn edit-meal  py-1 w-50" ><i data-id="{{id}}" data-day="saturday"
+    data-meal="dinner" class="fas fa-pen edit-meal"></i></button>
+    <button data-id="{{id}}" data-day="saturday"
+    data-meal="dinner" class="delete-btn delete-meal  py-1 w-50" ><i data-id="{{id}}" data-day="saturday"
+    data-meal="dinner" class="fas fa-trash-alt delete-meal"></i></button>
     </div>
     </div>
   </div>
@@ -620,15 +679,18 @@
 {{#isSunday mealPlan.days as |day|}} 
 {{#if dinner}}
   <div class="card mealplan-card">
-    <img src="{{dinner.image}}" class="card-img-top" />
+    <img data-spoon="{{dinner.spoonacular_id}}" src="{{dinner.image}}" class="card-img-top" />
     <div class="card-body px-0">
     <p class="small">{{dinner.title}}</p> 
    </div>
    <div class="card-footer p-0 m-0">
-    <div class="d-grid">
+    <div class="d-grid d-flex">
     <button data-id="{{id}}" data-day="sunday"
-    data-meal="dinner" class="edit-btn  py-1" ><i data-id="{{id}}" data-day="sunday"
-    data-meal="dinner" class="fas fa-pen"></i></button>
+    data-meal="dinner" class="edit-btn edit-meal  py-1 w-50" ><i data-id="{{id}}" data-day="sunday"
+    data-meal="dinner" class="fas fa-pen edit-meal"></i></button>
+    <button data-id="{{id}}" data-day="sunday"
+    data-meal="dinner" class="delete-btn delete-meal  py-1 w-50" ><i data-id="{{id}}" data-day="sunday"
+    data-meal="dinner" class="fas fa-trash-alt delete-meal"></i></button>
     </div>
     </div>
   </div>

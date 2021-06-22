@@ -8,6 +8,7 @@
 
 .card-img-top {
   height: 50%;
+  cursor: pointer;
 }
 
 .card-body {
@@ -22,6 +23,17 @@
 
 .edit-btn:hover {
   background-color: #8cc73f8e;
+  border: none;
+}
+
+.delete-btn {
+  background-color: red;
+  border: none;
+  color: white;
+}
+
+.delete-btn:hover {
+  background-color: rgba(255, 0, 0, 0.486);
   border: none;
 }
 

@@ -47,10 +47,6 @@ const handleUpdate = async (event) => {
     },
     redirect: "follow",
     body: JSON.stringify({
-      mealPlanId,
-      day,
-      meal,
-      dayId,
       spoonacularId,
       title,
       readyInMinutes,
@@ -58,13 +54,37 @@ const handleUpdate = async (event) => {
       image,
     }),
   };
-  const response = await fetch(`/api/meals`, options);
-  if (response.status !== 200) {
+  const postResponse = await fetch(`/api/meals`, options);
+  const mealData = await postResponse.json();
+  console.log(mealData);
+
+  if (postResponse.status !== 200) {
     console.error("Failed to add meal");
   } else {
-    window.location.replace(`/mealplan/${mealPlanId}`);
+    if (!dayId) {
+      const options = {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        redirect: "follow",
+        body: JSON.stringify({
+          day,
+        }),
+      };
+      // const response = await fetch(`/api/days`, options);
+    }
+
+    // window.location.replace(`/mealplan/${mealPlanId}`);
   }
 };
 
+const handleUpdateViewClick = (event) => {
+  const mealId = event.currentTarget.id;
+
+  window.location.replace(`/recipe?mealId=${mealId}`);
+};
+
 $("#update-search").submit(handleUpdateSearch);
-$("#searchResults").click(handleUpdate);
+$("#updateSearchResults").click(handleUpdate);
+$('[name="update-view-btn"]').click(handleUpdateViewClick);
