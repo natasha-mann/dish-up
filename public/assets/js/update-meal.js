@@ -56,7 +56,6 @@ const handleUpdate = async (event) => {
   };
   const postResponse = await fetch(`/api/meals`, options);
   const mealData = await postResponse.json();
-  console.log(mealData);
 
   if (postResponse.status !== 200) {
     console.error("Failed to add meal");
@@ -72,10 +71,36 @@ const handleUpdate = async (event) => {
           day,
         }),
       };
-      // const response = await fetch(`/api/days`, options);
-    }
+      const response = await fetch(`/api/days`, options);
+      if (response.status !== 200) {
+        console.error("Failed to add day");
+      } else {
+        window.location.assign(`/mealplan/${mealPlanId}`);
+      }
+    } else {
+      const mealId = mealData.id;
 
-    // window.location.replace(`/mealplan/${mealPlanId}`);
+      const options = {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        redirect: "follow",
+        body: JSON.stringify({
+          dayId,
+          day,
+          meal,
+          mealId,
+          mealPlanId,
+        }),
+      };
+      const response = await fetch(`/api/days/${dayId}`, options);
+      if (response.status !== 200) {
+        console.error("Failed to update day");
+      } else {
+        window.location.assign(`/mealplan/${mealPlanId}`);
+      }
+    }
   }
 };
 

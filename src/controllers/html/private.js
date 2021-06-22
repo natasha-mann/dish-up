@@ -73,7 +73,6 @@ const renderUpdateMeal = (req, res) => {
   try {
     const { id: mealPlanId } = req.params;
     const { day, meal, dayId } = req.query;
-    console.log(dayId);
 
     res.status(200).render("updateMeal", {
       layout: "dashboard",
