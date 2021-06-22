@@ -63,7 +63,6 @@ const handleAdd = async (event) => {
 
   const postResponse = await fetch(`/api/meals`, options);
   const mealData = await postResponse.json();
-  console.log(mealData);
 
   if (postResponse.status !== 200) {
     console.error("Failed to add meal");
