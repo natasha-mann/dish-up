@@ -1,4 +1,4 @@
-const { Meal, Day } = require("../../models");
+const { Meal } = require("../../models");
 
 const addMeal = async (req, res) => {
   try {
@@ -28,24 +28,4 @@ const addMeal = async (req, res) => {
   }
 };
 
-const deleteMeal = async (req, res) => {
-  try {
-    const { id, day, meal, dayId } = req.body;
-
-    const { userId } = req.session;
-
-    const deletedMeal = await Day.destroy(dayId, {});
-
-    if (!deletedMeal) {
-      res.status(404).json({ error: "Unable to delete meal from meal plan" });
-    }
-    res
-      .status(200)
-      .json({ success: "Successfully deleted meal from meal plan" });
-  } catch (error) {
-    console.error(error.message);
-    res.status(500).json({ error: "Unable to delete meal from meal plan" });
-  }
-};
-
-module.exports = { addMeal, deleteMeal };
+module.exports = { addMeal };

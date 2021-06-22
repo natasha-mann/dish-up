@@ -51,7 +51,7 @@ const handleClick = async (event) => {
 
     if (deleteMeal) {
       const options = {
-        method: "POST",
+        method: "PUT",
         headers: {
           "Content-Type": "application/json",
         },
@@ -64,13 +64,12 @@ const handleClick = async (event) => {
         }),
       };
 
-      const response = await fetch(`/api/meals/delete`, options);
-      console.log(response);
-      // if (response.status !== 200) {
-      //   console.error("Failed to delete meal");
-      // } else {
-      //   window.location.assign(`/mealplan/${id}`);
-      // }
+      const response = await fetch(`/api/days/${id}/meal`, options);
+      if (response.status !== 200) {
+        console.error("Failed to delete meal");
+      } else {
+        window.location.assign(`/mealplan/${id}`);
+      }
     }
   }
 
