@@ -27,8 +27,16 @@ body {
   color: white !important;
 }
 
-.navbar-text {
+.nav-link {
   color: white !important;
+}
+
+.nav-link:hover {
+  font-weight: bold !important;
+}
+
+#logout-btn {
+  font-size: large;
 }
 
 .welcome-card {
