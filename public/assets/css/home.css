@@ -52,3 +52,17 @@ h2 {
     background-color: var(--green);
     border-color: var(--green);
   } */
+
+.swiper-container {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.swiper-slide {
+  background-image: url(https://source.unsplash.com/random);
+  background-position: center;
+  background-size: cover;
+  width: 300px;
+  height: 300px;
+}
