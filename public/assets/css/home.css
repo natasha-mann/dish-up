@@ -10,44 +10,18 @@
   max-width: 450px;
 }
 
-.carousel-inner {
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  border-radius: 5px;
-  max-width: 450px;
+.swiper-container {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
-.carousel-item {
-  max-height: 600px;
-  max-width: 450px;
-}
-
-.carousel-heading {
-  color: black;
-}
-
-.carousel-description {
-  color: black;
+.swiper-slide {
+  width: 300px;
+  height: 300px;
 }
 
 .carousel-image {
-  opacity: 0.8;
-  max-height: 300px;
-  cursor: pointer;
-  /* object-fit: cover; */
+  width: 300px;
+  height: 300px;
 }
-
-/* .carousel-home {
-  height: 75% !important;
-} */
-
-/* .checkbox {
-    border-color: var(--green);
-    color: rgb(97, 151, 36);
-  }
-  
-  .checkbox:hover,
-  .checkbox:active,
-  .checkbox:focus {
-    background-color: var(--green);
-    border-color: var(--green);
-  } */

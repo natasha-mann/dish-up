@@ -30,6 +30,6 @@ const handleViewClick = (event) => {
   window.location.assign(`/recipe?mealId=${mealId}`);
 };
 
-$(".carousel-item").click(handleCarouselClick);
+$(".carousel-image").click(handleCarouselClick);
 $("#meal-search").submit(handleSubmit);
 $("[name='view-btn']").click(handleViewClick);
