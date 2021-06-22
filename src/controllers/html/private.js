@@ -1,5 +1,9 @@
+require("dotenv").config();
+
 const { MealPlan, Day, Meal } = require("../../models");
 const fetch = require("node-fetch");
+const { URL, URLSearchParams } = require("url");
+const { findAll } = require("../../models/Day");
 
 const renderDashboard = async (req, res) => {
   try {
@@ -16,6 +20,27 @@ const renderDashboard = async (req, res) => {
       firstName,
       lastName,
       mealPlans,
+    });
+  } catch (error) {
+    console.log(error.message);
+    return res.status(500).json({ error: "Failed to render" });
+  }
+};
+
+const renderAllMeals = async (req, res) => {
+  try {
+    const { userId, firstName, lastName } = req.session;
+
+    const mealData = await Meal.findAll({ where: { user_id: userId } });
+
+    const meals = mealData.map((meal) => meal.get({ plain: true }));
+
+    console.log(meals);
+
+    return res.render("viewAllMeals", {
+      layout: "dashboard",
+      firstName,
+      meals,
     });
   } catch (error) {
     console.log(error.message);
@@ -94,7 +119,18 @@ const renderSearchResults = async (req, res) => {
 
   const { day, meal, dayId, searchInput, diet, intolerance } = req.query;
 
-  const url = `https://api.spoonacular.com/recipes/complexSearch?apiKey=7f1744dbc1d04e0a9153423050f1d307&query=${searchInput}&number=10&addRecipeNutrition=true&diet=${diet}&intolerances=${intolerance}`;
+  const url = new URL("https://api.spoonacular.com/recipes/complexSearch");
+
+  const params = {
+    apiKey: process.env.API_KEY,
+    query: searchInput,
+    number: 2,
+    addRecipeNutrition: true,
+    diet: diet,
+    intolerances: intolerance,
+  };
+
+  url.search = new URLSearchParams(params).toString();
 
   const options = {
     method: "GET",
@@ -139,7 +175,18 @@ const renderUpdateResults = async (req, res) => {
 
   const { day, meal, dayId, searchInput, diet, intolerance } = req.query;
 
-  const url = `https://api.spoonacular.com/recipes/complexSearch?apiKey=6bd693686d904fbc9b2291fadaeb8d99&query=${searchInput}&number=10&addRecipeNutrition=true&diet=${diet}&intolerances=${intolerance}`;
+  const url = new URL("https://api.spoonacular.com/recipes/complexSearch");
+
+  const params = {
+    apiKey: process.env.API_KEY,
+    query: searchInput,
+    number: 2,
+    addRecipeNutrition: true,
+    diet: diet,
+    intolerances: intolerance,
+  };
+
+  url.search = new URLSearchParams(params).toString();
 
   const options = {
     method: "GET",
@@ -165,9 +212,7 @@ const renderUpdateResults = async (req, res) => {
     };
   });
 
-  if (!searchMeals) {
-    return res.status(404).json({ error: "No results" });
-  }
+  const noSearchResults = searchMeals.length === 0;
 
   res.status(200).render("updateMeal", {
     layout: "dashboard",
@@ -176,6 +221,7 @@ const renderUpdateResults = async (req, res) => {
     meal,
     dayId,
     searchMeals,
+    noSearchResults,
   });
 };
 
@@ -183,7 +229,16 @@ const renderRecipe = async (req, res) => {
   try {
     const { mealId } = req.query;
 
-    const url = `https://api.spoonacular.com/recipes/${mealId}/information?includeNutrition=true&apiKey=7f1744dbc1d04e0a9153423050f1d307`;
+    const url = new URL(
+      `https://api.spoonacular.com/recipes/${mealId}/information`
+    );
+
+    const params = {
+      apiKey: process.env.API_KEY,
+      includeNutrition: true,
+    };
+
+    url.search = new URLSearchParams(params).toString();
 
     const options = {
       method: "GET",
@@ -246,6 +301,7 @@ const renderRecipe = async (req, res) => {
 
 module.exports = {
   renderDashboard,
+  renderAllMeals,
   renderMealPlan,
   renderAddMeal,
   renderUpdateMeal,

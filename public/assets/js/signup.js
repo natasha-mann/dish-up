@@ -39,7 +39,7 @@ const onSubmit = async (event) => {
     if (response.status !== 200) {
       console.error("Sign up unsuccessful");
     } else {
-      window.location.replace("/login");
+      window.location.assign("/login");
     }
   } else {
     $("#alert-div").empty();

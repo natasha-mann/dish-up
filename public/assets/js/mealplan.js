@@ -29,7 +29,7 @@ const handleClick = async (event) => {
       if (response.status !== 200) {
         console.error("Failed to add meal");
       } else {
-        window.location.replace(
+        window.location.assign(
           `/mealplan/${id}/add?day=${day}&meal=${meal}&dayId=${dayId}`
         );
       }
@@ -50,12 +50,32 @@ const handleClick = async (event) => {
     }
 
     if (deleteMeal) {
+      const options = {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        redirect: "follow",
+        body: JSON.stringify({
+          id,
+          day,
+          meal,
+          dayId,
+        }),
+      };
+
+      const response = await fetch(`/api/days/${id}/meal`, options);
+      if (response.status !== 200) {
+        console.error("Failed to delete meal");
+      } else {
+        window.location.assign(`/mealplan/${id}`);
+      }
     }
   }
 
   if (viewMeal) {
     const spoonacularId = $(selectedMeal).attr("data-spoon");
-    window.location.replace(`/recipe?mealId=${spoonacularId}`);
+    window.location.assign(`/recipe?mealId=${spoonacularId}`);
   }
 };
 

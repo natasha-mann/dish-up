@@ -10,8 +10,22 @@ const addMeal = async (req, res) => {
       image,
     } = req.body;
 
+    const { userId } = req.session;
+
+    const meal = await Meal.findOne({
+      where: {
+        spoonacular_id,
+        user_id: userId,
+      },
+    });
+
+    if (meal) {
+      return res.status(200).json(meal);
+    }
+
     const newMeal = await Meal.create({
       spoonacular_id,
+      user_id: userId,
       title,
       ready_in_minutes,
       servings,

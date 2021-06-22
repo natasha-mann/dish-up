@@ -8,6 +8,7 @@
 * {
   margin: 0px;
   padding: 0px;
+  font-family: "Lato", sans-serif;
 }
 
 body {
@@ -18,6 +19,7 @@ body {
   background-position: center;
   background-attachment: fixed;
   background-repeat: no-repeat;
+  font-family: "Lato", sans-serif;
 }
 
 #home-navbar {
@@ -25,8 +27,16 @@ body {
   color: white !important;
 }
 
-.navbar-text {
+.nav-link {
   color: white !important;
+}
+
+.nav-link:hover {
+  font-weight: bold !important;
+}
+
+#logout-btn {
+  font-size: large;
 }
 
 .welcome-card {
@@ -53,6 +63,11 @@ body {
   margin-bottom: 1rem;
   background-color: #e9ecef;
   border-radius: 0.3rem;
+  font-weight: bold;
+}
+
+.jumbotron > h1 {
+  font-weight: bold;
 }
 
 .add-btn {
@@ -98,6 +113,106 @@ body {
   border: none;
 }
 
+.welcome-block {
+  height: 60%;
+  border-radius: 10px;
+  /* opacity: 0.95; */
+  background-image: linear-gradient(#f36523, #f28f47);
+  border: 5px solid white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.column-welcome {
+  position: absolute;
+  top: 50%;
+  left: 58%;
+  transform: translate(-50%, -50%);
+  height: 3rem;
+}
+
+#welcome-h2 {
+  color: white;
+  font-weight: bolder;
+  font-size: 2.75rem;
+  text-shadow: 2px 2px var(--green);
+}
+
+.welcome-instructions {
+  position: absolute;
+  top: 20%;
+  left: 55%;
+  color: white;
+  transform: translate(-50%, -50%);
+  height: 4rem;
+}
+
+.li-span-1 {
+  color: var(--green);
+  font-weight: bolder;
+  font-size: 3rem;
+  text-shadow: 2px 2px white;
+  padding-right: 0.5rem;
+}
+
+ol li {
+  font-size: 1.5rem;
+  list-style-type: none;
+  /* padding-left: 0.5rem; */
+  /* padding-right: 0.5rem; */
+}
+
+li {
+  font-size: 1.5rem;
+  /* padding-left: 0.5rem; */
+  /* padding-right: 0.5rem; */
+}
+
 #no-results-header {
   color: var(--orange);
+}
+
+.footer {
+  background-color: var(--orange);
+}
+
+.copyright {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.btn-link:hover {
+  background-color: var(--yellow);
+}
+
+@media screen and (max-width: 1200px) {
+  #welcome-h2 {
+    color: white;
+    font-weight: bolder;
+    font-size: 2.25rem;
+    text-shadow: 2px 2px var(--green);
+  }
+
+  .column-welcome {
+    position: absolute;
+    top: 50%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+    height: 3rem;
+  }
+
+  .welcome-instructions {
+    position: absolute;
+    top: 20%;
+    left: 55%;
+    color: white;
+    transform: translate(-50%, -50%);
+    height: 3rem;
+  }
+
+  .li-span-1 {
+    color: var(--green);
+    font-weight: bolder;
+    font-size: 2.75rem;
+    text-shadow: 2px 2px white;
+    padding-right: 0.5rem;
+  }
 }
