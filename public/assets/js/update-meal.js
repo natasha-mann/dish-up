@@ -20,7 +20,7 @@ const handleUpdateSearch = async (event) => {
     })
     .get();
 
-  window.location.replace(
+  window.location.assign(
     `/mealplan/${id}/update/results?day=${day}&meal=${meal}&dayId=${dayId}&searchInput=${searchInput}&diet=${diet}&intolerance=${intolerance}`
   );
 };
@@ -107,7 +107,7 @@ const handleUpdate = async (event) => {
 const handleUpdateViewClick = (event) => {
   const mealId = event.currentTarget.id;
 
-  window.location.replace(`/recipe?mealId=${mealId}`);
+  window.location.assign(`/recipe?mealId=${mealId}`);
 };
 
 $("#update-search").submit(handleUpdateSearch);
