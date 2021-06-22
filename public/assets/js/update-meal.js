@@ -86,5 +86,5 @@ const handleUpdateViewClick = (event) => {
 };
 
 $("#update-search").submit(handleUpdateSearch);
-$("#searchResults").click(handleUpdate);
-$('[name="view-btn"]').click(handleUpdateViewClick);
+$("#updateSearchResults").click(handleUpdate);
+$('[name="update-view-btn"]').click(handleUpdateViewClick);
