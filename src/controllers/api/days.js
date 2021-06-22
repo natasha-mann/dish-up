@@ -1,4 +1,4 @@
-const { Day } = require("../../models");
+const { Day, Meal } = require("../../models");
 
 const addDay = async (req, res) => {
   try {
@@ -115,4 +115,67 @@ const updateDay = async (req, res) => {
   }
 };
 
-module.exports = { addDay, updateDay };
+const removeMeal = async (req, res) => {
+  try {
+    const { dayId: id, day: name, meal, mealPlanId: meal_plan_id } = req.body;
+
+    if (meal === "breakfast") {
+      const updatedDay = await Day.update(
+        {
+          name,
+          breakfast_meal_id: null,
+          meal_plan_id,
+        },
+        {
+          where: { id },
+        }
+      );
+
+      if (!updatedDay) {
+        return res.status(404).json({ error: "failed to remove meal" });
+      }
+      return res.status(200).json(updatedDay);
+    }
+
+    if (meal === "lunch") {
+      const updatedDay = await Day.update(
+        {
+          name,
+          lunch_meal_id: null,
+          meal_plan_id,
+        },
+        {
+          where: { id },
+        }
+      );
+
+      if (!updatedDay) {
+        return res.status(404).json({ error: "failed to remove meal" });
+      }
+      return res.status(200).json(updatedDay);
+    }
+
+    if (meal === "dinner") {
+      const updatedDay = await Day.update(
+        {
+          name,
+          dinner_meal_id: null,
+          meal_plan_id,
+        },
+        {
+          where: { id },
+        }
+      );
+
+      if (!updatedDay) {
+        return res.status(404).json({ error: "failed to remove meal" });
+      }
+      return res.status(200).json(updatedDay);
+    }
+  } catch (error) {
+    console.error(`${error.message}`);
+    return res.status(500).json({ error: "failed to remove meal" });
+  }
+};
+
+module.exports = { addDay, updateDay, removeMeal };
