@@ -53,6 +53,14 @@ User.hasMany(MealPlan, {
   foreignKey: "user_id",
 });
 
+Meal.belongsTo(User, {
+  foreignKey: "user_id",
+});
+
+User.hasMany(Meal, {
+  foreignKey: "user_id",
+});
+
 Diet.belongsToMany(User, {
   through: { model: UserDiet },
   foreignKey: "diet_id",

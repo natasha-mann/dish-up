@@ -8,10 +8,10 @@
 </div>
 </div>
 
-  {{#if dayArray}}
-    <h2 class="my-3 text-center home-title">Results</h2>
+  {{#if meals}}
+    
     <div class="d-flex flex-wrap justify-content-center">
-  {{#each dayArray}}
+  {{#each meals}}
     <div class="card shadow mb-5 mx-4 bg-body rounded" style="width: 18rem">
   <img src="{{image}}" class="card-img-top" alt="{{title}}" />
   <div class="card-body text-center">
@@ -19,7 +19,7 @@
       {{title}}
     </h5>
     <div class="card-text text-start">
-      <div>Ready in: {{readyInMinutes}} minutes</div>
+      <div>Ready in: {{ready_in_minutes}} minutes</div>
       <div>Servings: {{servings}}</div>
     </div>
     <button
