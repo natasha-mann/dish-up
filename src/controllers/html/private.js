@@ -3,6 +3,7 @@ require("dotenv").config();
 const { MealPlan, Day, Meal } = require("../../models");
 const fetch = require("node-fetch");
 const { URL, URLSearchParams } = require("url");
+const { findAll } = require("../../models/Day");
 
 const renderDashboard = async (req, res) => {
   try {
@@ -19,6 +20,27 @@ const renderDashboard = async (req, res) => {
       firstName,
       lastName,
       mealPlans,
+    });
+  } catch (error) {
+    console.log(error.message);
+    return res.status(500).json({ error: "Failed to render" });
+  }
+};
+
+const renderAllMeals = async (req, res) => {
+  try {
+    const { userId, firstName, lastName } = req.session;
+
+    const mealData = await Meal.findAll({ where: { user_id: userId } });
+
+    const meals = mealData.map((meal) => meal.get({ plain: true }));
+
+    console.log(meals);
+
+    return res.render("viewAllMeals", {
+      layout: "dashboard",
+      firstName,
+      meals,
     });
   } catch (error) {
     console.log(error.message);
@@ -279,6 +301,7 @@ const renderRecipe = async (req, res) => {
 
 module.exports = {
   renderDashboard,
+  renderAllMeals,
   renderMealPlan,
   renderAddMeal,
   renderUpdateMeal,

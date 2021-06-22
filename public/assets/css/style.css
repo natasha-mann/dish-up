@@ -27,8 +27,16 @@ body {
   color: white !important;
 }
 
-.navbar-text {
+.nav-link {
   color: white !important;
+}
+
+.nav-link:hover {
+  font-weight: bold !important;
+}
+
+#logout-btn {
+  font-size: large;
 }
 
 .welcome-card {
@@ -159,35 +167,6 @@ li {
   /* padding-right: 0.5rem; */
 }
 
-@media screen and (max-width: 1200px) {
-  #welcome-h2 {
-    color: white;
-    font-weight: bolder;
-    font-size: 2.25rem;
-    text-shadow: 2px 2px var(--green);
-  }
-  .column-welcome {
-    position: absolute;
-    top: 50%;
-    left: 60%;
-    transform: translate(-50%, -50%);
-    height: 3rem;
-  }
-  .welcome-instructions {
-    position: absolute;
-    top: 20%;
-    left: 55%;
-    color: white;
-    transform: translate(-50%, -50%);
-    height: 3rem;
-  }
-  .li-span-1 {
-    color: var(--green);
-    font-weight: bolder;
-    font-size: 2.75rem;
-    text-shadow: 2px 2px white;
-    padding-right: 0.5rem;
-  }
 #no-results-header {
   color: var(--orange);
 }
@@ -202,4 +181,38 @@ li {
 
 .btn-link:hover {
   background-color: var(--yellow);
+}
+
+@media screen and (max-width: 1200px) {
+  #welcome-h2 {
+    color: white;
+    font-weight: bolder;
+    font-size: 2.25rem;
+    text-shadow: 2px 2px var(--green);
+  }
+
+  .column-welcome {
+    position: absolute;
+    top: 50%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+    height: 3rem;
+  }
+
+  .welcome-instructions {
+    position: absolute;
+    top: 20%;
+    left: 55%;
+    color: white;
+    transform: translate(-50%, -50%);
+    height: 3rem;
+  }
+
+  .li-span-1 {
+    color: var(--green);
+    font-weight: bolder;
+    font-size: 2.75rem;
+    text-shadow: 2px 2px white;
+    padding-right: 0.5rem;
+  }
 }
