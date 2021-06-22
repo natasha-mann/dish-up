@@ -26,6 +26,20 @@ const renderDashboard = async (req, res) => {
   }
 };
 
+const renderAllMeals = async (req, res) => {
+  try {
+    const { userId, firstName, lastName } = req.session;
+
+    return res.render("viewAllMeals", {
+      layout: "dashboard",
+      firstName,
+    });
+  } catch (error) {
+    console.log(error.message);
+    return res.status(500).json({ error: "Failed to render" });
+  }
+};
+
 const renderMealPlan = async (req, res) => {
   try {
     const { id } = req.params;
@@ -279,6 +293,7 @@ const renderRecipe = async (req, res) => {
 
 module.exports = {
   renderDashboard,
+  renderAllMeals,
   renderMealPlan,
   renderAddMeal,
   renderUpdateMeal,

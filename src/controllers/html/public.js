@@ -25,26 +25,26 @@ const renderHomePage = async (req, res) => {
     const firstMeal = mealsArray[0];
     const meals = mealsArray.slice(1);
 
-    const url = new URL("https://api.spoonacular.com/food/trivia/random");
+    // const url = new URL("https://api.spoonacular.com/food/trivia/random");
 
-    const params = {
-      apiKey: process.env.API_KEY,
-    };
+    // const params = {
+    //   apiKey: process.env.API_KEY,
+    // };
 
-    url.search = new URLSearchParams(params).toString();
+    // url.search = new URLSearchParams(params).toString();
 
-    const options = {
-      method: "GET",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      redirect: "follow",
-    };
+    // const options = {
+    //   method: "GET",
+    //   headers: {
+    //     "Content-Type": "application/json",
+    //   },
+    //   redirect: "follow",
+    // };
 
-    const response = await fetch(url, options);
-    const data = await response.json();
+    // const response = await fetch(url, options);
+    // const data = await response.json();
 
-    res.render("homepage", { isLoggedIn, firstMeal, meals, data });
+    res.render("homepage", { isLoggedIn, firstMeal, meals });
   } catch (error) {
     console.log(error.message);
     res.status(500).json({ error: "Failed to render" });
