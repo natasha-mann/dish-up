@@ -8,6 +8,7 @@
 * {
   margin: 0px;
   padding: 0px;
+  font-family: "Lato", sans-serif;
 }
 
 body {
@@ -54,15 +55,11 @@ body {
   margin-bottom: 1rem;
   background-color: #e9ecef;
   border-radius: 0.3rem;
+  font-weight: bold;
 }
 
-.mealplan-info {
-  background-color: #ffc30fcb;
-}
-
-.table-cell {
-  height: 10rem;
-  width: 10%;
+.jumbotron > h1 {
+  font-weight: bold;
 }
 
 .add-btn {
@@ -92,7 +89,7 @@ body {
 
 .search-btn:hover,
 .search-btn:active {
-  background-color: rgb(212, 226, 19);
+  background-color: #ffc30f88;
   border: none;
 }
 
@@ -191,4 +188,18 @@ li {
     text-shadow: 2px 2px white;
     padding-right: 0.5rem;
   }
+#no-results-header {
+  color: var(--orange);
+}
+
+.footer {
+  background-color: var(--orange);
+}
+
+.copyright {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.btn-link:hover {
+  background-color: var(--yellow);
 }

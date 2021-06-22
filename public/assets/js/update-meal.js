@@ -1,4 +1,4 @@
-const handleSearch = async (event) => {
+const handleUpdateSearch = async (event) => {
   event.preventDefault();
 
   const meal = $("#search-title").attr("data-meal");
@@ -21,22 +21,16 @@ const handleSearch = async (event) => {
     .get();
 
   window.location.assign(
-    `/mealplan/${id}/add/results?day=${day}&meal=${meal}&dayId=${dayId}&searchInput=${searchInput}&diet=${diet}&intolerance=${intolerance}`
+    `/mealplan/${id}/update/results?day=${day}&meal=${meal}&dayId=${dayId}&searchInput=${searchInput}&diet=${diet}&intolerance=${intolerance}`
   );
 };
 
-const handleViewClick = (event) => {
-  const mealId = event.currentTarget.id;
-
-  window.location.assign(`/recipe?mealId=${mealId}`);
-};
-
-const handleAdd = async (event) => {
+const handleUpdate = async (event) => {
   event.preventDefault();
 
   const card = event.target;
 
-  const mealPlanId = $('[name="addMeal"]').attr("id");
+  const mealPlanId = $('[name="updateMeal"]').attr("id");
   const day = $("#search-title").attr("data-day");
   const meal = $("#search-title").attr("data-meal");
   const dayId = $("#search-title").attr("data-dayId");
@@ -60,7 +54,6 @@ const handleAdd = async (event) => {
       image,
     }),
   };
-
   const postResponse = await fetch(`/api/meals`, options);
   const mealData = await postResponse.json();
 
@@ -68,8 +61,6 @@ const handleAdd = async (event) => {
     console.error("Failed to add meal");
   } else {
     if (!dayId) {
-      const mealId = mealData.id;
-
       const options = {
         method: "POST",
         headers: {
@@ -78,13 +69,9 @@ const handleAdd = async (event) => {
         redirect: "follow",
         body: JSON.stringify({
           day,
-          meal,
-          mealId,
-          mealPlanId,
         }),
       };
       const response = await fetch(`/api/days`, options);
-
       if (response.status !== 200) {
         console.error("Failed to add day");
       } else {
@@ -108,9 +95,8 @@ const handleAdd = async (event) => {
         }),
       };
       const response = await fetch(`/api/days/${dayId}`, options);
-
       if (response.status !== 200) {
-        console.error("Failed to add day");
+        console.error("Failed to update day");
       } else {
         window.location.assign(`/mealplan/${mealPlanId}`);
       }
@@ -118,6 +104,12 @@ const handleAdd = async (event) => {
   }
 };
 
-$("#meal-search").submit(handleSearch);
-$('[name="view-btn"]').click(handleViewClick);
-$("#searchResults").click(handleAdd);
+const handleUpdateViewClick = (event) => {
+  const mealId = event.currentTarget.id;
+
+  window.location.assign(`/recipe?mealId=${mealId}`);
+};
+
+$("#update-search").submit(handleUpdateSearch);
+$("#updateSearchResults").click(handleUpdate);
+$('[name="update-view-btn"]').click(handleUpdateViewClick);

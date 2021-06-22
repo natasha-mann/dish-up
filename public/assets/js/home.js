@@ -14,54 +14,22 @@ const handleSubmit = async (event) => {
     })
     .get();
 
-  const options = {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    redirect: "follow",
-    body: JSON.stringify({
-      searchInput,
-      diet,
-      intolerance,
-    }),
-  };
-
-  const response = await fetch("/api/meals", options);
-  const meals = await response.json();
-
-  // if (response.status !== 200) {
-  //   console.error("Failed to render search results");
-  // } else {
-  //   window.location.replace(
-  //     `/mealplan/${id}/add/results?day=${day}&meal=${meal}`
-  //   );
-  // }
+  window.location.assign(
+    `/home/results?searchInput=${searchInput}&diet=${diet}&intolerance=${intolerance}`
+  );
 };
 
 const handleCarouselClick = async (event) => {
-  const imageId = event.currentTarget.id;
+  const mealId = event.currentTarget.id;
+  window.location.assign(`/recipe?mealId=${mealId}`);
+};
 
-  const options = {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    redirect: "follow",
-    body: JSON.stringify({
-      imageId,
-    }),
-  };
+const handleViewClick = (event) => {
+  const mealId = event.currentTarget.id;
 
-  const response = await fetch("/api/meals/recipe", options);
-  const carouselMeal = await response.json();
-
-  if (response.status !== 200) {
-    console.error("Failed to render recipe");
-  } else {
-    window.location.replace(`/recipe`);
-  }
+  window.location.assign(`/recipe?mealId=${mealId}`);
 };
 
 $(".carousel-item").click(handleCarouselClick);
 $("#meal-search").submit(handleSubmit);
+$("[name='view-btn']").click(handleViewClick);

@@ -4,15 +4,21 @@
 {{>public-navbar}}
 {{/if}}
 
+<div class="container rounded px-0 ">
+  <div class="text-center mt-3 pt-2 pb-1 mealplan-info">
+  <h2>Did you know....?</h2>
+  <p>{{data.text}}</p> 
+</div>
+</div>
 
-  <div class="container bg-light mt-5">
+  <div class="container bg-light mt-3 rounded">
+
       <div class="p-4">
-        <h1>Find Foods...</h1>
         <form id="meal-search"class="d-flex flex-wrap flex-column">
           <input
             class="form-control form-control-lg mb-3"
             type="text"
-            placeholder="Search for tomatoes.."
+            placeholder="Search for your favourite ingredients..."
             aria-label=".form-control-lg example"
             id="search-input"
           />
@@ -212,16 +218,21 @@
             Search
           </button>
         </form>
-        {{#if searchMeals}}
-        <h2 class="my-3">Results</h2>
+        {{#if noSearchResults}}
+          {{> no-results}}
+          {{else}}
+            {{#if searchMeals}}
+          <h2 class="my-3 text-center home-title">Results</h2>
           <div class="d-flex flex-wrap justify-content-center">
           {{#each searchMeals}}
             {{> meal-card}}
           {{/each}}
           </div>
+          {{/if}}
         {{/if}}
+
         <div class="row justify-content-center mt-4">
-        <h2>Recently Added</h2>
+        <h2 class="home-title text-center">Recently Added</h2>
         <div class="col-lg-8 col-sm-12 carousel-container">
           <div class="card m-3">
             <div
@@ -328,3 +339,4 @@
         </div>
       </div>
       </div>
+  </div>
