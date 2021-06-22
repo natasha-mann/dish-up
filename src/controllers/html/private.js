@@ -102,7 +102,7 @@ const renderSearchResults = async (req, res) => {
   const params = {
     apiKey: process.env.API_KEY,
     query: searchInput,
-    number: 10,
+    number: 2,
     addRecipeNutrition: true,
     diet: diet,
     intolerances: intolerance,
@@ -119,8 +119,6 @@ const renderSearchResults = async (req, res) => {
   };
 
   const response = await fetch(url, options);
-  console.log(response);
-
   const data = await response.json();
   const mealsArray = data.results;
 
@@ -155,7 +153,18 @@ const renderUpdateResults = async (req, res) => {
 
   const { day, meal, dayId, searchInput, diet, intolerance } = req.query;
 
-  const url = `https://api.spoonacular.com/recipes/complexSearch?apiKey=6bd693686d904fbc9b2291fadaeb8d99&query=${searchInput}&number=10&addRecipeNutrition=true&diet=${diet}&intolerances=${intolerance}`;
+  const url = new URL("https://api.spoonacular.com/recipes/complexSearch");
+
+  const params = {
+    apiKey: process.env.API_KEY,
+    query: searchInput,
+    number: 2,
+    addRecipeNutrition: true,
+    diet: diet,
+    intolerances: intolerance,
+  };
+
+  url.search = new URLSearchParams(params).toString();
 
   const options = {
     method: "GET",
@@ -181,9 +190,7 @@ const renderUpdateResults = async (req, res) => {
     };
   });
 
-  if (!searchMeals) {
-    return res.status(404).json({ error: "No results" });
-  }
+  const noSearchResults = searchMeals.length === 0;
 
   res.status(200).render("updateMeal", {
     layout: "dashboard",
@@ -192,6 +199,7 @@ const renderUpdateResults = async (req, res) => {
     meal,
     dayId,
     searchMeals,
+    noSearchResults,
   });
 };
 
@@ -199,7 +207,16 @@ const renderRecipe = async (req, res) => {
   try {
     const { mealId } = req.query;
 
-    const url = `https://api.spoonacular.com/recipes/${mealId}/information?includeNutrition=true&apiKey=7f1744dbc1d04e0a9153423050f1d307`;
+    const url = new URL(
+      `https://api.spoonacular.com/recipes/${mealId}/information`
+    );
+
+    const params = {
+      apiKey: process.env.API_KEY,
+      includeNutrition: true,
+    };
+
+    url.search = new URLSearchParams(params).toString();
 
     const options = {
       method: "GET",

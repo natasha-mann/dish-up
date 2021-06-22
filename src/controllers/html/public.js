@@ -1,3 +1,5 @@
+require("dotenv").config();
+
 const { Meal } = require("../../models");
 const fetch = require("node-fetch");
 
@@ -36,7 +38,18 @@ const renderSearchResults = async (req, res) => {
 
     const { day, meal, searchInput, diet, intolerance } = req.query;
 
-    const url = `https://api.spoonacular.com/recipes/complexSearch?apiKey=7f1744dbc1d04e0a9153423050f1d307&query=${searchInput}&number=10&addRecipeNutrition=true&diet=${diet}&intolerances=${intolerance}`;
+    const url = new URL("https://api.spoonacular.com/recipes/complexSearch");
+
+    const params = {
+      apiKey: process.env.API_KEY,
+      query: searchInput,
+      number: 2,
+      addRecipeNutrition: true,
+      diet: diet,
+      intolerances: intolerance,
+    };
+
+    url.search = new URLSearchParams(params).toString();
 
     const options = {
       method: "GET",
