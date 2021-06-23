@@ -7,9 +7,9 @@
     "doc": "docs"
   },
   "scripts": {
-    "start": "node src/index.js",
     "dev": "nodemon src/index.js",
-    "seed": "node src/db/seed.js"
+    "seed": "node src/db/seed.js",
+    "start": "npm run seed && node src/index.js"
   },
   "repository": {
     "type": "git",
