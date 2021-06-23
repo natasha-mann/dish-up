@@ -3,7 +3,6 @@ require("dotenv").config();
 const { MealPlan, Day, Meal } = require("../../models");
 const fetch = require("node-fetch");
 const { URL, URLSearchParams } = require("url");
-const { findAll } = require("../../models/Day");
 
 const renderDashboard = async (req, res) => {
   try {
