@@ -10,7 +10,7 @@
   },
   {
     "spoonacular_id": 633851,
-    "user_id": 3,
+    "user_id": 1,
     "title": "Baked Tofu Cheesecake",
     "ready_in_minutes": 45,
     "servings": 12,
@@ -28,7 +28,7 @@
   },
   {
     "spoonacular_id": 715494,
-    "user_id": 2,
+    "user_id": 1,
     "title": "Guinness and Brats",
     "ready_in_minutes": 55,
     "servings": 4,
@@ -37,7 +37,7 @@
   },
   {
     "spoonacular_id": 636062,
-    "user_id": 3,
+    "user_id": 1,
     "title": "Breakfast Porridge",
     "ready_in_minutes": 45,
     "servings": 6,
@@ -57,7 +57,7 @@
 
   {
     "spoonacular_id": 661249,
-    "user_id": 2,
+    "user_id": 1,
     "title": "Spinach & Ham Quiche",
     "ready_in_minutes": 45,
     "servings": 8,
@@ -67,7 +67,7 @@
 
   {
     "spoonacular_id": 659135,
-    "user_id": 3,
+    "user_id": 1,
     "title": "Salmon with roasted vegetables",
     "ready_in_minutes": 45,
     "servings": 2,

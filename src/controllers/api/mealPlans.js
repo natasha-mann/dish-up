@@ -40,4 +40,21 @@ const createMealPlan = async (req, res) => {
   }
 };
 
-module.exports = { getAllMealPlans, createMealPlan };
+const deleteMealPlan = async (req, res) => {
+  try {
+    const { id } = req.params;
+
+    const deletedMealPlan = await MealPlan.destroy({
+      where: { id },
+    });
+    if (!deletedMealPlan) {
+      return res.status(404).json({ error: "meal plan does not exist" });
+    }
+    return res.status(200).json({ success: "meal plan deleted successfully" });
+  } catch (error) {
+    console.error(error.message);
+    return res.status(500).json({ error: "Failed to delete meal plan" });
+  }
+};
+
+module.exports = { getAllMealPlans, createMealPlan, deleteMealPlan };
