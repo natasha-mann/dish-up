@@ -22,9 +22,6 @@ const renderHomePage = async (req, res) => {
       return meal.get({ plain: true });
     });
 
-    const firstMeal = mealsArray[0];
-    const meals = mealsArray.slice(1);
-
     const url = new URL("https://api.spoonacular.com/food/trivia/random");
 
     const params = {
@@ -44,7 +41,7 @@ const renderHomePage = async (req, res) => {
     const response = await fetch(url, options);
     const data = await response.json();
 
-    res.render("homepage", { isLoggedIn, firstMeal, meals, data });
+    res.render("homepage", { isLoggedIn, mealsArray, data });
   } catch (error) {
     console.log(error.message);
     res.status(500).json({ error: "Failed to render" });

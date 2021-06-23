@@ -233,110 +233,16 @@
 
         <div class="row justify-content-center mt-4">
         <h2 class="home-title text-center">Recently Added</h2>
-        <div class="col-lg-8 col-sm-12 carousel-container">
-          <div class="card m-3">
-            <div
-              id="carouselExampleCaptions"
-              class="carousel slide"
-              data-bs-ride="carousel"
-            >
-              <div class="carousel-indicators">
-                <button
-                  type="button"
-                  data-bs-target="#carouselExampleCaptions"
-                  data-bs-slide-to="0"
-                  class="active"
-                  aria-current="true"
-                  aria-label="Slide 1"
-                ></button>
-                <button
-                  type="button"
-                  data-bs-target="#carouselExampleCaptions"
-                  data-bs-slide-to="1"
-                  aria-label="Slide 2"
-                ></button>
-                <button
-                  type="button"
-                  data-bs-target="#carouselExampleCaptions"
-                  data-bs-slide-to="2"
-                  aria-label="Slide 3"
-                ></button>
-              </div>
-              <div class="carousel-inner carousel-home">
-                {{#if firstMeal}}
-                  <div class="carousel-item active" id="{{firstMeal.spoonacular_id}}">
-                  <img
-                    src="{{firstMeal.image}}"
-                    class="d-block w-100 img-fluid carousel-image"
-                    alt="{{firstMeal.title}}"
-                    height="70"
-                  />
-                  <div class="card-body text-center">
-                    <h5 class="carousel-heading">
-                      {{firstMeal.title}}
-                    </h5>
-                    <div class="d-inline-block">
-                    <div>
-                      Ready in: {{firstMeal.ready_in_minutes}} minutes
-                    </div>
-                    <div>
-                      Servings: {{firstMeal.servings}}
-                    </div>
-                    </div>
-                  </div>
-                </div>
-                {{/if}}
-                {{#each meals}}
-                <div class="carousel-item" id="{{spoonacular_id}}">
-                  <img
-                    src="{{image}}"
-                    class="d-block w-100 img-fluid carousel-image"
-                    alt="{{title}}"
-                    height="70"
-                  />
-                  <div class="card-body text-center">
-                    <h5 class="carousel-heading">
-                      {{title}}
-                    </h5>
-                    <div class="d-inline-block">
-                    <div>
-                      Ready in: {{ready_in_minutes}} minutes
-                    </div>
-                    <div>
-                      Servings: {{servings}}
-                    </div>
-                    </div>
-                  </div>
-                </div>
-                {{/each}}
-              </div>
-              <button
-                class="carousel-control-prev"
-                type="button"
-                data-bs-target="#carouselExampleCaptions"
-                data-bs-slide="prev"
-              >
-                <span
-                  class="carousel-control-prev-icon"
-                  aria-hidden="true"
-                ></span>
-                <span class="visually-hidden">Previous</span>
-              </button>
-              <button
-                class="carousel-control-next"
-                type="button"
-                data-bs-target="#carouselExampleCaptions"
-                data-bs-slide="next"
-              >
-                <span
-                  class="carousel-control-next-icon"
-                  aria-hidden="true"
-                ></span>
-                <span class="visually-hidden">Next</span>
-              </button>
-            </div>
-          </div>
         </div>
-      </div>
+          <div class="swiper-container">
+        <div class="swiper-wrapper">
+          {{#each mealsArray}}
+          <div class="swiper-slide"><img src="{{image}}" class="carousel-image" id="{{spoonacular_id}}"/></div>
+          {{/each}}
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+        </div>
       </div>
   </div>

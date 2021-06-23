@@ -1,6 +1,7 @@
 const { Router } = require("express");
 const {
   renderDashboard,
+  renderAllMeals,
   renderMealPlan,
   renderAddMeal,
   renderUpdateMeal,
@@ -11,6 +12,8 @@ const {
 const router = Router();
 
 router.get("/dashboard", renderDashboard);
+
+router.get("/meals", renderAllMeals);
 
 router.get("/mealplan/:id", renderMealPlan);
 

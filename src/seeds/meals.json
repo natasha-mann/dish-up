@@ -1,6 +1,7 @@
 [
   {
     "spoonacular_id": 652610,
+    "user_id": 1,
     "title": "Mushroom & Sundried Tomato Pasta",
     "ready_in_minutes": 45,
     "servings": 4,
@@ -9,6 +10,7 @@
   },
   {
     "spoonacular_id": 633851,
+    "user_id": 3,
     "title": "Baked Tofu Cheesecake",
     "ready_in_minutes": 45,
     "servings": 12,
@@ -17,6 +19,7 @@
   },
   {
     "spoonacular_id": 658655,
+    "user_id": 1,
     "title": "Roasted red peppers and tomatoes salad",
     "ready_in_minutes": 45,
     "servings": 2,
@@ -25,6 +28,7 @@
   },
   {
     "spoonacular_id": 715494,
+    "user_id": 2,
     "title": "Guinness and Brats",
     "ready_in_minutes": 55,
     "servings": 4,
@@ -33,6 +37,7 @@
   },
   {
     "spoonacular_id": 636062,
+    "user_id": 3,
     "title": "Breakfast Porridge",
     "ready_in_minutes": 45,
     "servings": 6,
@@ -42,6 +47,7 @@
 
   {
     "spoonacular_id": 661251,
+    "user_id": 1,
     "title": "Spinach Almond Amaranth Breakfast Muffins",
     "ready_in_minutes": 45,
     "servings": 9,
@@ -51,6 +57,7 @@
 
   {
     "spoonacular_id": 661249,
+    "user_id": 2,
     "title": "Spinach & Ham Quiche",
     "ready_in_minutes": 45,
     "servings": 8,
@@ -60,6 +67,7 @@
 
   {
     "spoonacular_id": 659135,
+    "user_id": 3,
     "title": "Salmon with roasted vegetables",
     "ready_in_minutes": 45,
     "servings": 2,
