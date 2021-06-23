@@ -79,4 +79,21 @@ const handleClick = async (event) => {
   }
 };
 
+const handleDelete = async (event) => {
+  event.preventDefault();
+  const id = event.currentTarget.id;
+  const options = {
+    method: "DELETE",
+    redirect: "follow",
+  };
+  const response = await fetch(`/api/mealplans/${id}`, options);
+
+  if (response.status !== 200) {
+    console.error("Failed to delete meal plan");
+  } else {
+    window.location.assign("/dashboard");
+  }
+};
+
+$('[name="delete-meal-plan"]').click(handleDelete);
 $('[name="mealPlanTable"]').click(handleClick);
