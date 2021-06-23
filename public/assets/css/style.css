@@ -131,7 +131,7 @@ body {
 .column-welcome {
   position: absolute;
   top: 50%;
-  left: 58%;
+  left: 60%;
   transform: translate(-50%, -50%);
   height: 3rem;
 }
@@ -139,7 +139,7 @@ body {
 #welcome-h2 {
   color: white;
   font-weight: bolder;
-  font-size: 2.75rem;
+  font-size: 2.5rem;
   text-shadow: 2px 2px var(--green);
 }
 
@@ -169,8 +169,6 @@ ol li {
 
 li {
   font-size: 1.5rem;
-  /* padding-left: 0.5rem; */
-  /* padding-right: 0.5rem; */
 }
 
 #no-results-header {
