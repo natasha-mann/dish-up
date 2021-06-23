@@ -40,11 +40,6 @@ body {
   font-size: large;
 }
 
-.main-container {
-  position: relative;
-  min-height: 100vh;
-}
-
 .welcome-card {
   background-color: var(--orange);
   color: white;
