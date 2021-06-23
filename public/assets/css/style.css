@@ -21,6 +21,9 @@ body {
   background-repeat: no-repeat;
   font-family: "Lato", sans-serif;
 }
+.main-container {
+  min-height: 79vh;
+}
 
 #home-navbar {
   background-color: var(--orange) !important;
