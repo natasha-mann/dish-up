@@ -1,6 +1,6 @@
 {{>private-navbar}}
 
-<main class="main-container flex-shrink-0">
+<main class="main-container">
  <div class="container">
      
     <div class="jumbotron text-center">
@@ -62,8 +62,9 @@
                   <div class="form-icon">
                     <span><i class="fa fa-file-alt icon-symbol"></i></span>
                   </div>
-                  <form  id="select-mealplan-form" class="form-horizontal">
+                  <form  id="select-mealplan-form" class="form-horizontal dishup-form">
                     <h3 class="title">My Meal Plans</h3>
+                    {{#if mealPlans}}
                     <div class="form-group">
                       <select
                       id="mealplan-select"
@@ -71,11 +72,12 @@
                         size="6"
                         aria-label="size 3 select example"
                       >
-                        <option selected>Select a meal plan</option>
-
+                        
                         {{#each mealPlans}}
                         <option value="{{id}}">{{title}}</option>
                         {{/each}}
+                      
+                       
                       </select>
                     </div>
                     <div id="alert-div-select"></div>
@@ -83,6 +85,12 @@
                       <button type="submit" class="btn signup">Let's go!</button>
                     </div>
                   </form>
+                     {{else}}
+
+                      <div class="mt-5"><h3>You haven't added any meal plans yet!</h3></div>
+
+                     {{/if}}
+   
                 </div>
               </div>
             </div>
@@ -92,4 +100,4 @@
     </div> 
   </div> 
   </main>
-  {{> footer}}
+{{>footer}}

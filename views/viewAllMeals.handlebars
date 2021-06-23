@@ -2,8 +2,8 @@
 {{>private-navbar}}
 
 
-<main class="main-container flex-shrink-0">
-<div class="container">
+<main>
+<div class="container mb-5">
 <div class="jumbotron text-center">
   <h1 class="display-5">Hello {{firstName}}!</h1>
   <p class="lead">Here are all of the meals in your meal plans. Click to view your recipes.</p>
@@ -14,15 +14,17 @@
     
     <div class="d-flex flex-wrap justify-content-center">
   {{#each meals}}
-    <div class="card shadow mb-5 mx-4 bg-body rounded" style="width: 18rem">
+    <div class="card border-0 shadow mb-5 mx-4 bg-body rounded" style="width: 18rem">
   <img src="{{image}}" class="search-img" alt="{{title}}" />
   <div class="card-body text-center">
+    <div class="h-25 mb-3">
     <h5 class="card-title search-title">
       {{title}}
     </h5>
+    </div>
     <div class="card-text text-start">
-      <div>Ready in: {{ready_in_minutes}} minutes</div>
-      <div>Servings: {{servings}}</div>
+      <div> <i class="far fa-clock py-3 me-2"></i> Ready in: {{ready_in_minutes}} minutes</div>
+      <div> <i class="fas fa-user-friends py-3 me-2"></i>Servings: {{servings}}</div>
     </div>
   </div>
     <div class="card-footer p-0 m-0">
@@ -36,6 +38,17 @@
   </div>
 </div>
   {{/each}}
+  {{else}}
+  <div class="container">
+    <div class="card mt-5 w-md-50 w-lg-25  mx-auto shadow p-3 mb-5 bg-body rounded empty-meals">
+      <div class="card-body text-center p-3">
+      <h4 class="my-3">You haven't added any meals yet!</h4>
+     <p>Head back to the <a class="dishup-links"href="/dashboard">dashboard</a> to get started.</p>    
+     
+    </div>
+  </div>
+  </div>
+
     </div>
   {{/if}}
 

@@ -1,6 +1,6 @@
 {{>private-navbar}}
 
-<main class="main-container flex-shrink-0">
+<main>
   <div class="container main-container bg-light mt-5">
       <div class="p-4">
         <h1 id="search-title" data-dayId="{{dayId}}" data-meal="{{meal}}" data-day="{{day}}" data-id="{{mealPlanId}}" class="text-center search-title">{{toUpperCase day}} - {{toUpperCase meal}}</h1>
@@ -221,12 +221,14 @@
 <div id="mealCard"  class="card shadow mb-5 mx-4 bg-body rounded" style="width: 18rem">
   <img id="image"  src="{{image}}" class="search-img" alt="{{title}}" />
   <div class="card-body text-center">
+    <div class="h-25 mb-3">
     <h5 id="title" class="card-title search-title">
       {{title}}
     </h5>
+    </div>
     <div class="card-text text-start">
-      <div id="readyInMinutes" >Ready in: {{readyInMinutes}} minutes</div>
-      <div id="servings" >Servings: {{servings}}</div>
+      <div id="readyInMinutes" ><i class="far fa-clock py-3 me-2"></i>Ready in: {{readyInMinutes}} minutes</div>
+      <div id="servings" ><i class="fas fa-user-friends py-3 me-2"></i>Servings: {{servings}}</div>
     </div>
   </div>
       <div class="card-footer p-0 m-0">
@@ -238,7 +240,7 @@
       >View</button>
           <button
     data-title="{{title}}" data-servings="{{servings}}" data-ready="{{readyInMinutes}}" data-image="{{image}}"  data-id="{{id}}"
-      name="addMeal"
+      name="updateMeal"
       id="{{../mealPlanId}}"
       class="add-btn py-1 w-50"
     >Add</button>
@@ -254,4 +256,4 @@
          {{/if}}
     </div>
     </main>
-    {{> footer}}
+   {{>footer}}

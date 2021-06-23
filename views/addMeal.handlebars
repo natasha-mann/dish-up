@@ -1,6 +1,6 @@
 {{>private-navbar}}
 
-<main class="main-container flex-shrink-0">
+<main>
   <div class="container bg-light mt-5">
       <div class="p-4">
         <h1 id="search-title" data-dayId="{{dayId}}" data-meal="{{meal}}" data-day="{{day}}" data-id="{{mealPlanId}}" class="text-center search-title">{{toUpperCase day}} - {{toUpperCase meal}}</h1>
@@ -220,12 +220,14 @@
 <div class="card shadow mb-5 mx-4 bg-body rounded" style="width: 18rem">
   <img src="{{image}}" class="search-img" alt="{{title}}" />
   <div class="card-body text-center">
+    <div class="h-25 mb-3">
     <h5 class="card-title search-title">
       {{title}}
     </h5>
+    </div>
     <div class="card-text text-start">
-      <div>Ready in: {{readyInMinutes}} minutes</div>
-      <div>Servings: {{servings}}</div>
+      <div> <i class="far fa-clock py-3 me-2"></i>Ready in: {{readyInMinutes}} minutes</div>
+      <div><i class="fas fa-user-friends py-3 me-2"></i>Servings: {{servings}}</div>
     </div>
   </div>
     <div class="card-footer p-0 m-0">

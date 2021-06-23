@@ -1,12 +1,17 @@
 <div class="card shadow mb-5 mx-4 bg-body rounded" style="width: 18rem">
   <img src="{{image}}" class="card-img-top" alt="{{title}}" />
   <div class="card-body text-center">
-    <h5 class="card-title search-title">
-      {{title}}
-    </h5>
+    <div class="h-25 mb-1">
+      <h5 class="card-title search-title">
+        {{title}}
+      </h5>
+    </div>
     <div class="card-text text-start">
-      <div>Ready in: {{readyInMinutes}} minutes</div>
-      <div>Servings: {{servings}}</div>
+      <div><i class="far fa-clock py-3 me-2"></i>Ready in:
+        {{readyInMinutes}}
+        minutes</div>
+      <div><i class="fas fa-user-friends py-3 me-2"></i>Servings:
+        {{servings}}</div>
     </div>
   </div>
   <div class="card-footer p-0 m-0">

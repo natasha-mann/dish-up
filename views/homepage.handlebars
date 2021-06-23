@@ -4,9 +4,9 @@
 {{>public-navbar}}
 {{/if}}
 
-<main class="main-container flex-shrink-0">
+<main >
   <div class="container rounded px-0 ">
-  <div class="text-center mt-3 pt-2 pb-1 mealplan-info">
+  <div class="text-center mt-3 px-3 pt-2 pb-1 mealplan-info">
   <h2>Did you know....?</h2>
   <p>{{data.text}}</p> 
 </div>
@@ -214,7 +214,7 @@
             />
             <label class="btn btn-outline-danger" for="Wheat">Wheat</label>
           </div>
-          <button type="submit" class="btn btn-primary btn-lg search-btn">
+          <button type="submit" class=" btn-lg search-btn">
             Search
           </button>
         </form>
@@ -222,7 +222,7 @@
           {{> no-results}}
           {{else}}
             {{#if searchMeals}}
-          <h2 class="my-3 text-center home-title">Results</h2>
+          <h2 class="my-5 text-center home-title">Results</h2>
           <div class="d-flex flex-wrap justify-content-center">
           {{#each searchMeals}}
             {{> meal-card}}
@@ -237,7 +237,14 @@
           <div class="swiper-container">
         <div class="swiper-wrapper">
           {{#each mealsArray}}
-          <div class="swiper-slide"><img src="{{image}}" class="carousel-image" id="{{spoonacular_id}}"/></div>
+          <div class="swiper-slide">
+          <div class="card mealplan-card">
+            <img src="{{image}}" class="carousel-image" id="{{spoonacular_id}}"/>
+            <div class="card-body p-0 text-center">
+              <p class="fs-5">{{title}}</p> 
+            </div>
+          </div>
+          </div>
           {{/each}}
         </div>
         <div class="swiper-pagination"></div>
@@ -246,5 +253,7 @@
         </div>
       </div>
   </div>
-  {{>footer}}
+
 </main>
+  {{>footer}}
+
