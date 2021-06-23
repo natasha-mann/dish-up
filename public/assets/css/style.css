@@ -76,6 +76,20 @@ body {
   font-weight: bold;
 }
 
+.empty-meals {
+  background-color: #e9ecef !important;
+}
+
+.dishup-links {
+  color: var(--orange);
+  font-weight: bold;
+}
+
+.dishup-links:hover {
+  color: var(--orange);
+  font-weight: bold;
+}
+
 .add-btn {
   background-color: var(--green);
   border: none;

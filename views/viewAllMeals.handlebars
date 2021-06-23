@@ -3,7 +3,7 @@
 
 
 <main class="main-container flex-shrink-0">
-<div class="container">
+<div class="container mb-5">
 <div class="jumbotron text-center">
   <h1 class="display-5">Hello {{firstName}}!</h1>
   <p class="lead">Here are all of the meals in your meal plans. Click to view your recipes.</p>
@@ -36,6 +36,17 @@
   </div>
 </div>
   {{/each}}
+  {{else}}
+  <div class="container">
+    <div class="card mt-5 w-md-50 w-lg-25  mx-auto shadow p-3 mb-5 bg-body rounded empty-meals">
+      <div class="card-body text-center p-3">
+      <h4 class="my-3">You haven't added any meals yet!</h4>
+     <p>Head back to the <a class="dishup-links"href="/dashboard">dashboard</a> to get started.</p>    
+     
+    </div>
+  </div>
+  </div>
+
     </div>
   {{/if}}
 
