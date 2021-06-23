@@ -29,6 +29,7 @@ body {
 
 .nav-link {
   color: white !important;
+  font-size: 1.2rem;
 }
 
 .nav-link:hover {
@@ -37,6 +38,11 @@ body {
 
 #logout-btn {
   font-size: large;
+}
+
+.main-container {
+  position: relative;
+  min-height: 100vh;
 }
 
 .welcome-card {

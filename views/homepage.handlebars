@@ -4,13 +4,13 @@
 {{>public-navbar}}
 {{/if}}
 
-<div class="container rounded px-0 ">
+<main class="main-container flex-shrink-0">
+  <div class="container rounded px-0 ">
   <div class="text-center mt-3 pt-2 pb-1 mealplan-info">
   <h2>Did you know....?</h2>
   <p>{{data.text}}</p> 
 </div>
 </div>
-
   <div class="container bg-light mt-3 rounded">
 
       <div class="p-4">
@@ -232,7 +232,7 @@
         {{/if}}
 
         <div class="row justify-content-center mt-4">
-        <h2 class="home-title text-center">Recently Added</h2>
+        <h2 class="home-title text-center mb-4">Recently Added</h2>
         </div>
           <div class="swiper-container">
         <div class="swiper-wrapper">
@@ -246,3 +246,5 @@
         </div>
       </div>
   </div>
+  {{>footer}}
+</main>

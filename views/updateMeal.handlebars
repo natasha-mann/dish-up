@@ -1,7 +1,7 @@
 {{>private-navbar}}
 
-
-  <div class="container bg-light mt-5">
+<main class="main-container flex-shrink-0">
+  <div class="container main-container bg-light mt-5">
       <div class="p-4">
         <h1 id="search-title" data-dayId="{{dayId}}" data-meal="{{meal}}" data-day="{{day}}" data-id="{{mealPlanId}}" class="text-center search-title">{{toUpperCase day}} - {{toUpperCase meal}}</h1>
         <form id="update-search"class="d-flex flex-wrap flex-column">
@@ -219,7 +219,7 @@
         <div id="updateSearchResults" class="d-flex flex-wrap justify-content-center">
           {{#each searchMeals}}
 <div id="mealCard"  class="card shadow mb-5 mx-4 bg-body rounded" style="width: 18rem">
-  <img id="image"  src="{{image}}" class="card-img-top" alt="{{title}}" />
+  <img id="image"  src="{{image}}" class="search-img" alt="{{title}}" />
   <div class="card-body text-center">
     <h5 id="title" class="card-title search-title">
       {{title}}
@@ -228,13 +228,21 @@
       <div id="readyInMinutes" >Ready in: {{readyInMinutes}} minutes</div>
       <div id="servings" >Servings: {{servings}}</div>
     </div>
-    <button name="update-view-btn" id="{{id}}" class="btn btn-primary view-btn mt-3">View</button>
-    <button  data-title="{{title}}" data-servings="{{servings}}" data-ready="{{readyInMinutes}}" data-image="{{image}}"  data-id="{{id}}" 
-      type="button"
-      name="updateMeal"
+  </div>
+      <div class="card-footer p-0 m-0">
+    <div class="d-grid d-flex">
+      <button
+        name="view-btn"
+        id="{{id}}"
+        class="view-btn py-1 w-50"
+      >View</button>
+          <button
+    data-title="{{title}}" data-servings="{{servings}}" data-ready="{{readyInMinutes}}" data-image="{{image}}"  data-id="{{id}}"
+      name="addMeal"
       id="{{../mealPlanId}}"
-      class="btn btn-primary add-btn mt-3"
+      class="add-btn py-1 w-50"
     >Add</button>
+    </div>
   </div>
 </div>
 
@@ -245,3 +253,5 @@
          {{/if}}
          {{/if}}
     </div>
+    </main>
+    {{> footer}}

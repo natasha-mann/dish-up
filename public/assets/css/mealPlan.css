@@ -11,6 +11,10 @@
   cursor: pointer;
 }
 
+.search-img {
+  height: 50%;
+}
+
 .card-body {
   height: 40%;
 }

@@ -54,6 +54,11 @@ const renderSearchResults = async (req, res) => {
 
     const { day, meal, searchInput, diet, intolerance } = req.query;
 
+    const mealData = await Meal.findAll();
+    const mealsArray = mealData.map((meal) => {
+      return meal.get({ plain: true });
+    });
+
     const url = new URL("https://api.spoonacular.com/recipes/complexSearch");
 
     const params = {
@@ -77,9 +82,9 @@ const renderSearchResults = async (req, res) => {
 
     const response = await fetch(url, options);
     const data = await response.json();
-    const mealsArray = data.results;
+    const meals = data.results;
 
-    const searchMeals = mealsArray.map((each) => {
+    const searchMeals = meals.map((each) => {
       const { id, title, image, readyInMinutes, servings } = each;
 
       return {
@@ -99,6 +104,7 @@ const renderSearchResults = async (req, res) => {
       meal,
       searchMeals,
       noSearchResults,
+      mealsArray,
     });
   } catch (error) {
     console.log(error.message);

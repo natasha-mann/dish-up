@@ -1,6 +1,8 @@
 
 {{>private-navbar}}
 
+
+<main class="main-container flex-shrink-0">
 <div class="container">
 <div class="jumbotron text-center">
   <h1 class="display-5">Hello {{firstName}}!</h1>
@@ -13,7 +15,7 @@
     <div class="d-flex flex-wrap justify-content-center">
   {{#each meals}}
     <div class="card shadow mb-5 mx-4 bg-body rounded" style="width: 18rem">
-  <img src="{{image}}" class="card-img-top" alt="{{title}}" />
+  <img src="{{image}}" class="search-img" alt="{{title}}" />
   <div class="card-body text-center">
     <h5 class="card-title search-title">
       {{title}}
@@ -22,14 +24,21 @@
       <div>Ready in: {{ready_in_minutes}} minutes</div>
       <div>Servings: {{servings}}</div>
     </div>
-    <button
-      name="view-btn"
-      id="{{id}}"
-      class="btn btn-primary view-btn mt-3"
-    >View</button>
+  </div>
+    <div class="card-footer p-0 m-0">
+    <div class="d-grid">
+      <button
+        name="view-btn"
+        id="{{spoonacular_id}}"
+        class="btn btn-primary view-btn py-1 w-100"
+      >View</button>
+    </div>
   </div>
 </div>
   {{/each}}
     </div>
   {{/if}}
+
+  </main>
+  {{> footer}}
  
