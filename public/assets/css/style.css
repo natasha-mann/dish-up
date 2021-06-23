@@ -120,6 +120,8 @@ body {
   background-color: var(--orange);
   border: none;
   color: white;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
 }
 
 .view-btn:hover,
