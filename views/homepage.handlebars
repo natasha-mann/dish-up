@@ -222,7 +222,7 @@
           {{> no-results}}
           {{else}}
             {{#if searchMeals}}
-          <h2 class="my-3 text-center home-title">Results</h2>
+          <h2 class="my-5 text-center home-title">Results</h2>
           <div class="d-flex flex-wrap justify-content-center">
           {{#each searchMeals}}
             {{> meal-card}}
@@ -237,7 +237,14 @@
           <div class="swiper-container">
         <div class="swiper-wrapper">
           {{#each mealsArray}}
-          <div class="swiper-slide"><img src="{{image}}" class="carousel-image" id="{{spoonacular_id}}"/></div>
+          <div class="swiper-slide">
+          <div class="card mealplan-card">
+            <img src="{{image}}" class="carousel-image" id="{{spoonacular_id}}"/>
+            <div class="card-body p-0 text-center">
+              <p class="fs-5">{{title}}</p> 
+            </div>
+          </div>
+          </div>
           {{/each}}
         </div>
         <div class="swiper-pagination"></div>
@@ -248,3 +255,5 @@
   </div>
   {{>footer}}
 </main>
+
+

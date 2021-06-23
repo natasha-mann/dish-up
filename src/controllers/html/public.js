@@ -81,8 +81,8 @@ const renderSearchResults = async (req, res) => {
     };
 
     const response = await fetch(url, options);
-    const data = await response.json();
-    const meals = data.results;
+    const searchData = await response.json();
+    const meals = searchData.results;
 
     const searchMeals = meals.map((each) => {
       const { id, title, image, readyInMinutes, servings } = each;
@@ -98,6 +98,17 @@ const renderSearchResults = async (req, res) => {
 
     const noSearchResults = searchMeals.length === 0;
 
+    const randomUrl = new URL("https://api.spoonacular.com/food/trivia/random");
+
+    const randomParams = {
+      apiKey: process.env.API_KEY,
+    };
+
+    randomUrl.search = new URLSearchParams(randomParams).toString();
+
+    const randomResponse = await fetch(randomUrl, options);
+    const data = await randomResponse.json();
+
     res.status(200).render("homepage", {
       isLoggedIn,
       day,
@@ -105,6 +116,7 @@ const renderSearchResults = async (req, res) => {
       searchMeals,
       noSearchResults,
       mealsArray,
+      data,
     });
   } catch (error) {
     console.log(error.message);

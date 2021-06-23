@@ -34,8 +34,6 @@ const renderAllMeals = async (req, res) => {
 
     const meals = mealData.map((meal) => meal.get({ plain: true }));
 
-    console.log(meals);
-
     return res.render("viewAllMeals", {
       layout: "dashboard",
       firstName,
