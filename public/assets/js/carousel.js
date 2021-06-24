@@ -1,5 +1,4 @@
 const createSwiper = () => {
-  console.log("swiper created");
   const swiper = new Swiper(".swiper-container", {
     effect: "coverflow",
     centeredSlides: true,
