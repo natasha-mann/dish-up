@@ -188,7 +188,7 @@ li {
   background-position: 100%;
   opacity: 1;
   position: relative;
-  height: 100vh;
+  /* height: 100vh; */
   width: 100vw;
 }
 
@@ -199,7 +199,7 @@ li {
   color: black;
   font-size: 3rem;
   font-weight: bold;
-  margin: 0 auto;
+  /* margin: 0 auto; */
   padding: 5px;
   width: 70%;
   text-align: center;
