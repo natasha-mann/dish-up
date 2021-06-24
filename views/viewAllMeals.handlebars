@@ -10,8 +10,7 @@
 </div>
 </div>
 
-  {{#if meals}}
-    
+  {{#if meals}}    
     <div class="d-flex flex-wrap justify-content-center">
   {{#each meals}}
     <div class="card border-0 shadow mb-5 mx-4 bg-body rounded" style="width: 18rem">
@@ -28,12 +27,37 @@
     </div>
   </div>
     <div class="card-footer p-0 m-0">
-    <div class="d-grid">
+    <div class="d-grid d-flex">
       <button
-        name="view-btn"
+        name="view-btn" 
         id="{{spoonacular_id}}"
-        class="btn btn-primary view-btn py-1 w-100"
+        class="btn btn-primary view-btn-meals py-1 w-50"
       >View</button>
+        <button
+          id="{{id}}"
+          name="delete-meal"
+          class="btn btn-danger delete-btn py-1 w-50"
+          data-bs-toggle="modal"
+          data-bs-target="#modal{{id}}"
+        ><i id="{{id}}" class="fas fa-trash-alt delete-meal"></i></button>
+    </div>
+  </div>
+</div>
+
+ <div class="modal" id="modal{{id}}" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Are you sure you want to delete?</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>Deleting this will also remove the meal from all of your meal plans.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancel</button>
+        <button type="button" class="btn btn-success meal-delete" name="confirm-meal-delete" id="{{id}}">Confirm</button>
+      </div>
     </div>
   </div>
 </div>
@@ -51,7 +75,6 @@
 
     </div>
   {{/if}}
-
   </main>
   {{> footer}}
  

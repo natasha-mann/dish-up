@@ -28,7 +28,7 @@ const renderDashboard = async (req, res) => {
 
 const renderAllMeals = async (req, res) => {
   try {
-    const { userId, firstName, lastName } = req.session;
+    const { userId, firstName } = req.session;
 
     const mealData = await Meal.findAll({ where: { user_id: userId } });
 

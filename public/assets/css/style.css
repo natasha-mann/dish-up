@@ -127,6 +127,21 @@ body {
   border-top-right-radius: 0;
 }
 
+.view-btn-meals {
+  background-color: var(--orange);
+  border: none;
+  color: white;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.delete-btn {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
 .view-btn:hover,
 .view-btn:active {
   background-color: #f36523af;
