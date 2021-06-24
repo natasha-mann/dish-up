@@ -2,6 +2,58 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    {{! title and description }}
+    <title>DishUp || Login</title>
+    <meta
+      name="description"
+      content="DishUp - a quick and easy way to plan your meals!"
+    />
+
+    {{! tags for SEO }}
+    <link rel="canonical" href="https://blooming-tundra-91244.herokuapp.com/" />
+    <meta name="robots" content="index, follow" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="DishUp" />
+    <meta
+      property="og:description"
+      content="DishUp - a quick and easy way to plan your meals!"
+    />
+    <meta property="og:image" content="/assets/images/dishup-logo-bg.png" />
+    <meta property="og:image:alt" content="dishup logo" />
+    <meta
+      property="og:url"
+      content="https://blooming-tundra-91244.herokuapp.com/"
+    />
+
+    {{! favicon }}
+    <link
+      rel="apple-touch-icon"
+      sizes="152x152"
+      href="/assets/images/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/assets/images/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/assets/images/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/assets/images/favicon/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="/assets/images/favicon/safari-pinned-tab.svg"
+      color="#5bbad5"
+    />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+
+    {{! stylesheet links }}
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -20,7 +72,6 @@
     />
     <link href="/assets/css/style.css" rel="stylesheet" type="text/css" />
     <link href="/assets/css/forms.css" rel="stylesheet" type="text/css" />
-    <title>DishUp || Login</title>
   </head>
   <body class="d-flex flex-column h-100">
     {{{body}}}
