@@ -12,7 +12,6 @@
 }
 
 body {
-  background-image: url("../images/dishup-background-landing-page1.png");
   height: 100%;
   width: 100%;
   background-size: cover;
@@ -195,4 +194,32 @@ li {
   font-weight: bolder;
   font-size: 2.75rem;
   text-shadow: 2px 2px white;
+}
+
+.image-container {
+  background-image: url("https://images.unsplash.com/photo-1463123081488-789f998ac9c4?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80");
+  background-size: cover;
+  background-position: 100%;
+  opacity: 1;
+  position: relative;
+  /* height: 100vh; */
+  width: 100vw;
+}
+
+.text {
+  background-color: white;
+  border-radius: 5px;
+  opacity: 1;
+  color: black;
+  font-size: 3rem;
+  font-weight: bold;
+  /* margin: 0 auto; */
+  padding: 5px;
+  width: 70%;
+  text-align: center;
+  /* position: absolute; */
+  /* top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%); */
+  mix-blend-mode: screen;
 }

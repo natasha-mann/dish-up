@@ -11,7 +11,7 @@ const sequelize = require("./config/connection");
 const logger = require("./middleware/logger");
 const helpers = require("./helpers");
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3006;
 
 const app = express();
 
