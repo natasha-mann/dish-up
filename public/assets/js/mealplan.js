@@ -95,5 +95,5 @@ const handleDelete = async (event) => {
   }
 };
 
-$('[name="delete-meal-plan"]').click(handleDelete);
+$('[name="confirm-mealplan-delete"]').click(handleDelete);
 $('[name="mealPlanTable"]').click(handleClick);

@@ -48,7 +48,6 @@ const schema = {
       key: "id",
     },
     onDelete: "CASCADE",
-    onUpdate: "CASCADE",
   },
   lunch_meal_id: {
     type: DataTypes.INTEGER,
@@ -57,7 +56,6 @@ const schema = {
       key: "id",
     },
     onDelete: "CASCADE",
-    onUpdate: "CASCADE",
   },
   dinner_meal_id: {
     type: DataTypes.INTEGER,
@@ -66,7 +64,6 @@ const schema = {
       key: "id",
     },
     onDelete: "CASCADE",
-    onUpdate: "CASCADE",
   },
 };
 
