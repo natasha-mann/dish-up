@@ -29,7 +29,7 @@
   },
   {
     "name": "friday",
-    "meal_plan_id": 1,
+    "meal_plan_id": 9,
     "breakfast_meal_id": 5,
     "lunch_meal_id": 3,
     "dinner_meal_id": 7
@@ -43,7 +43,7 @@
   },
   {
     "name": "sunday",
-    "meal_plan_id": 1,
+    "meal_plan_id": 9,
     "breakfast_meal_id": 7,
     "lunch_meal_id": 8,
     "dinner_meal_id": 1
