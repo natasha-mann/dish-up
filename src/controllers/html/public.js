@@ -132,10 +132,15 @@ const renderSignup = (req, res) => {
   res.render("signup", { layout: "signup" });
 };
 
+const renderAboutUs = (req, res) => {
+  res.render("about-us");
+};
+
 module.exports = {
   renderLandingPage,
   renderHomePage,
   renderSearchResults,
   renderLogin,
   renderSignup,
+  renderAboutUs,
 };
