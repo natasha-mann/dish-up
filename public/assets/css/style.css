@@ -136,6 +136,11 @@ body {
   border-bottom-right-radius: 0;
 }
 
+.view-btn-meals:hover,
+.view-btn-meals:active {
+  background-color: #f3652385;
+}
+
 .delete-btn {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
