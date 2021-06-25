@@ -18,16 +18,16 @@
 
 .swiper-slide {
   width: 300px;
-  height: 350px;
+  height: 370px;
 }
 
 .carousel-image {
   height: 300px;
 }
 
-.mealplan-card {
+.carousel-card {
   cursor: pointer;
-  height: 350px;
+  height: 370px;
 }
 
 @media screen and (max-width: 1400px) {
