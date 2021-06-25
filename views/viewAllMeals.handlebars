@@ -66,11 +66,31 @@
   <div class="container">
     <div class="card mt-5 w-md-50 w-lg-25  mx-auto shadow p-3 mb-5 bg-body rounded empty-meals">
       <div class="card-body text-center p-3">
-      <h4 class="my-3">You haven't added any meals yet!</h4>
-     <p>Head back to the <a class="dishup-links"href="/dashboard">dashboard</a> to get started.</p>    
+      <h3 class="my-3">You haven't added any meals yet!</h3>
+     <p class="fs-5">Head back to the <a class="dishup-links"href="/dashboard">dashboard</a> to get started.</p>
+     <br/>
+      <p>Check out below to see what other members have been eating.</p>        
      
     </div>
   </div>
+
+          <div class="swiper-container">
+        <div class="swiper-wrapper">
+          {{#each allMealsArray}}
+          <div class="swiper-slide">
+          <div class="card mealplan-card">
+            <img src="{{image}}" class="carousel-image" id="{{spoonacular_id}}"/>
+            <div class="card-body p-0 text-center">
+              <p class="fs-5">{{title}}</p> 
+            </div>
+          </div>
+          </div>
+          {{/each}}
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+        </div>
   </div>
 
     </div>
