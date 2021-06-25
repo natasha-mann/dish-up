@@ -133,7 +133,8 @@ const renderSignup = (req, res) => {
 };
 
 const renderAboutUs = (req, res) => {
-  res.render("about-us");
+  const { isLoggedIn } = req.session;
+  res.render("about-us", { isLoggedIn });
 };
 
 module.exports = {
