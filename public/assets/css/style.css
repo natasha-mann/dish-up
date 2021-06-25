@@ -205,6 +205,9 @@ body {
 body.busy .spinner {
   display: block !important;
 }
+.instagram-media {
+  margin-top: 3rem !important;
+}
 
 @media screen and (min-height: 1006px) {
   .main-row {
