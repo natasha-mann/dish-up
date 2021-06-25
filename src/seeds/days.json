@@ -8,21 +8,21 @@
   },
   {
     "name": "tuesday",
-    "meal_plan_id": 1,
+    "meal_plan_id": 9,
     "breakfast_meal_id": 6,
     "lunch_meal_id": 7,
     "dinner_meal_id": 4
   },
   {
     "name": "wednesday",
-    "meal_plan_id": 1,
+    "meal_plan_id": 9,
     "breakfast_meal_id": 5,
     "lunch_meal_id": 8,
     "dinner_meal_id": 1
   },
   {
     "name": "thursday",
-    "meal_plan_id": 1,
+    "meal_plan_id": 9,
     "breakfast_meal_id": 7,
     "lunch_meal_id": 1,
     "dinner_meal_id": 8
