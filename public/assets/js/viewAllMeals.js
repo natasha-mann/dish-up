@@ -16,4 +16,10 @@ const handleMealDelete = async (event) => {
   }
 };
 
+const handleCarouselClick = async (event) => {
+  const mealId = event.currentTarget.id;
+  window.location.assign(`/recipe?mealId=${mealId}`);
+};
+
 $("[name='confirm-meal-delete']").click(handleMealDelete);
+$(".carousel-image").click(handleCarouselClick);
