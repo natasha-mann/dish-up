@@ -1,5 +1,7 @@
 const handleUpdateSearch = async (event) => {
   event.preventDefault();
+  $("#search-text").hide();
+  $("body").addClass("busy");
 
   const meal = $("#search-title").attr("data-meal");
   const day = $("#search-title").attr("data-day");

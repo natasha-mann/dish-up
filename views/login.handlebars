@@ -1,8 +1,8 @@
 {{>public-navbar}}
 
-<main class="main-container">
+<main >
   <div class="container">
-  <div class="row mt-2">
+  <div class="row mt-2 main-row">
     <div class="col-md-6 col-sm-9 mx-auto mt-5">
       <div class="form-bg">
         <div class="container">
@@ -31,8 +31,12 @@
                     />
                   </div>
                   <div id="alert-div"></div>
-                  <div class="form-group">
-                    <button type="submit" class="btn signup">Login</button>
+                  <div class="form-group text-center">
+                    <button type="submit" class="btn signup">
+                      <div class="spinner spinner-border mx-auto" id="spinner" role="status" aria-hidden="true">
+                      </div>
+                    <span  id="login-text">Login</span>
+                    </button>
                   </div>
                 </form>
               </div>

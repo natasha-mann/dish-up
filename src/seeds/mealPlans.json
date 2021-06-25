@@ -55,5 +55,12 @@
     "user_id": 1,
     "start_date": "2021/08/30",
     "end_date": "2021/09/05"
+  },
+  {
+    "title": "Healthy Meal Plan",
+    "description": "Lots of Vegetables!",
+    "user_id": 4,
+    "start_date": "2021/08/30",
+    "end_date": "2021/09/05"
   }
 ]

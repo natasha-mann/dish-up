@@ -1,5 +1,8 @@
 const handleSubmit = async (event) => {
   event.preventDefault();
+  $("#search-text").hide();
+  $("body").addClass("busy");
+
   const searchInput = $("#search-input").val();
   const diet = $("#diet-input")
     .find(":checked")

@@ -1,5 +1,7 @@
 const handleSubmit = async (event) => {
   event.preventDefault();
+  $("#login-text").hide();
+  $("body").addClass("busy");
 
   const email = $("#email").val();
   const password = $("#password").val();
@@ -19,6 +21,8 @@ const handleSubmit = async (event) => {
 
   if (response.status !== 200) {
     console.error("Failed login");
+    $("body").removeClass("busy");
+    $("#login-text").show();
     $("#alert-div").empty();
     $("#alert-div")
       .append(`<div id="error-alert" class="alert alert-warning d-flex align-items-center" role="alert">
@@ -28,6 +32,8 @@ const handleSubmit = async (event) => {
     </div>
   </div>`);
   } else {
+    $("body").removeClass("busy");
+
     window.location.assign("/dashboard");
   }
 };

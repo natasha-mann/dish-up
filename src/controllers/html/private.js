@@ -34,10 +34,16 @@ const renderAllMeals = async (req, res) => {
 
     const meals = mealData.map((meal) => meal.get({ plain: true }));
 
+    const allMealData = await Meal.findAll();
+    const allMealsArray = allMealData.map((meal) => {
+      return meal.get({ plain: true });
+    });
+
     return res.render("viewAllMeals", {
       layout: "dashboard",
       firstName,
       meals,
+      allMealsArray,
     });
   } catch (error) {
     console.log(error.message);

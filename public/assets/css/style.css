@@ -13,7 +13,7 @@
 
 body {
   background-image: url("../images/dishup-background-landing-page1.png");
-  height: 100%;
+  height: 100vh;
   width: 100%;
   background-size: cover;
   background-position: center;
@@ -164,55 +164,111 @@ body {
   background-color: var(--yellow);
 }
 
-.welcome-block {
-  background-image: linear-gradient(#f36523, #f28f47);
-  border: 5px solid white;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-}
-
-ol li {
-  font-size: 1.5rem;
-  list-style-type: none;
-}
-
-li {
-  font-size: 1.5rem;
-}
-
-#welcome-h2 {
-  color: white;
-  font-weight: bolder;
-  font-size: 2.25rem;
-  text-shadow: 2px 2px var(--green);
-}
-
-.welcome-instructions {
-  color: white;
-}
-
-.li-span-1 {
-  color: var(--green);
-  font-weight: bolder;
-  font-size: 2.75rem;
-  text-shadow: 2px 2px white;
-}
-
 .image-container {
   background-image: url("https://images.unsplash.com/photo-1463123081488-789f998ac9c4?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80");
   background-size: cover;
-  background-position: 100%;
+  height: 100vh;
   opacity: 1;
 }
 
-.text {
+.welcome-box {
   background-color: white;
   border-radius: 5px;
-  opacity: 1;
-  color: black;
-  font-size: 3rem;
-  font-weight: bold;
   padding: 5px;
   width: 70%;
-  text-align: center;
   mix-blend-mode: screen;
+}
+
+.text {
+  opacity: 1;
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.action-text {
+  font-weight: bolder;
+  font-size: 1.7rem;
+}
+
+.landing-link {
+  color: black !important;
+}
+
+.main-row {
+  height: 79vh;
+}
+
+#spinner {
+  display: none;
+}
+
+body.busy .spinner {
+  display: block !important;
+}
+.instagram-media {
+  margin-top: 3rem !important;
+}
+
+@media screen and (min-height: 1006px) {
+  .main-row {
+    height: 89vh;
+  }
+  .about-us,
+  .dashboard-row,
+  .mealplan-row {
+    height: 95vh !important;
+  }
+}
+
+@media screen and (max-height: 1005px) {
+  .dashboard-row {
+    height: 95vh;
+  }
+}
+
+@media screen and (max-height: 750px) {
+  .main-row {
+    height: 100vh;
+  }
+  .about-us,
+  .dashboard-row,
+  .mealplan-row {
+    height: fit-content;
+  }
+}
+
+@media screen and (max-width: 1250px) {
+  .image-container,
+  .dashboard-row {
+    height: fit-content;
+  }
+}
+
+@media screen and (max-width: 998px) {
+  .profile-img {
+    height: 100px;
+  }
+}
+
+@media screen and (max-width: 578px) {
+  .quote {
+    text-align: center;
+  }
+
+  .profile-img-div {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .landing-video {
+    width: 288px;
+    height: 165px;
+  }
+
+  .instagram-media {
+    max-width: 280px !important;
+    min-width: 280px !important;
+  }
 }

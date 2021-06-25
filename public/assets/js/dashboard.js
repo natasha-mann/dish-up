@@ -1,5 +1,7 @@
 const handleCreateMealPlan = async (event) => {
   event.preventDefault();
+  $("#create-mealplan-text").hide();
+  $("body").addClass("busy");
 
   const title = $("#title").val();
   const description = $("#description").val();
@@ -8,6 +10,8 @@ const handleCreateMealPlan = async (event) => {
   const user_id = 2;
 
   if (!title || !start_date) {
+    $("body").removeClass("busy");
+    $("#create-mealplan-text").show();
     $("#alert-div").empty();
     $("#alert-div")
       .append(`<div id="error-alert" class="alert alert-danger d-flex align-items-center" role="alert">
@@ -39,8 +43,12 @@ const handleCreateMealPlan = async (event) => {
 
   if (response.status !== 200) {
     console.error("Unable to create meal plan");
+    $("body").removeClass("busy");
+    $("#create-mealplan-text").show();
   } else {
     const { id } = data;
+    $("body").removeClass("busy");
+
     window.location.assign(`/mealplan/${id}`);
   }
 };
