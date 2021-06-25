@@ -62,7 +62,6 @@ npm run seed
 
 ```
 npm run start
-
 ```
 
 ## Contributors

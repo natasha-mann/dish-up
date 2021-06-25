@@ -1,7 +1,7 @@
 [
   {
     "spoonacular_id": 652610,
-    "user_id": 1,
+    "user_id": 4,
     "title": "Mushroom & Sundried Tomato Pasta",
     "ready_in_minutes": 45,
     "servings": 4,
@@ -19,7 +19,7 @@
   },
   {
     "spoonacular_id": 658655,
-    "user_id": 1,
+    "user_id": 4,
     "title": "Roasted red peppers and tomatoes salad",
     "ready_in_minutes": 45,
     "servings": 2,
@@ -37,7 +37,7 @@
   },
   {
     "spoonacular_id": 636062,
-    "user_id": 1,
+    "user_id": 4,
     "title": "Breakfast Porridge",
     "ready_in_minutes": 45,
     "servings": 6,
@@ -47,7 +47,7 @@
 
   {
     "spoonacular_id": 661251,
-    "user_id": 1,
+    "user_id": 4,
     "title": "Spinach Almond Amaranth Breakfast Muffins",
     "ready_in_minutes": 45,
     "servings": 9,
@@ -67,7 +67,7 @@
 
   {
     "spoonacular_id": 659135,
-    "user_id": 1,
+    "user_id": 4,
     "title": "Salmon with roasted vegetables",
     "ready_in_minutes": 45,
     "servings": 2,

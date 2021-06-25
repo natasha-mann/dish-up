@@ -19,5 +19,12 @@
     "email": "sam.jones@email.com",
     "password": "lamp456",
     "daily_calories": 2200
+  },
+  {
+    "first_name": "Natasha",
+    "last_name": "Mann",
+    "email": "naasha.mann@email.com",
+    "password": "password123",
+    "daily_calories": 2200
   }
 ]
