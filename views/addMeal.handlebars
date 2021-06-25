@@ -1,7 +1,7 @@
 {{>private-navbar}}
 
 <main>
-  <div class="container bg-light mt-5">
+  <div class="container main-container bg-light mt-5">
       <div class="p-4">
         <h1 id="search-title" data-dayId="{{dayId}}" data-meal="{{meal}}" data-day="{{day}}" data-id="{{mealPlanId}}" class="text-center search-title">{{toUpperCase day}} - {{toUpperCase meal}}</h1>
         <form id="meal-search"class="d-flex flex-wrap flex-column">
@@ -205,7 +205,9 @@
             <label class="btn btn-outline-danger" for="Wheat">Wheat</label>
           </div>
           <button type="submit" class="btn btn-primary btn-lg search-btn">
-            Search
+           <div class="spinner spinner-border mx-auto" id="spinner" role="status" aria-hidden="true">
+            </div>
+            <span  id="search-text">Seach</span>
           </button>
         </form>
       </div>

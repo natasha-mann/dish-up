@@ -215,7 +215,9 @@
             <label class="btn btn-outline-danger" for="Wheat">Wheat</label>
           </div>
           <button type="submit" class=" btn-lg search-btn">
-            Search
+            <div class="spinner spinner-border mx-auto" id="spinner" role="status" aria-hidden="true">
+            </div>
+            <span  id="search-text">Seach</span>
           </button>
         </form>
         {{#if noSearchResults}}
@@ -239,6 +241,7 @@
           {{#each mealsArray}}
           <div class="swiper-slide">
           <div class="card mealplan-card">
+            
             <img src="{{image}}" class="carousel-image" id="{{spoonacular_id}}"/>
             <div class="card-body p-0 text-center">
               <p class="fs-5">{{title}}</p> 
