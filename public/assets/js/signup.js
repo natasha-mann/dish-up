@@ -43,10 +43,11 @@ const onSubmit = async (event) => {
 
     if (response.status !== 200) {
       $("body").removeClass("busy");
-      $("#signup-text").show();
+
       console.error("Sign up unsuccessful");
     } else {
       $("body").removeClass("busy");
+      $("#signup-text").show();
       window.location.assign("/login");
     }
   } else {

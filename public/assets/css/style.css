@@ -171,17 +171,27 @@ body {
   opacity: 1;
 }
 
-.text {
+.welcome-box {
   background-color: white;
   border-radius: 5px;
-  opacity: 1;
-  color: black;
-  font-size: 3rem;
-  font-weight: bold;
   padding: 5px;
   width: 70%;
-  text-align: center;
   mix-blend-mode: screen;
+}
+
+.text {
+  opacity: 1;
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.action-text {
+  font-weight: bolder;
+  font-size: 1.7rem;
+}
+
+.landing-link {
+  color: black !important;
 }
 
 .main-row {

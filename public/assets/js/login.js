@@ -33,6 +33,7 @@ const handleSubmit = async (event) => {
   </div>`);
   } else {
     $("body").removeClass("busy");
+
     window.location.assign("/dashboard");
   }
 };
