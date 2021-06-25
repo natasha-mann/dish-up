@@ -5,6 +5,7 @@ const {
   renderSearchResults,
   renderLogin,
   renderSignup,
+  renderAboutUs,
 } = require("../../controllers/html/public");
 const router = Router();
 
@@ -13,6 +14,6 @@ router.get("/home", renderHomePage);
 router.get("/home/results", renderSearchResults);
 router.get("/login", renderLogin);
 router.get("/signup", renderSignup);
-//insert recipe, results page
+router.get("/aboutus", renderAboutUs);
 
 module.exports = router;

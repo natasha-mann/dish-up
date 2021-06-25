@@ -132,10 +132,16 @@ const renderSignup = (req, res) => {
   res.render("signup", { layout: "signup" });
 };
 
+const renderAboutUs = (req, res) => {
+  const { isLoggedIn } = req.session;
+  res.render("about-us", { isLoggedIn });
+};
+
 module.exports = {
   renderLandingPage,
   renderHomePage,
   renderSearchResults,
   renderLogin,
   renderSignup,
+  renderAboutUs,
 };
