@@ -201,9 +201,6 @@ li {
   background-size: cover;
   background-position: 100%;
   opacity: 1;
-  position: relative;
-  /* height: 100vh; */
-  width: 100vw;
 }
 
 .text {
@@ -213,13 +210,8 @@ li {
   color: black;
   font-size: 3rem;
   font-weight: bold;
-  /* margin: 0 auto; */
   padding: 5px;
   width: 70%;
   text-align: center;
-  /* position: absolute; */
-  /* top: 30%;
-  left: 50%;
-  transform: translate(-50%, -50%); */
   mix-blend-mode: screen;
 }
