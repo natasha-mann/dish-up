@@ -13,7 +13,7 @@
 
 body {
   background-image: url("../images/dishup-background-landing-page1.png");
-  height: 100%;
+  height: 100vh;
   width: 100%;
   background-size: cover;
   background-position: center;
@@ -164,43 +164,10 @@ body {
   background-color: var(--yellow);
 }
 
-.welcome-block {
-  background-image: linear-gradient(#f36523, #f28f47);
-  border: 5px solid white;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-}
-
-ol li {
-  font-size: 1.5rem;
-  list-style-type: none;
-}
-
-li {
-  font-size: 1.5rem;
-}
-
-#welcome-h2 {
-  color: white;
-  font-weight: bolder;
-  font-size: 2.25rem;
-  text-shadow: 2px 2px var(--green);
-}
-
-.welcome-instructions {
-  color: white;
-}
-
-.li-span-1 {
-  color: var(--green);
-  font-weight: bolder;
-  font-size: 2.75rem;
-  text-shadow: 2px 2px white;
-}
-
 .image-container {
   background-image: url("https://images.unsplash.com/photo-1463123081488-789f998ac9c4?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80");
   background-size: cover;
-  background-position: 100%;
+  height: 100vh;
   opacity: 1;
 }
 
@@ -215,4 +182,22 @@ li {
   width: 70%;
   text-align: center;
   mix-blend-mode: screen;
+}
+
+@media screen and (max-width: 1250px) {
+  .image-container {
+    height: fit-content;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .landing-video {
+    width: 288px;
+    height: 165px;
+  }
+
+  .instagram-media {
+    max-width: 280px !important;
+    min-width: 280px !important;
+  }
 }
