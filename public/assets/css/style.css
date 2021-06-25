@@ -184,9 +184,59 @@ body {
   mix-blend-mode: screen;
 }
 
-@media screen and (max-width: 1250px) {
-  .image-container {
+.main-row {
+  height: 79vh;
+}
+
+@media screen and (min-height: 1006px) {
+  .main-row {
+    height: 89vh;
+  }
+  .about-us,
+  .dashboard-row,
+  .mealplan-row {
+    height: 95vh !important;
+  }
+}
+
+@media screen and (max-height: 1005px) {
+  .dashboard-row {
+    height: 95vh;
+  }
+}
+
+@media screen and (max-height: 750px) {
+  .main-row {
+    height: 100vh;
+  }
+  .about-us,
+  .dashboard-row,
+  .mealplan-row {
     height: fit-content;
+  }
+}
+
+@media screen and (max-width: 1250px) {
+  .image-container,
+  .dashboard-row {
+    height: fit-content;
+  }
+}
+
+@media screen and (max-width: 998px) {
+  .profile-img {
+    height: 100px;
+  }
+}
+
+@media screen and (max-width: 578px) {
+  .quote {
+    text-align: center;
+  }
+
+  .profile-img-div {
+    text-align: center;
+    margin-bottom: 1rem;
   }
 }
 
