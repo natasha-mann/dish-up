@@ -9,29 +9,29 @@
   {
     "name": "tuesday",
     "meal_plan_id": 9,
-    "breakfast_meal_id": 6,
-    "lunch_meal_id": 7,
-    "dinner_meal_id": 4
+    "breakfast_meal_id": 12,
+    "lunch_meal_id": 9,
+    "dinner_meal_id": 11
   },
   {
     "name": "wednesday",
     "meal_plan_id": 9,
     "breakfast_meal_id": 5,
     "lunch_meal_id": 8,
-    "dinner_meal_id": 1
+    "dinner_meal_id": 3
   },
   {
     "name": "thursday",
     "meal_plan_id": 9,
-    "breakfast_meal_id": 7,
+    "breakfast_meal_id": 6,
     "lunch_meal_id": 1,
-    "dinner_meal_id": 8
+    "dinner_meal_id": 11
   },
   {
     "name": "friday",
     "meal_plan_id": 9,
-    "breakfast_meal_id": 5,
-    "lunch_meal_id": 3,
+    "breakfast_meal_id": 12,
+    "lunch_meal_id": 10,
     "dinner_meal_id": 7
   },
   {
@@ -44,9 +44,9 @@
   {
     "name": "sunday",
     "meal_plan_id": 9,
-    "breakfast_meal_id": 7,
-    "lunch_meal_id": 8,
-    "dinner_meal_id": 1
+    "breakfast_meal_id": 5,
+    "lunch_meal_id": 13,
+    "dinner_meal_id": 4
   },
   {
     "name": "monday",

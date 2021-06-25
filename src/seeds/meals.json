@@ -73,5 +73,50 @@
     "servings": 2,
     "calories": 492,
     "image": "https://spoonacular.com/recipeImages/659135-312x231.jpg"
+  },
+  {
+    "spoonacular_id": 634806,
+    "user_id": 4,
+    "title": "Beetroot Feta Salad",
+    "ready_in_minutes": 45,
+    "servings": 2,
+    "calories": 202,
+    "image": "https://spoonacular.com/recipeImages/634806-312x231.jpg"
+  },
+  {
+    "spoonacular_id": 649730,
+    "user_id": 4,
+    "title": "Lemon Pie",
+    "ready_in_minutes": 45,
+    "servings": 2,
+    "calories": 250,
+    "image": "https://spoonacular.com/recipeImages/649730-312x231.jpg"
+  },
+  {
+    "spoonacular_id": 645824,
+    "user_id": 4,
+    "title": "Grilled Prawns",
+    "ready_in_minutes": 40,
+    "servings": 2,
+    "calories": 330,
+    "image": "https://spoonacular.com/recipeImages/645824-312x231.jpg"
+  },
+  {
+    "spoonacular_id": 645175,
+    "user_id": 4,
+    "title": "Granola",
+    "ready_in_minutes": 30,
+    "servings": 18,
+    "calories": 195,
+    "image": "https://spoonacular.com/recipeImages/645175-312x231.jpg"
+  },
+  {
+    "spoonacular_id": 635938,
+    "user_id": 4,
+    "title": "Bread Bowl Au Gratin",
+    "ready_in_minutes": 50,
+    "servings": 18,
+    "calories": 450,
+    "image": "https://spoonacular.com/recipeImages/635938-312x231.jpg"
   }
 ]
