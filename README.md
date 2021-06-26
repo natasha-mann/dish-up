@@ -20,7 +20,6 @@ Let us tell you more about the app below.
   - [User Flows](#user-flows)
   - [Technologies Used](#technologies-used)
   - [Web APIs](#web-apis)
-  - [JamBoard](#jamboard)
   - [Model Framework](#model-framework)
   - [Wireframes](#wireframes)
 - [Plans for Improvement](#plans-for-improvement)
@@ -96,11 +95,13 @@ For this project we used the following technologies:
 
 We used the [Spoonacular API](https://spoonacular.com/food-api) to get the required data for this project:
 
-### JamBoard
-
 ### Model Framework
 
+![screenshot](./public/assets/images/models-ERD.png)
+
 ### Wireframes
+
+![screenshot](./public/assets/images/wireframes.gif)
 
 > Note:
 > During implementation some of these features were improved or changed.
