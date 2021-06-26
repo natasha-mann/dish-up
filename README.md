@@ -121,3 +121,9 @@ We used the [Spoonacular API](https://spoonacular.com/food-api) to get the requi
   - Adding weekly calories options
 
 ## Screenshots
+
+![screenshot](./public/assets/screenshots/landing-page.png)
+![screenshot](./public/assets/screenshots/home-page.png)
+![screenshot](./public/assets/screenshots/dashboard.png)
+![screenshot](./public/assets/screenshots/mealplan.png)
+![screenshot](./public/assets/screenshots/all-meals.png)
