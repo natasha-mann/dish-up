@@ -27,7 +27,7 @@ Let us tell you more about the app below.
 
 ## Project Link
 
-Click [here](https://natasha-mann.github.io/dish-up/) to view the project on GitHub pages.
+Click [here](https://blooming-tundra-91244.herokuapp.com/) to view the project on GitHub pages.
 
 ## Getting Started
 
