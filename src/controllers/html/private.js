@@ -127,7 +127,7 @@ const renderSearchResults = async (req, res) => {
   const params = {
     apiKey: process.env.API_KEY,
     query: searchInput,
-    number: 2,
+    number: 9,
     addRecipeNutrition: true,
     diet: diet,
     intolerances: intolerance,
@@ -183,7 +183,7 @@ const renderUpdateResults = async (req, res) => {
   const params = {
     apiKey: process.env.API_KEY,
     query: searchInput,
-    number: 2,
+    number: 9,
     addRecipeNutrition: true,
     diet: diet,
     intolerances: intolerance,
