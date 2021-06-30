@@ -22,11 +22,6 @@ const handleSubmit = async (event) => {
   );
 };
 
-// const handleCarouselClick = async (event) => {
-//   const mealId = event.currentTarget.id;
-//   window.location.assign(`/recipe?mealId=${mealId}`);
-// };
-
 const handleViewClick = async (event) => {
   const mealId = event.currentTarget.id;
 
@@ -35,13 +30,18 @@ const handleViewClick = async (event) => {
     headers: {
       "Content-Type": "application/json",
     },
+    redirect: "follow",
   };
 
   const response = await fetch(`/recipe?mealId=${mealId}`);
 
-  $("#login-modal").modal("show");
+  const path = response.url.substring(response.url.lastIndexOf("/") + 1);
 
-  // window.location.assign(`/recipe?mealId=${mealId}`);
+  if (path === "login") {
+    $("#login-modal").modal("show");
+  } else {
+    window.location.assign(`/recipe?mealId=${mealId}`);
+  }
 };
 
 $(".carousel-image").click(handleViewClick);
