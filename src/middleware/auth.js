@@ -2,7 +2,7 @@ const auth = (req, res, next) => {
   if (req.session.isLoggedIn) {
     next();
   } else {
-    res.redirect("/login");
+    res.status(404).json({ error: "User not logged in" });
   }
 };
 
