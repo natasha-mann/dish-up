@@ -13,14 +13,14 @@
   
   <thead>
     <tr> 
-      <th scope="col"></th>
-      <th scope="col">Monday</th>
-      <th scope="col">Tuesday</th>
-      <th scope="col">Wednesday</th>
-      <th scope="col">Thursday</th>
-      <th scope="col">Friday</th>
-      <th scope="col">Saturday</th>
-      <th scope="col">Sunday</th>
+      <th class="meal-col" scope="col"></th>
+      <th class="day-col" scope="col">Tuesday</th>
+      <th class="day-col" scope="col">Monday</th>
+      <th class="day-col" scope="col">Wednesday</th>
+      <th class="day-col" scope="col">Thursday</th>
+      <th class="day-col" scope="col">Friday</th>
+      <th class="day-col" scope="col">Saturday</th>
+      <th class="day-col" scope="col">Sunday</th>
     </tr>
   </thead>
   <tbody>
@@ -34,7 +34,7 @@
   <div class="card mealplan-card">
     
     <img data-spoon="{{breakfast.spoonacular_id}}" src="{{breakfast.image}}" class="card-img-top" />
-    <div class="card-body">
+    <div class="card-body px-1">
     <p class="small">{{breakfast.title}}</p> 
    </div>
    <div class="card-footer p-0 m-0">
@@ -67,7 +67,7 @@
 {{#if breakfast}}
    <div class="card mealplan-card">
     <img data-spoon="{{breakfast.spoonacular_id}}" src="{{breakfast.image}}" class="card-img-top " />
-    <div class="card-body px-0">
+    <div class="card-body px-1">
     <p class="small">{{breakfast.title}}</p> 
    </div>
    <div class="card-footer p-0 m-0">
@@ -100,7 +100,7 @@
 {{#if breakfast}}
    <div class="card mealplan-card">
     <img data-spoon="{{breakfast.spoonacular_id}}" src="{{breakfast.image}}" class="card-img-top" />
-    <div class="card-body px-0">
+    <div class="card-body px-1">
     <p class="small">{{breakfast.title}}</p> 
    </div>
    <div class="card-footer p-0 m-0">
@@ -132,7 +132,7 @@
 {{#if breakfast}}
    <div class="card mealplan-card">
     <img data-spoon="{{breakfast.spoonacular_id}}" src="{{breakfast.image}}" class="card-img-top" />
-    <div class="card-body px-0">
+    <div class="card-body px-1">
     <p class="small">{{breakfast.title}}</p> 
    </div>
    <div class="card-footer p-0 m-0">
@@ -164,7 +164,7 @@
 {{#if breakfast}}
  <div class="card mealplan-card">
     <img data-spoon="{{breakfast.spoonacular_id}}" src="{{breakfast.image}}" class="card-img-top " />
-    <div class="card-body px-0">
+    <div class="card-body px-1">
     <p class="small">{{breakfast.title}}</p> 
    </div>
    <div class="card-footer p-0 m-0">
@@ -196,7 +196,7 @@
 {{#if breakfast}}
   <div class="card mealplan-card">
     <img data-spoon="{{breakfast.spoonacular_id}}" src="{{breakfast.image}}" class="card-img-top" />
-    <div class="card-body px-0">
+    <div class="card-body px-1">
     <p class="small">{{breakfast.title}}</p> 
    </div>
    <div class="card-footer p-0 m-0">
@@ -228,7 +228,7 @@
 {{#if breakfast}}
   <div class="card mealplan-card">
     <img data-spoon="{{breakfast.spoonacular_id}}" src="{{breakfast.image}}" class="card-img-top" />
-    <div class="card-body px-0">
+    <div class="card-body px-1">
     <p class="small">{{breakfast.title}}</p> 
    </div>
    <div class="card-footer p-0 m-0">
@@ -262,7 +262,7 @@
 {{#if lunch}}
   <div class="card mealplan-card">
     <img data-spoon="{{lunch.spoonacular_id}}" src="{{lunch.image}}" class="card-img-top" />
-    <div class="card-body px-0">
+    <div class="card-body px-1">
     <p class="small">{{lunch.title}}</p> 
    </div>
    <div class="card-footer p-0 m-0">
@@ -294,7 +294,7 @@
 {{#if lunch}}
   <div class="card mealplan-card">
     <img data-spoon="{{lunch.spoonacular_id}}" src="{{lunch.image}}" class="card-img-top" />
-    <div class="card-body px-0">
+    <div class="card-body px-1">
     <p class="small">{{lunch.title}}</p> 
    </div>
    <div class="card-footer p-0 m-0">
@@ -326,7 +326,7 @@
 {{#if lunch}}
   <div class="card mealplan-card">
     <img data-spoon="{{lunch.spoonacular_id}}" src="{{lunch.image}}" class="card-img-top" />
-    <div class="card-body px-0">
+    <div class="card-body px-1">
     <p class="small">{{lunch.title}}</p> 
    </div>
    <div class="card-footer p-0 m-0">
@@ -358,7 +358,7 @@
 {{#if lunch}}
   <div class="card mealplan-card">
     <img data-spoon="{{lunch.spoonacular_id}}" src="{{lunch.image}}" class="card-img-top" />
-    <div class="card-body px-0">
+    <div class="card-body px-1">
     <p class="small">{{lunch.title}}</p> 
    </div>
    <div class="card-footer p-0 m-0">
@@ -390,7 +390,7 @@
 {{#if lunch}}
   <div class="card mealplan-card">
     <img data-spoon="{{lunch.spoonacular_id}}" src="{{lunch.image}}" class="card-img-top" />
-    <div class="card-body px-0">
+    <div class="card-body px-1">
     <p class="small">{{lunch.title}}</p> 
    </div>
    <div class="card-footer p-0 m-0">
@@ -422,7 +422,7 @@
 {{#if lunch}}
   <div class="card mealplan-card">
     <img data-spoon="{{lunch.spoonacular_id}}" src="{{lunch.image}}" class="card-img-top" />
-    <div class="card-body px-0">
+    <div class="card-body px-1">
     <p class="small">{{lunch.title}}</p> 
    </div>
    <div class="card-footer p-0 m-0">
@@ -454,7 +454,7 @@
 {{#if lunch}}
   <div class="card mealplan-card">
     <img data-spoon="{{lunch.spoonacular_id}}" src="{{lunch.image}}" class="card-img-top" />
-    <div class="card-body px-0">
+    <div class="card-body px-1">
     <p class="small">{{lunch.title}}</p> 
    </div>
    <div class="card-footer p-0 m-0">
@@ -489,7 +489,7 @@
 {{#if dinner}}
   <div class="card mealplan-card">
     <img data-spoon="{{dinner.spoonacular_id}}" src="{{dinner.image}}" class="card-img-top" />
-    <div class="card-body px-0">
+    <div class="card-body px-1">
     <p class="small">{{dinner.title}}</p> 
    </div>
    <div class="card-footer p-0 m-0">
@@ -521,7 +521,7 @@
 {{#if dinner}}
   <div class="card mealplan-card">
     <img data-spoon="{{dinner.spoonacular_id}}" src="{{dinner.image}}" class="card-img-top" />
-    <div class="card-body px-0">
+    <div class="card-body px-1">
     <p class="small">{{dinner.title}}</p> 
    </div>
    <div class="card-footer p-0 m-0">
@@ -553,7 +553,7 @@
 {{#if dinner}}
   <div class="card mealplan-card">
     <img data-spoon="{{dinner.spoonacular_id}}" src="{{dinner.image}}" class="card-img-top" />
-    <div class="card-body px-0">
+    <div class="card-body px-1">
     <p class="small">{{dinner.title}}</p> 
    </div>
    <div class="card-footer p-0 m-0">
@@ -585,7 +585,7 @@
 {{#if dinner}}
   <div class="card mealplan-card">
     <img data-spoon="{{dinner.spoonacular_id}}" src="{{dinner.image}}" class="card-img-top" />
-    <div class="card-body px-0">
+    <div class="card-body px-1">
     <p class="small">{{dinner.title}}</p> 
    </div>
    <div class="card-footer p-0 m-0">
@@ -617,7 +617,7 @@
 {{#if dinner}}
  <div class="card mealplan-card">
     <img data-spoon="{{dinner.spoonacular_id}}" src="{{dinner.image}}" class="card-img-top" />
-    <div class="card-body px-0">
+    <div class="card-body px-1">
     <p class="small">{{dinner.title}}</p> 
    </div>
    <div class="card-footer p-0 m-0">
@@ -649,7 +649,7 @@
 {{#if dinner}}
  <div class="card mealplan-card">
     <img data-spoon="{{dinner.spoonacular_id}}" src="{{dinner.image}}" class="card-img-top" />
-    <div class="card-body px-0">
+    <div class="card-body px-1">
     <p class="small">{{dinner.title}}</p> 
    </div>
    <div class="card-footer p-0 m-0">
@@ -681,7 +681,7 @@
 {{#if dinner}}
   <div class="card mealplan-card">
     <img data-spoon="{{dinner.spoonacular_id}}" src="{{dinner.image}}" class="card-img-top" />
-    <div class="card-body px-0">
+    <div class="card-body px-1">
     <p class="small">{{dinner.title}}</p> 
    </div>
    <div class="card-footer p-0 m-0">

@@ -2,6 +2,18 @@
   background-color: #ffc30fcb;
 }
 
+.table-cell {
+  height: 10rem;
+}
+
+.meal-col {
+  width: 4%;
+}
+
+.day-col {
+  width: 10%;
+}
+
 .mealplan-card {
   height: 95%;
 }
@@ -39,11 +51,6 @@
 .delete-btn:hover {
   background-color: rgba(255, 0, 0, 0.486);
   border: none;
-}
-
-.table-cell {
-  height: 10rem;
-  width: 10%;
 }
 
 @media screen and (max-width: 768px) {

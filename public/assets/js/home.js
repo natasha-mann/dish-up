@@ -35,14 +35,11 @@ const handleViewClick = async (event) => {
     headers: {
       "Content-Type": "application/json",
     },
-    redirect: "follow",
   };
 
   const response = await fetch(`/recipe?mealId=${mealId}`);
 
-  if (response.status === 404) {
-    $("#login-modal").modal("show");
-  }
+  $("#login-modal").modal("show");
 
   // window.location.assign(`/recipe?mealId=${mealId}`);
 };
