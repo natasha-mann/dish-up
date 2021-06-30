@@ -7,7 +7,7 @@ const renderLandingPage = (req, res) => {
   try {
     const { isLoggedIn } = req.session;
 
-    res.render("landing-page", { isLoggedIn });
+    res.render("landing-page", { layout: "landing-page", isLoggedIn });
   } catch (error) {
     console.log(error.message);
     res.status(500).json({ error: "Failed to render" });

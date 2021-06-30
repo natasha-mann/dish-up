@@ -11,18 +11,39 @@
   font-family: "Lato", sans-serif;
 }
 
-body {
-  background-image: url("../images/dishup-background-landing-page1.png");
-  height: 100vh;
-  width: 100%;
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  font-family: "Lato", sans-serif;
-}
 .main-container {
   min-height: 79vh;
+}
+
+.image-container {
+  background-image: url("/assets/images/landing-background.jpg");
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  opacity: 1;
+}
+
+.welcome-box {
+  background-color: white;
+  border-radius: 5px;
+  padding: 5px;
+  width: 70%;
+  mix-blend-mode: screen;
+}
+
+.text {
+  opacity: 1;
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.action-text {
+  font-weight: bolder;
+  font-size: 1.7rem;
+}
+
+.landing-link {
+  color: black !important;
 }
 
 #home-navbar {
@@ -169,36 +190,6 @@ body {
   background-color: var(--yellow);
 }
 
-.image-container {
-  background-image: url("https://images.unsplash.com/photo-1463123081488-789f998ac9c4?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80");
-  background-size: cover;
-  height: 100vh;
-  opacity: 1;
-}
-
-.welcome-box {
-  background-color: white;
-  border-radius: 5px;
-  padding: 5px;
-  width: 70%;
-  mix-blend-mode: screen;
-}
-
-.text {
-  opacity: 1;
-  font-size: 3rem;
-  font-weight: bold;
-}
-
-.action-text {
-  font-weight: bolder;
-  font-size: 1.7rem;
-}
-
-.landing-link {
-  color: black !important;
-}
-
 .main-row {
   height: 79vh;
 }
@@ -212,6 +203,46 @@ body.busy .spinner {
 }
 .instagram-media {
   margin-top: 3rem !important;
+}
+
+.home-title {
+  color: var(--orange);
+}
+
+.mealplan-info {
+  background-color: #ffc30fcb;
+}
+
+.carousel-container {
+  max-width: 450px;
+}
+
+.swiper-container {
+  width: 100%;
+  height: 450px;
+  margin-top: 1rem;
+}
+
+.swiper-slide {
+  width: 300px;
+  height: 370px;
+}
+
+.carousel-image {
+  height: 300px;
+}
+
+.carousel-card {
+  cursor: pointer;
+  height: 370px;
+}
+
+@media screen and (max-width: 1400px) {
+  .carousel-image {
+    justify-content: center;
+
+    height: 250px;
+  }
 }
 
 @media screen and (min-height: 1006px) {
